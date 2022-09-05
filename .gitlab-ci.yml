@@ -21,7 +21,7 @@ install-job:
     - echo "完成install🔥🔥🔥"
 
 build-job:
-  stage: install
+  stage: build
   only:
     - master
   tags:
@@ -32,5 +32,5 @@ build-job:
       - public
   script:
     - echo "开始代码打包💪💪💪"
-    - npm run doc:build
+    - npm run docs:build
     - echo "完成代码打包💪💪💪"
