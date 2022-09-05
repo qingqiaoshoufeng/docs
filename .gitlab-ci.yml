@@ -1,15 +1,36 @@
 image: node:16
-pages:
-  cache:
-    paths:
-      - node_modules/
-  script:
-    - yarn install
-    - yarn docs:build
-  artifacts:
-    paths:
-      - public
+
+stages: # 分段
+  - install
+  - build
+#  - deplo
+
+cache: # 缓存
+  paths:
+    - node_modules
+
+install-job:
+  stage: install
   only:
     - master
   tags:
     - general
+  script:
+    - echo "开始install🔥🔥🔥"
+    - npm install
+    - echo "完成install🔥🔥🔥"
+
+build-job:
+  stage: install
+  only:
+    - master
+  tags:
+    - general
+  artifacts:
+  expire_in: 1 week
+    paths:
+      - public
+  script:
+    - echo "开始代码打包💪💪💪"
+    - npm run build
+    - echo "完成代码打包💪💪💪"
