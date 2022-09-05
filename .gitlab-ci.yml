@@ -27,7 +27,7 @@ build-job:
   tags:
     - general
   artifacts:
-  expire_in: 1 week
+    expire_in: 1 week
     paths:
       - public
   script:
