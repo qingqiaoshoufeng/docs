@@ -50,11 +50,7 @@ build-job:
     #     echo 'llll====='
     #     mkdir -p ${path}
     #   fi 
-    # - cd /data
-    # - ls
-    # - pwd
-    # - cd ${path}
-    # - pwd
+
     - cd /data
     - pwd
     - ls
