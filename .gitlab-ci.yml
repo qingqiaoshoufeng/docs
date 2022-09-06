@@ -31,6 +31,8 @@ build-job:
     expire_in: 1 week
     paths:
       - public/
+  before_script: 
+    - mkdir -p /data
   script:
     - echo "开始代码打包💪💪💪"
     - npm run docs:build
@@ -38,20 +40,20 @@ build-job:
     - echo "$CI_PROJECT_NAME"
     - path=/data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA}
     - echo "$path"
-    - pwd
-    - mkdir -p ${path}
-    - if [ ! -f /data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA} ]; then echo "1111111111111111"; fi
-    - if [ ! -f ${path}} ]; then echo "2222222221"; fi
-    - |
-      if [ ! -d ${path} ]; then
-        echo 'llll====='
-        mkdir -p ${path}
-      fi 
-    - cd /data
-    - ls
-    - pwd
-    - cd ${path}
-    - pwd
+    # - pwd
+    # - mkdir -p ${path}
+    # - if [ ! -f /data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA} ]; then echo "1111111111111111"; fi
+    # - if [ ! -f ${path}} ]; then echo "2222222221"; fi
+    # - |
+    #   if [ ! -d ${path} ]; then
+    #     echo 'llll====='
+    #     mkdir -p ${path}
+    #   fi 
+    # - cd /data
+    # - ls
+    # - pwd
+    # - cd ${path}
+    # - pwd
     - cd /
     - pwd
     - ls
