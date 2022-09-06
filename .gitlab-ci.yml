@@ -6,6 +6,7 @@ stages: # 分段
 #  - deplo
 
 cache: # 缓存
+  key: ${CI_BUILD_REF_NAME}
   paths:
     - node_modules
 
@@ -34,5 +35,5 @@ build-job:
     - echo "开始代码打包💪💪💪"
     - npm run docs:build
     - echo "完成代码打包💪💪💪"
-    - cd /data/castle-data
+    - pwd
     - ls
