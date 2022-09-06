@@ -36,8 +36,9 @@ build-job:
     - mkdir -p /data
   script:
     - echo "开始代码打包💪💪💪"
-    - npm run docs:build
+    # - npm run docs:build
     - echo "完成代码打包💪💪💪"
+    - SHORT_SHA=${git rev-parse --short ${CI_COMMIT_SHA}}
     - path=/data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA}
     - echo "$path"
     # - if [ ! -f ${path}} ]; then mkdir -p ${path}; fi
@@ -49,5 +50,6 @@ build-job:
     - echo "$CI_JOB_ID"
     - echo "$CI_PIPELINE_ID"
     - git rev-parse --short 921103db8259eb9de72f42db8b939895f5651489
+    - echo ${SHORT_SHA}
 
   
