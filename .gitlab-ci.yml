@@ -41,12 +41,13 @@ build-job:
     - path=/data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA}
     - echo "$path"
     # - if [ ! -f ${path}} ]; then mkdir -p ${path}; fi
-    - |
-      if [ ! -d ${path} ]; then
-        mkdir -p ${path}
-      fi 
-    - cp -rf ./public/* ${path}
+    # - |
+    #   if [ ! -d ${path} ]; then
+    #     mkdir -p ${path}
+    #   fi 
+    # - cp -rf ./public/* ${path}
     - echo "$CI_JOB_ID"
     - echo "$CI_PIPELINE_ID"
+    - git rev-parse --short 921103db8259eb9de72f42db8b939895f5651489
 
   
