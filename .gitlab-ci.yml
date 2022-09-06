@@ -38,17 +38,13 @@ build-job:
     - echo "开始代码打包💪💪💪"
     - npm run docs:build
     - echo "完成代码打包💪💪💪"
-    - echo "$CI_PROJECT_NAME"
     - path=/data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA}
     - echo "$path"
-    # - mkdir -p ${path}
-    # - if [ ! -f /data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA} ]; then echo "1111111111111111"; fi
-    # - if [ ! -f ${path}} ]; then echo "2222222221"; fi
-    # - |
-    #   if [ ! -d ${path} ]; then
-    #     echo 'llll====='
-    #     mkdir -p ${path}
-    #   fi 
+    # - if [ ! -f ${path}} ]; then mkdir -p ${path}; fi
+    - |
+      if [ ! -d ${path} ]; then
+        mkdir -p ${path}
+      fi 
 
     - cd /data
     - pwd
