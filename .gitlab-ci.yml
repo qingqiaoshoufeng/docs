@@ -28,10 +28,10 @@ build&deploy-job:
     - master
   tags:
     - general
-  artifacts:
-    expire_in: 1 week
-    paths:
-      - public/
+  # artifacts:
+  #   expire_in: 1 week
+  #   paths:
+  #     - public/
   before_script: 
     - mkdir -p /data
   script:
