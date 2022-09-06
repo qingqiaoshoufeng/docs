@@ -45,8 +45,6 @@ build-job:
       if [ ! -d ${path} ]; then
         mkdir -p ${path}
       fi 
+    - cp -rf ./public ${path}
 
-    - cd /data
-    - pwd
-    - ls
-    # - cp -rf ./public  ${path}
+  
