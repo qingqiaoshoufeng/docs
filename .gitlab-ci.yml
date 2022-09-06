@@ -47,5 +47,6 @@ build-job:
       fi 
     - cp -rf ./public/* ${path}
     - echo "$CI_JOB_ID"
+    - echo "$CI_PIPELINE_ID"
 
   
