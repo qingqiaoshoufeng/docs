@@ -36,4 +36,5 @@ build-job:
     - npm run docs:build
     - echo "完成代码打包💪💪💪"
     - echo "$CI_PROJECT_NAME"
-    - cp -rf ./public/  /data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA}/
+    - [ ! -f /data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA} ] && mkdir /data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA}
+    - cp -rf ./public  /data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA}
