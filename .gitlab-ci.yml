@@ -52,4 +52,6 @@ build-job:
     - pwd
     - cd ${path}
     - pwd
+    - cd /
+    - pwd
     # - cp -rf ./public  ${path}
