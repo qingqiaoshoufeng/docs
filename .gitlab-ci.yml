@@ -6,6 +6,9 @@ stages: # 分段
 #  - deplo
 
 cache: # 缓存
+  key:
+    files:
+      - package.json
   paths:
     - node_modules
 
@@ -29,8 +32,10 @@ build-job:
   artifacts:
     expire_in: 1 week
     paths:
-      - public
+      - public/
   script:
     - echo "开始代码打包💪💪💪"
     - npm run docs:build
     - echo "完成代码打包💪💪💪"
+    - cd /data/castle-data
+    - ls
