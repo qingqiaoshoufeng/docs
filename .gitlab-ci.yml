@@ -3,7 +3,7 @@ image: node:16
 stages: # 分段
   - install
   - build
-  - deploy
+  # - deploy
 
 
 cache: # 缓存
@@ -22,7 +22,7 @@ install-job:
     - npm install
     - echo "完成install"
 
-build-job:
+build&deploy-job:
   stage: build
   only:
     - master
@@ -38,15 +38,6 @@ build-job:
     - echo "💪开始代码打包💪"
     - npm run docs:build
     - echo "完成代码打包"
-    
-
-deploy-job:
-  stage: deploy
-  only:
-    - master
-  tags:
-    - general
-  script:
     - SHORT_SHA=`git rev-parse --short ${CI_COMMIT_SHA}`
     - OUTPUT_PATH=/data/${CI_PROJECT_NAME}/${CI_PIPELINE_ID}-${SHORT_SHA}
     - echo "$OUTPUT_PATH"
@@ -56,4 +47,6 @@ deploy-job:
       fi 
     - cp -rf ./public/* ${OUTPUT_PATH}
     - cp -rf ./public/* /data/${CI_PROJECT_NAME}/latest
+    
+    
   
