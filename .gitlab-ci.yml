@@ -41,7 +41,6 @@ build-job:
     - echo "$CI_PROJECT_NAME"
     - path=/data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA}
     - echo "$path"
-    # - pwd
     # - mkdir -p ${path}
     # - if [ ! -f /data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA} ]; then echo "1111111111111111"; fi
     # - if [ ! -f ${path}} ]; then echo "2222222221"; fi
