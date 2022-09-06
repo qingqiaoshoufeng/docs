@@ -38,7 +38,7 @@ build-job:
     - echo "开始代码打包💪💪💪"
     # - npm run docs:build
     - echo "完成代码打包💪💪💪"
-    - SHORT_SHA=${git rev-parse --short ${CI_COMMIT_SHA}}
+    - SHORT_SHA=`git rev-parse --short ${CI_COMMIT_SHA}`
     - path=/data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA}
     - echo "$path"
     # - if [ ! -f ${path}} ]; then mkdir -p ${path}; fi
