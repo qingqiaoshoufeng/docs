@@ -1,13 +1,10 @@
 image: node:16
 
-default:
-  before_script: 
-    - mkdir -p /data
-
 stages: # 分段
   - install
   - build
 #  - deplo
+
 
 cache: # 缓存
   key: ${CI_BUILD_REF_NAME}
@@ -35,6 +32,8 @@ build-job:
     expire_in: 1 week
     paths:
       - public/
+  before_script: 
+    - mkdir -p /data
   script:
     - echo "开始代码打包💪💪💪"
     - npm run docs:build
