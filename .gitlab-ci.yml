@@ -39,7 +39,7 @@ build-job:
     - npm run docs:build
     - echo "完成代码打包💪💪💪"
     - SHORT_SHA=`git rev-parse --short ${CI_COMMIT_SHA}`
-    - PATH=/data/${CI_PROJECT_NAME}/`${CI_PIPELINE_ID}_${SHORT_SHA}`
+    - PATH=/data/${CI_PROJECT_NAME}/${CI_PIPELINE_ID}-${SHORT_SHA}
     # - if [ ! -f ${path}} ]; then mkdir -p ${path}; fi
     - |
       if [ ! -d ${PATH} ]; then
