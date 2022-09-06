@@ -36,7 +36,6 @@ build-job:
     - npm run docs:build
     - echo "完成代码打包💪💪💪"
     - echo "$CI_PROJECT_NAME"
-    - ls
     - path=/data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA}
     - echo "$path"
     - mkdir -p ${path}
@@ -48,6 +47,7 @@ build-job:
         echo 'llll====='
         mkdir -p ${path}
       fi 
-    # - ls
-    # - cd ${path}
+    - cd /data
+    - ls
+    - cd ${path}
     # - cp -rf ./public  ${path}
