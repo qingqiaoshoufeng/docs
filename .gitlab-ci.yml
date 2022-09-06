@@ -18,7 +18,7 @@ install-job:
     - general
   script:
     - echo "开始install🔥🔥🔥"
-    - npm install
+    # - npm install
     - echo "完成install🔥🔥🔥"
 
 build-job:
@@ -33,7 +33,6 @@ build-job:
       - public/
   script:
     - echo "开始代码打包💪💪💪"
-    - npm run docs:build
+    # - npm run docs:build
     - echo "完成代码打包💪💪💪"
-    - pwd
-    - ls
+    - echo "$CI_PROJECT_NAME"
