@@ -46,7 +46,12 @@ build&deploy-job:
         mkdir -p ${OUTPUT_PATH}
       fi 
     - cp -rf ./public/* ${OUTPUT_PATH}
-    - cp -rf ./public/* /data/${CI_PROJECT_NAME}/latest
+    - OUTPUT_LATEST_PATH=/data/${CI_PROJECT_NAME}/latest
+    - |
+      if [ ! -d ${OUTPUT_LATEST_PATH} ]; then
+        mkdir -p ${OUTPUT_LATEST_PATH}
+      fi 
+    - cp -rf ./public/* ${OUTPUT_LATEST_PATH}
     
     
   
