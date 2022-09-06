@@ -28,10 +28,10 @@ build-job:
     - master
   tags:
     - general
-  artifacts:
-    expire_in: 1 week
-    paths:
-      - public/
+  # artifacts:
+  #   expire_in: 1 week
+  #   paths:
+  #     - public/
   before_script: 
     - mkdir -p /data
   script:
@@ -39,24 +39,14 @@ build-job:
     - npm run docs:build
     - echo "完成代码打包💪💪💪"
     - SHORT_SHA=`git rev-parse --short ${CI_COMMIT_SHA}`
-    # # - PATH=/data/${CI_PROJECT_NAME}/${CI_PIPELINE_ID}_${SHORT_SHA}
-    # - PATH=/data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA}
-    # - echo $PATH
-    # # - if [ ! -f ${path}} ]; then mkdir -p ${path}; fi
-    # - |
-    #   if [ ! -d ${PATH} ]; then
-    #     mkdir -p ${PATH}
-    #   fi 
-    # - cp -rf ./public/* ${PATH}
-
-    - path=/data/${CI_PROJECT_NAME}/${CI_PIPELINE_ID}-${SHORT_SHA}
-    - echo "$path"
-    # - if [ ! -f ${path}} ]; then mkdir -p ${path}; fi
+    - PATH=/data/${CI_PROJECT_NAME}/${CI_PIPELINE_ID}-${SHORT_SHA}
+    - echo "$PATH"
+    # - if [ ! -f ${PATH}} ]; then mkdir -p ${PATH}; fi
     - |
-      if [ ! -d ${path} ]; then
-        mkdir -p ${path}
+      if [ ! -d ${PATH} ]; then
+        mkdir -p ${PATH}
       fi 
-    - cp -rf ./public/* ${path}
+    - cp -rf ./public/* ${PATH}
 
 
   
