@@ -1,5 +1,11 @@
 image: node:16
 
+default:
+  tags:
+    - general
+  before_script: 
+    - mkdir -p /data
+
 stages: # 分段
   - install
   - build
@@ -31,8 +37,6 @@ build-job:
     expire_in: 1 week
     paths:
       - public/
-  before_script: 
-    - mkdir -p /data
   script:
     - echo "开始代码打包💪💪💪"
     - npm run docs:build
