@@ -38,7 +38,9 @@ build-job:
     - echo "$CI_PROJECT_NAME"
     - path=/data/${CI_PROJECT_NAME}/${CI_COMMIT_SHA}
     - |
-      if [ ! -d "${path}" ]; then
-        mkdir -p "${path}"
+      if [ ! -d ${path} ]; then
+        mkdir -p ${path}
       fi 
+    - ls
+    - cd ${path}
     - cp -rf ./public  ${path}
