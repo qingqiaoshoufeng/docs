@@ -19,7 +19,7 @@ install-job:
     - general
   script:
     - echo "🔥开始install🔥"
-    - npm install
+    - npm install --registry=http://10.13.4.128:4873
     - echo "完成install"
 
 build&deploy-job:
