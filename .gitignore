@@ -3,6 +3,10 @@ node_modules
 docs/.vitepress/dist
 public
 
+docs/.vuepress/.temp/
+docs/.vuepress/.cache/
+docs/.vuepress/dist/
+
 
 # local env files
 .env.local
