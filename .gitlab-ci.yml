@@ -19,7 +19,7 @@ install-job:
     - general
   script:
     - echo "🔥开始install🔥"
-    - npm install --registry=http://10.13.4.128:4873
+    - yarn --registry=http://10.13.4.128:4873
     - echo "完成install"
 
 build&deploy-job:
@@ -36,7 +36,7 @@ build&deploy-job:
     - mkdir -p /data
   script:
     - echo "💪开始代码打包💪"
-    - npm run docs:build
+    - yarn docs:build
     - echo "完成代码打包"
     # - SHORT_SHA=`git rev-parse --short ${CI_COMMIT_SHA}`
     # - OUTPUT_PATH=/data/${CI_PROJECT_NAME}/${CI_PIPELINE_ID}-${SHORT_SHA}
