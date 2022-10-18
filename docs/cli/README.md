@@ -35,8 +35,115 @@ yarn install
 yarn run dev
 ```
 
-## 目录介绍
+## 命令行界面
 
-## 命令
+在项目中，可以在 npm scripts 中使用 castle 可执行文件，或者直接使用 npx castle 运行它。下面是通过脚手架创建的 castle 项目中默认的 npm scripts：
+
+```json
+{
+  "scripts": {
+    "dev": "castle dev", // 启动开发服务器
+    "build": "castle build", // 为生产环境构建产物
+  },
+}
+```
 
 ## 配置
+
+项目配置文件路径 `src/config/settings.mjs`，最基础的配置文件：
+
+```js
+// settings.mjs
+export default {
+  // 配置选项 
+}
+```
+
+### title
+
+- **类型:** `string`
+- **默认值:** `Castle Template`
+
+项目标题，将会在顶部导航栏左侧和登陆界面显示
+
+---
+
+### homePath
+
+- **类型:** `string`
+- **默认值:** `/home`
+
+登陆之后跳转的默认页面
+
+---
+
+### watermarkContent
+
+- **类型:** `string`
+- **默认值:** `''`
+
+界面水印文字
+
+---
+
+### copyright
+
+- **类型:** `string`
+- **默认值:** `'Copyright @2022 Huaxin. All Rights Reserved'`
+
+版权信息
+
+---
+
+### tokenKeyName
+
+- **类型:** `string`
+- **默认值:** `''`
+
+Token 在 localStorage 存放的名称
+
+---
+
+### httpInterceptors.request
+
+- **类型:** `function`
+
+http 全局请求拦截器，配置详情参考[axios 拦截器](https://axios-http.com/zh/docs/interceptors)。示例：
+```js
+// settings.mjs
+export default{
+  httpInterceptors: {
+    request: (config) => {
+      config.headers.Authorization = `Bearer xxx`
+      return config
+    }
+  },
+}
+```
+
+---
+
+### httpInterceptors.response
+
+- **类型:** `function`
+
+http 全局响应拦截器，配置详情参考[axios 拦截器](https://axios-http.com/zh/docs/interceptors)。示例：
+```js
+// settings.mjs
+export default{
+  httpInterceptors: {
+    response: [
+      (response) => {
+        // 2xx 范围内的状态码都会触发该函数。
+        // 对响应数据做点什么
+        return response;
+      }, 
+      (error) => {
+        // 超出 2xx 范围的状态码都会触发该函数。
+        // 对响应错误做点什么
+        return Promise.reject(error);
+      }
+    ]
+  },
+}
+```
