@@ -31,3 +31,21 @@
     - sort (number)：排序的权重，越大越靠后
 
 ### 外部链接   
+
+通过 [SFC 自定义语法路由数据](./router.md#sfc-自定义语法路由数据)对应的参数处理。
+
+参考：
+
+```json
+<route>
+  {
+    path: "https://next.antdv.com/",
+    meta: {
+      title: "外部链接",
+      icon: "DashboardOutlined",
+      target: "_blank",
+      sort: 3
+    }
+  }
+</route>
+```
