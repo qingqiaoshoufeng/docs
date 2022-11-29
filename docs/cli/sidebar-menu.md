@@ -11,11 +11,11 @@
     - hideChildrenInMenu (boolean)：隐藏所有子目录
 
     ```json
-    <route>
+    <route lang="json">
       {
-        meta: {
-          hideChildrenInMenu: true,
-          hideInMenu: true,
+        "meta": {
+          "hideChildrenInMenu": true,
+          "hideInMenu": true,
         }
       }
     </route>
@@ -27,25 +27,29 @@
 
 ### 目录排序
 
-- 可以通过 [SFC 自定义语法路由数据](./router.md#sfc-自定义语法路由数据) 里面 `meta` 里面的配置来隐藏目录
-    - sort (number)：排序的权重，越大越靠后
+可以通过 [SFC 自定义语法路由数据](./router.md#sfc-自定义语法路由数据) 参数 `meta.sort` 来控制排序
+  - sort (number)：排序的权重，越大越靠后
 
 ### 外部链接   
 
-通过 [SFC 自定义语法路由数据](./router.md#sfc-自定义语法路由数据)对应的参数处理。
+通过 [SFC 自定义语法路由数据](./router.md#sfc-自定义语法路由数据)参数 `meta.target`处理。
 
 参考：
 
 ```json
-<route>
+<route lang="json">
   {
-    path: "https://next.antdv.com/",
-    meta: {
-      title: "外部链接",
-      icon: "DashboardOutlined",
-      target: "_blank",
-      sort: 3
+    "path": "https://next.antdv.com/",
+    "meta": {
+      "title": "外部链接",
+      "target": "_blank"
     }
   }
 </route>
 ```
+
+### 菜单高亮
+
+通过 [SFC 自定义语法路由数据](./router.md#sfc-自定义语法路由数据)参数 `meta.activeMenuPath`来匹配侧边栏或顶部测单的`path`来高亮。
+  - activeMenuPath (string)：路由path
+

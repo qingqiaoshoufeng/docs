@@ -36,6 +36,7 @@ export default defineUserConfig({
             '/cli/router.md',
             '/cli/sidebar-menu.md',
             '/cli/permission.md',
+            '/cli/global.md',
           ],
         },
       ],

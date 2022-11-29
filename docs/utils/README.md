@@ -21,17 +21,43 @@ export default {
 ### downloadFile
 
 ```js
-downloadFile(path, fileName, [config = {}], [method = 'get'])
+downloadFile(path, fileName, config: object = {}, method: string = 'get')
 ```
 
-**参数**：
+**参数：**：
 1. `path` (string): 下载链接
 2. `fileName` (string): 下载文件名
-3. `[config = {}]` (object): 其他请求参数，见 [axios-config](http://axios-js.com/zh-cn/docs/index.html#axios-config)
-4. `[method = 'get']` (string): 请求方式，默认为 get
+3. `config = {}` (object): 其他请求参数，见 [axios-config](http://axios-js.com/zh-cn/docs/index.html#axios-config)
+4. `method = 'get'` (string): 请求方式，默认为 get
 
 **返回：**
 
 (promise): promise 对象
 
 ---
+
+### eventBus
+
+事件总线，封装好的 [mitt](https://www.npmjs.com/package/mitt)。
+
+**使用：**
+
+```js
+// listen to an event
+bus.on('foo', e => console.log('foo', e) )
+
+// listen to all events
+bus.on('*', (type, e) => console.log(type, e) )
+
+// fire an event
+bus.emit('foo', { a: 'b' })
+
+// clearing all events
+bus.clear()
+
+// working with handler references:
+function onFoo() {}
+bus.on('foo', onFoo)   // listen
+bus.off('foo', onFoo)  // unlisten
+```
+

@@ -45,14 +45,16 @@ yarn run dev
 }
 ```
 
-## 配置
+## 项目配置
 
-项目配置文件路径 `src/config/settings.mjs`，最基础的配置文件：
+项目配置文件位于路径 `src/config/settings.js`，最基础的配置文件：
 
 ```js
 // settings.mjs
 export default {
+  // ...
   // 配置选项 
+  // ...
 }
 ```
 
@@ -68,25 +70,34 @@ export default {
 ### homePath
 
 - **类型:** `string`
-- **默认值:** `/home`
+- **默认值:** `/`
 
-登陆之后跳转的默认页面
+登陆之后跳转的默认页面。注：用户默认跳转到此用户拥有权限的第一个页面
 
 ---
 
 ### watermarkContent
 
-- **类型:** `string`
-- **默认值:** `''`
+- **类型:** `(userInfo: unknown) => string`
+- **默认值:** `(userInfo) => userInfo?.name`
 
 界面水印文字
 
 ---
 
+### themeConfigProvider
+
+- **类型:** `object`
+- **默认值:** `{}`
+
+组件提供统一的全局化配置，详见：[全局化配置](https://antdv.com/components/config-provider-cn)
+
+---
+
 ### copyright
 
-- **类型:** `string`
-- **默认值:** `'Copyright @2022 Huaxin. All Rights Reserved'`
+- **类型:** `() => string`
+- **默认值:** `() => 'Copyright @2022 Huaxin. All Rights Reserved'`
 
 版权信息
 
@@ -95,7 +106,7 @@ export default {
 ### tokenKeyName
 
 - **类型:** `string`
-- **默认值:** `''`
+- **默认值:** `'token'`
 
 Token 在 localStorage 存放的名称
 
@@ -144,3 +155,88 @@ export default{
   },
 }
 ```
+
+### userApiImplement
+
+用户认证鉴权等一系列实现过程
+
+- **类型:** 
+```ts
+{ 
+  login: (loginForm: { username: string, password: string, encryptPassword: string } ) => Promise<string>, 
+  logout: () => Promise<any>, 
+  getUserInfo: () => Promise<{ name: string, [key: string]: any}>, 
+  getPermissionData: (userInfo: object) => Promise<{ permissionCodes: string[], [key: string]: any }> 
+}
+```
+
+- **示例:** 
+```js
+{
+  // 用户登录的实现方法
+  async login(loginForm) {
+    // ... 
+    // 登录请求实现过程，例如：const { token } = await login(loginForm)
+    // ...
+    return Promise.resolve(token); // 返回数据：token<string>
+  },
+
+  // 用户登出的实现方法
+  async logout() {
+    // ... 
+    // 登出请求实现过程，例如：await logOut()
+    // ...
+    return Promise.resolve(); 
+  },
+
+  // 获取用户信息的实现方法
+  async getUserInfo() {
+    // ... 
+    // 获取用户信息实现过程，例如：const userInfo = await getUserInfo()
+    // ...
+    return Promise.resolve(userInfo); // 返回数据：userInfo<object>，请务必保证 userInfo 里面包含 name<string>
+  },
+
+  // 获取用户权限数据的实现方法
+  async getPermissionData(userInfo) {
+    // ... 
+    // 获取用户权限数据，例如：const { permissionCodes } = await getPermissionData()
+    // 或者可以从用户信息里面（userInfo）获取，根据实际接口情况设计来，例如 const { permissionCodes } = userInfo
+    // ...
+    return Promise.resolve(permissions); // 返回数据：permissions<object>，请务必保证 permissions 里面包含 permissionCodes: string[]
+  },
+}
+```
+
+### layout
+
+- **类型:** `object`
+- **默认值:** `{}`
+
+布局配置，详见：[Ant Design Pro Layout](https://github.com/vueComponent/pro-components/tree/next/packages/pro-layout)
+
+
+## 环境配置
+
+项目配置文件位于路径 `src/config/project-settings.mjs`，最基础的配置文件：
+
+```js
+// project-settings.mjs
+export default {
+  // ...
+  // 配置选项 
+  // ...
+}
+```
+
+### server
+
+- **类型：** `({ command: string, mode: string, env: object }) => object`
+
+开发服务配置选项，详情见：[Vite 开发服务器选项](https://cn.vitejs.dev/config/server-options.html)
+
+其中参数 command 和 mode，请见 [Vite 情景配置](https://cn.vitejs.dev/config/#conditional-config)，env 请见 [Vite 环境变量](https://cn.vitejs.dev/config/#async-config)
+
+## 环境变量
+
+Vite 在一个特殊的 import.meta.env 对象上暴露环境变量，详见：[Vite 环境变量和模式](https://cn.vitejs.dev/guide/env-and-mode.html#env-variables-and-modes)

@@ -11,7 +11,7 @@ actions:
     type: secondary
 features:
   - title: Castle CLI
-    details: 项目初始化定制脚手架
+    details: 开箱即用，项目标准深度定制脚手架
   - title: UI组件库
     details: 基于 ant-design-vue 深度定制组件库
   - title: 其他
@@ -22,7 +22,7 @@ features:
 #     details: 灵活的插件API，使得插件可以为你的站点提供许多即插即用的功能。
 #   - title: 打包工具
 #     details: 默认的打包工具是 Vite ，也同样支持 Webpack 。选一个你喜欢的来使用吧！
-# footer: MIT Licensed | Copyright © 2018-present Evan You
+footer: MIT Licensed | Copyright © 2022-present 华信设计院
 ---
 
 <!-- ### 像数 1, 2, 3 一样容易

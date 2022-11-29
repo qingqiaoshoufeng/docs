@@ -89,11 +89,11 @@ src/pages/
 JSON/JSON5:
 
 ```json
-<route>
+<route lang="json">
 {
-  name: "name-override",
-  meta: {
-    requiresAuth: false
+  "name": "name-override",
+  "meta": {
+    "requiresAuth": false
   }
 }
 </route>
