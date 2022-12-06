@@ -7,7 +7,7 @@ export default defineUserConfig({
   lang: 'zh-CN',
   title: '🏰 Castle',
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/images/logo.png' }],
+    ['link', { rel: 'icon', type: 'image/png', href: '/images/castle.png' }],
   ],
   description: 'Castle 文档中心',
   base: '/',
