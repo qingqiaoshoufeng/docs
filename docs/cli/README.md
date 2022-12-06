@@ -10,7 +10,7 @@ Castle CLI是一个基于Vite的简洁的定制化脚手架，本教程将帮助
 #### 步骤1：全局安装 **@castle/castle-cli**
 
 ```sh
-yarn add @castle/castle-cli -g
+npm i @castle/castle-cli -g
 ```
 
 #### 步骤2：通过脚手架命令，补充提示所需要的信息，创建工程

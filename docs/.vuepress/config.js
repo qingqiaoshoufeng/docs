@@ -1,13 +1,18 @@
+import * as path from 'path'
 import { defineUserConfig, defaultTheme } from 'vuepress'
+// import { VpNpmBadge } from '@bfehub/vuepress-components'
+import { codeBlockPlugin } from '@bfehub/vuepress-plugin-code-block'
 
 export default defineUserConfig({
   lang: 'zh-CN',
   title: '🏰 Castle',
-  head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/images/logo.png' }],
-  ],
+  head: [['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }]],
   description: 'Castle 文档中心',
   base: '/docs/latest/',
+  // enhance({ app }) {
+  //   app.use(VpNpmBadge)
+  // },
+  plugins: [codeBlockPlugin()],
   theme: defaultTheme({
     navbar: [
       {
