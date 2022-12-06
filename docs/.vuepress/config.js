@@ -10,7 +10,7 @@ export default defineUserConfig({
     ['link', { rel: 'icon', type: 'image/png', href: '/images/logo.png' }],
   ],
   description: 'Castle 文档中心',
-  base: '/docs/latest/',
+  base: '/',
   // enhance({ app }) {
   //   app.use(VpNpmBadge)
   // },
