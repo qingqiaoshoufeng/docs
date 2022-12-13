@@ -2,6 +2,7 @@ import * as path from 'path'
 import { defineUserConfig, defaultTheme } from 'vuepress'
 // import { VpNpmBadge } from '@bfehub/vuepress-components'
 import { codeBlockPlugin } from '@bfehub/vuepress-plugin-code-block' // https://bfehub.github.io/vmi/zh/
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -14,7 +15,12 @@ export default defineUserConfig({
   // enhance({ app }) {
   //   app.use(VpNpmBadge)
   // },
-  plugins: [codeBlockPlugin()],
+  plugins: [
+    codeBlockPlugin(),
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, './components'),
+    }),
+  ],
   theme: defaultTheme({
     navbar: [
       {
@@ -33,6 +39,10 @@ export default defineUserConfig({
         text: '工具集',
         link: '/utils/',
       },
+      {
+        text: '编码规范',
+        link: '/front-standard-guide/',
+      },
     ],
     sidebar: {
       '/cli/': [
@@ -44,6 +54,28 @@ export default defineUserConfig({
             '/cli/sidebar-menu.md',
             '/cli/permission.md',
             '/cli/global.md',
+          ],
+        },
+      ],
+      '/ui-component/': [
+        {
+          text: 'components-template',
+          children: [
+            '/ui-component/components-template/README.md',
+            '/ui-component/components-template/HxDemo.md',
+          ],
+        },
+      ],
+      '/front-standard-guide/': [
+        {
+          text: '编码规范',
+          children: [
+            '/front-standard-guide/name-style-guide.md',
+            '/front-standard-guide/html-style-guide.md',
+            '/front-standard-guide/css-style-guide.md',
+            '/front-standard-guide/javascript-style-guide.md',
+            '/front-standard-guide/typescript-style-guide.md',
+            '/front-standard-guide/git-style-guide.md',
           ],
         },
       ],

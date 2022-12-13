@@ -1,0 +1,18 @@
+html,
+body {
+  background-color: var(--c-bg) !important;
+  transition: background-color var(--t-color);
+}
+body {
+  font-family: var(--font-family);
+  color: var(--c-text) !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--c-text) !important;
+}

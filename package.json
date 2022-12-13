@@ -12,7 +12,12 @@
   "devDependencies": {
     "@bfehub/vuepress-components": "^1.1.0",
     "@bfehub/vuepress-plugin-code-block": "^1.1.0",
+    "@vuepress/plugin-register-components": "^2.0.0-beta.58",
     "vue": "^3.2.37",
     "vuepress": "next"
+  },
+  "dependencies": {
+    "ant-design-vue": "^3.2.15",
+    "components-template": "^0.0.2"
   }
 }
