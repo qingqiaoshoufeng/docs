@@ -2,6 +2,8 @@
 
 ## 基础用法
 
+<demo src="./example/HxDemo-Basic.vue"></demo>
+
 ## API
 
 ### 属性
