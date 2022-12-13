@@ -1,7 +1,7 @@
 import * as path from 'path'
 import { defineUserConfig, defaultTheme } from 'vuepress'
 // import { VpNpmBadge } from '@bfehub/vuepress-components'
-import { codeBlockPlugin } from '@bfehub/vuepress-plugin-code-block'
+import { codeBlockPlugin } from '@bfehub/vuepress-plugin-code-block' // https://bfehub.github.io/vmi/zh/
 
 export default defineUserConfig({
   lang: 'zh-CN',
