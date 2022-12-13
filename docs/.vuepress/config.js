@@ -2,6 +2,7 @@ import * as path from 'path'
 import { defineUserConfig, defaultTheme } from 'vuepress'
 // import { VpNpmBadge } from '@bfehub/vuepress-components'
 import { codeBlockPlugin } from '@bfehub/vuepress-plugin-code-block'
+import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 
 export default defineUserConfig({
   lang: 'zh-CN',
@@ -14,7 +15,12 @@ export default defineUserConfig({
   // enhance({ app }) {
   //   app.use(VpNpmBadge)
   // },
-  plugins: [codeBlockPlugin()],
+  plugins: [
+    codeBlockPlugin(),
+    registerComponentsPlugin({
+      componentsDir: path.resolve(__dirname, './components')
+    })
+  ],
   theme: defaultTheme({
     navbar: [
       {
@@ -47,6 +53,15 @@ export default defineUserConfig({
           ],
         },
       ],
+      '/ui-component/': [
+        {
+          text: 'components-template',
+          children: [
+            '/ui-component/components-template/README.md',
+            '/ui-component/components-template/HxDemo.md',
+          ]
+        }
+      ]
     },
   }),
 })
