@@ -17,7 +17,7 @@
     "vuepress": "next"
   },
   "dependencies": {
-    "ant-design-vue": "^3.2.15",
-    "components-template": "^0.0.2"
+    "@castle/components-template": "^0.0.4",
+    "ant-design-vue": "^3.2.15"
   }
 }
