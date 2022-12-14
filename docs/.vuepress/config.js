@@ -10,7 +10,7 @@ export default defineUserConfig({
   head: [
     ['link', { rel: 'icon', type: 'image/png', href: '/images/castle.png' }],
   ],
-  description: 'Castle 文档中心',
+  description: '致力于构建和沉淀包括但不限于前端开发的所有技术文档',
   base: '/',
   // enhance({ app }) {
   //   app.use(VpNpmBadge)
@@ -28,8 +28,8 @@ export default defineUserConfig({
         link: '/cli/',
       },
       {
-        text: 'UI组件库',
-        link: '/ui-component/',
+        text: '组件',
+        link: '/components/',
       },
       {
         text: '开发环境',
@@ -57,12 +57,13 @@ export default defineUserConfig({
           ],
         },
       ],
-      '/ui-component/': [
+      '/components/': [
         {
-          text: 'components-template',
+          text: '组件',
           children: [
-            '/ui-component/components-template/README.md',
-            '/ui-component/components-template/HxDemo.md',
+            '/components/README.md',
+            '/components/components-template/README.md',
+            // '/components/components-template/HxDemo.md',
           ],
         },
       ],

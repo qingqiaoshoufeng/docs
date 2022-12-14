@@ -15,4 +15,9 @@ h4,
 h5,
 h6 {
   color: var(--c-text) !important;
+  margin-bottom: 0.5em !important;
+}
+
+.custom-container-title {
+  margin: 1em 0 0.5em 0 !important;
 }

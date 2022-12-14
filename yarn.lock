@@ -62,6 +62,11 @@
     vue "^3.2.33"
     vue-router "^4.0.15"
 
+"@castle/components-template@^0.0.4":
+  version "0.0.4"
+  resolved "http://10.13.4.128:4873/@castle%2fcomponents-template/-/components-template-0.0.4.tgz#020ad736e363b52b7cbcf45d82776e933d3ca0cd"
+  integrity sha512-eVySrJlPinN18hFUn9+wuJXW7248mVe0IwVKXsr/hKD58eUJ8QAJmO48kWCDxnkHuOfeFu9MqGxjQvQRsuJuvQ==
+
 "@ctrl/tinycolor@^3.4.0":
   version "3.5.0"
   resolved "http://10.13.4.128:4873/@ctrl%2ftinycolor/-/tinycolor-3.5.0.tgz#6e52b3d1c38d13130101771821e09cdd414a16bc"
@@ -943,11 +948,6 @@ clone@^1.0.2:
   version "1.0.4"
   resolved "http://10.13.4.128:4873/clone/-/clone-1.0.4.tgz#da309cc263df15994c688ca902179ca3c7cd7c7e"
   integrity sha1-2jCcwmPfFZlMaIypAheco8fNfH4=
-
-components-template@^0.0.2:
-  version "0.0.2"
-  resolved "http://10.13.4.128:4873/components-template/-/components-template-0.0.2.tgz#b3bbaf914e5a443335c2a993c127e45a8e414b2d"
-  integrity sha512-f9neLHIHm1Gxl7Adf6YLVAsboeoLNKLXj2LXoQ3DA/7BZqZe2fnV5TPwr5hhDCKZOdsmi3C5gCMiwyL6Q7Yl4A==
 
 compute-scroll-into-view@^1.0.20:
   version "1.0.20"
