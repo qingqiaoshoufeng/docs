@@ -606,9 +606,6 @@
 
   Extend  相比 Mixin 的好处是，如果无参数的 mixin 被多处使用，编译后会输出多段重复的代码。这时如果使用 @extend，可以避免这个问题。但是 gzip 等压缩工具就可以解决重复代码的问题，因此大多数情况下，你只需要使用 mixin 来让代码符合 DRY 原则。
 
-## 配套工具
-
-- [stylelint-config-ali](https://www.npmjs.com/package/stylelint-config-ali)：本规范配套的 [stylelint](https://stylelint.io/) 规则包
 
 ## 参考资料
 

@@ -699,6 +699,3 @@ TypeScript 是微软开发的一款开源编程语言，它是 JavaScript 的超
   function f(x?: ...number[]): void;
   ```
 
-## 配套工具
-
-- [eslint-config-ali](https://www.npmjs.com/package/eslint-config-ali)：本规范配套的 [ESLint](http://eslint.org/) 规则包，可使用 `eslint-config-ali/typescript` 或 `eslint-config-ali/typescript/xx` 引入本文介绍的规则

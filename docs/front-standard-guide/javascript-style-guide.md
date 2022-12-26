@@ -2898,9 +2898,6 @@ JavaScript 编码规范主要包含编码风格、语言特性、注释、命名
   };
   ```
 
-## 配套工具
-
-- [eslint-config-ali](https://www.npmjs.com/package/eslint-config-ali)：本规范配套的 [ESLint](http://eslint.org/) 规则包
 
 ## 参考资料
 

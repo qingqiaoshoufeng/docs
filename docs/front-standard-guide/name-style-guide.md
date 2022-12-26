@@ -1,46 +1,107 @@
 # 命名规范
 
-Naming things is hard. This sheet attempts to make it easier.
 
-Although these suggestions can be applied to any programming language, I will use JavaScript to illustrate them in practice.
+## 使用英语
 
-## English language
-
-Use English language when naming your variables and functions.
+命名变量和函数时使用英语。
 
 ```js
 /* Bad */
-const primerNombre = 'Gustavo'
-const amigos = ['Kate', 'John']
+const xingming = 'Gustavo'
+const pengyou = ['Kate', 'John']
+
 /* Good */
 const firstName = 'Gustavo'
 const friends = ['Kate', 'John']
 ```
 
-> Like it or not, English is the dominant language in programming: the syntax of all programming languages is written in English, as well as countless documentations and educational materials. By writing your code in English you dramatically increase its cohesiveness.
-## Naming convention
+## 命名约定
 
-Pick **one** naming convention and follow it. It may be `camelCase`, `PascalCase`, `snake_case`, or anything else, as long as it remains consistent. Many programming languages have their own traditions regarding naming conventions; check the documentation for your language or study some popular repositories on Github!
+- **变量**
+
+小驼峰式命名法
 
 ```js
 /* Bad */
-const page_count = 5
-const shouldUpdate = true
+const setConut = 10;
+const getTitle = '啦啦啦';
+
 /* Good */
-const pageCount = 5
-const shouldUpdate = true
-/* Good as well */
-const page_count = 5
-const should_update = true
+const maxCount = 10;
+const tableTitle = '啦啦啦';
 ```
+
+- **常量**
+
+使用大写字母和下划线来组合命名，下划线用来分割单词
+
+```js
+const MAX_COUNT = 10;
+const URL = '//www.huifenqi.com';
+```
+
+- **函数**
+
+小驼峰式命名法。
+
+```js
+/* Bad */
+function Read(): boolean {
+  return true;
+}
+
+/* Good */
+function getName(): string {
+  return this.name;
+}
+```
+
+- **类 & 构造函数**
+
+大驼峰式命名法，首字母大写
+
+```js
+class Person {
+  public name: string;
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+const person = new Person('mevyn');
+```
+
+- **类的成员**
+
+1. 公共属性和方法：跟变量和函数的命名一样。
+2. 私有属性和方法：前缀为_(下划线)，后面跟公共属性和方法一样的命名方式。
+
+```js
+class Person {
+  private _name: string;
+  constructor() { }
+  // 公共方法
+  getName() {
+    return this._name;
+  }
+  // 公共方法
+  setName(name) {
+    this._name = name;
+  }
+}
+const person = new Person();
+person.setName('mervyn');
+person.getName();
+```
+
 
 ## S-I-D
 
-A name must be _short_, _intuitive_ and _descriptive_:
+名称必须简短、直观且具有描述性：
 
-- **Short**. A name must not take long to type and, therefore, remember;
-- **Intuitive**. A name must read naturally, as close to the common speech as possible;
-- **Descriptive**. A name must reflect what it does/possesses in the most efficient way.
+- **Short**. 一个名字不能花很长时间输入，因此要记住;
+- **Intuitive**. 名字必须读起来自然，尽可能接近普通话;
+- **Descriptive**. 名称必须以最有效的方式反映它的作用/拥有的东西.
 
 ```js
 /* Bad */
@@ -53,9 +114,9 @@ const hasPagination = postCount > 10
 const shouldPaginate = postCount > 10 // alternatively
 ```
 
-## Avoid contractions
+## 避免缩写
 
-Do **not** use contractions. They contribute to nothing but decreased readability of the code. Finding a short, descriptive name may be hard, but contraction is not an excuse for not doing so.
+不要使用缩写。它们只会降低代码的可读性。找到一个简短的描述性名称可能很难，但使用缩写并不是不这样做的借口。
 
 ```js
 /* Bad */
@@ -64,9 +125,9 @@ const onItmClk = () => {}
 const onItemClick = () => {}
 ```
 
-## Avoid context duplication
+## 避免上下文重复
 
-A name should not duplicate the context in which it is defined. Always remove the context from a name if that doesn't decrease its readability.
+名称不应与定义它的上下文重复。如果不降低名称的可读性，请始终从名称中删除上下文。
 
 ```js
 class MenuItem {
@@ -77,9 +138,9 @@ class MenuItem {
 }
 ```
 
-## Reflect the expected result
+## 反映预期结果
 
-A name should reflect the expected result.
+名称应该反映预期的结果。
 
 ```jsx
 /* Bad */
@@ -92,36 +153,36 @@ return <Button disabled={isDisabled} />
 
 ---
 
-# Naming functions
+# 命名函数
 
-## A/HC/LC Pattern
+## A/HC/LC 模式
 
-There is a useful pattern to follow when naming functions:
+命名函数时有一个万能的模式可以遵循:
 
 ```
 prefix? + action (A) + high context (HC) + low context? (LC)
 ```
 
-Take a look at how this pattern may be applied in the table below.
+在下表中查看如何应用此模式。
 
-| Name                   | Prefix   | Action (A) | High context (HC) | Low context (LC) |
+| Name (命名)    | Prefix (前缀)   | Action (A 动作) | High context (HC 高语境) | Low context (LC 低语境) |
 | ---------------------- | -------- | ---------- | ----------------- | ---------------- |
 | `getUser`              |          | `get`      | `User`            |                  |
 | `getUserMessages`      |          | `get`      | `User`            | `Messages`       |
 | `handleClickOutside`   |          | `handle`   | `Click`           | `Outside`        |
 | `shouldDisplayMessage` | `should` | `Display`  | `Message`         |                  |
 
-> **Note:** The order of context affects the meaning of a variable. For example, `shouldUpdateComponent` means _you_ are about to update a component, while `shouldComponentUpdate` tells you that _component_ will update on itself, and you are but controlling when it should be updated.
-> In other words, **high context emphasizes the meaning of a variable**.
+> **Note:** 上下文的顺序会影响变量的含义。例如, `shouldUpdateComponent` 表示您即将更新一个组件，而 `shouldComponentUpdate` 告诉您该组件将自行更新，而您只是控制何时应该更新。
+> 换句话说, **高语境强调变量的意义**.
 ---
 
-## Actions
+## Actions 动作
 
-The verb part of your function name. The most important part responsible for describing what the function _does_.
+函数名称的动词部分。最重要的部分负责描述函数的作用.
 
 ### `get`
 
-Accesses data immediately (i.e. shorthand getter of internal data).
+立即访问数据（即内部数据的速记获取器）。
 
 ```js
 function getFruitCount() {
@@ -129,8 +190,8 @@ function getFruitCount() {
 }
 ```
 
-> See also [compose](#compose).
-You can use `get` when performing asynchronous operations as well:
+> 另见 [compose](#compose).
+您也可以在执行异步操作时使用 `get`：
 
 ```js
 async function getUser(id) {
@@ -141,7 +202,7 @@ async function getUser(id) {
 
 ### `set`
 
-Sets a variable in a declarative way, with value `A` to value `B`.
+以声明方式设置变量，把值`A`设置为值`B`.
 
 ```js
 let fruits = 0
@@ -154,7 +215,7 @@ console.log(fruits) // 5
 
 ### `reset`
 
-Sets a variable back to its initial value or state.
+将变量设置回其初始值或状态。
 
 ```js
 const initialFruits = 5
@@ -170,9 +231,9 @@ console.log(fruits) // 5
 
 ### `remove`
 
-Removes something _from_ somewhere.
+从某处移除某物。
 
-For example, if you have a collection of selected filters on a search page, removing one of them from the collection is `removeFilter`, **not** `deleteFilter` (and this is how you would naturally say it in English as well):
+例如，如果您在搜索页面上有一组选定的过滤器，从集合中删除其中一个是 `removeFilter`, 而不是 `deleteFilter` （这也是您自然会用英语表达的方式）：
 
 ```js
 function removeFilter(filterName, filters) {
@@ -182,12 +243,12 @@ const selectedFilters = ['price', 'availability', 'size']
 removeFilter('price', selectedFilters)
 ```
 
-> See also [delete](#delete).
+> 另见 [delete](#delete).
 ### `delete`
 
-Completely erases something from the realms of existence.
+从存在领域彻底抹去某些东西。
 
-Imagine you are a content editor, and there is that notorious post you wish to get rid of. Once you clicked a shiny "Delete post" button, the CMS performed a `deletePost` action, **not** `removePost`.
+假设您是一名内容编辑，您希望删除臭名昭著的帖子。一旦你点击了一个闪亮的“删除帖子”按钮，CMS 就会执行一个 `deletePost` 动作, 而不是 `removePost`.
 
 ```js
 function deletePost(id) {
@@ -195,17 +256,11 @@ function deletePost(id) {
 }
 ```
 
-> See also [remove](#remove).
-> **`remove` or `delete`?**
->
-> When the difference between `remove` and `delete` is not so obvious to you, I'd suggest looking at their opposite actions - `add` and `create`.
-> The key difference between `add` and `create` is that `add` needs a destination while `create` **requires no destination**. You `add` an item _to somewhere_, but you don't "`create` it _to somewhere_".
-> Simply pair `remove` with `add` and `delete` with `create`.
->
-> Explained in detail [here](https://github.com/kettanaito/naming-cheatsheet/issues/74#issue-1174942962).
+> 另见 [remove](#remove).
+
 ### `compose`
 
-Creates new data from the existing one. Mostly applicable to strings, objects, or functions.
+从现有数据创建新数据。主要适用于字符串、对象或函数。
 
 ```js
 function composePageUrl(pageName, pageId) {
@@ -213,10 +268,10 @@ function composePageUrl(pageName, pageId) {
 }
 ```
 
-> See also [get](#get).
+> 另见 [get](#get).
 ### `handle`
 
-Handles an action. Often used when naming a callback method.
+处理一个动作。通常在命名回调方法时使用。
 
 ```js
 function handleLinkClick() {
@@ -229,9 +284,9 @@ link.addEventListener('click', handleLinkClick)
 
 ## Context
 
-A domain that a function operates on.
+函数运行的域。
 
-A function is often an action on _something_. It is important to state what its operable domain is, or at least an expected data type.
+函数通常是对某事的操作。重要的是要说明它的可操作域是什么，或者至少是预期的数据类型。
 
 ```js
 /* A pure function operating with primitives */
@@ -244,16 +299,14 @@ function getRecentPosts(posts) {
 }
 ```
 
-> Some language-specific assumptions may allow omitting the context. For example, in JavaScript, it's common that `filter` operates on Array. Adding explicit `filterArray` would be unnecessary.
----
 
 ## Prefixes
 
-Prefix enhances the meaning of a variable. It is rarely used in function names.
+前缀增强了变量的含义。它很少用在函数名中。
 
 ### `is`
 
-Describes a characteristic or state of the current context (usually `boolean`).
+描述当前上下文的特征或状态（通常为`boolean`）。
 
 ```js
 const color = 'blue'
@@ -266,7 +319,7 @@ if (isBlue && isPresent) {
 
 ### `has`
 
-Describes whether the current context possesses a certain value or state (usually `boolean`).
+描述当前上下文是否拥有某个值或状态（通常为`boolean`）。
 
 ```js
 /* Bad */
@@ -278,7 +331,7 @@ const hasProducts = productsCount > 0
 
 ### `should`
 
-Reflects a positive conditional statement (usually `boolean`) coupled with a certain action.
+反映了一个肯定的条件语句（通常是`boolean`）加上一个特定的动作。
 
 ```js
 function shouldUpdateUrl(url, expectedUrl) {
@@ -288,7 +341,7 @@ function shouldUpdateUrl(url, expectedUrl) {
 
 ### `min`/`max`
 
-Represents a minimum or maximum value. Used when describing boundaries or limits.
+表示最小值或最大值。在描述边界或限制时使用。
 
 ```js
 /**
@@ -302,7 +355,7 @@ function renderPosts(posts, minPosts, maxPosts) {
 
 ### `prev`/`next`
 
-Indicate the previous or the next state of a variable in the current context. Used when describing state transitions.
+指示当前上下文中变量的前一个或下一个状态。在描述状态转换时使用。
 
 ```jsx
 async function getPosts() {
@@ -313,9 +366,9 @@ async function getPosts() {
 }
 ```
 
-## Singular and Plurals
+## Singular and Plurals（单数和复数）
 
-Like a prefix, variable names can be made singular or plural depending on whether they hold a single value or multiple values.
+像前缀一样，变量名可以是单数或复数，这取决于它们是单个值还是多个值。
 
 ```js
 /* Bad */
