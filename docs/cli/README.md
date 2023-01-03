@@ -116,7 +116,9 @@ Token 在 localStorage 存放的名称
 
 - **类型:** `function`
 
-http 全局请求拦截器，配置详情参考[axios 拦截器](https://axios-http.com/zh/docs/interceptors)。示例：
+http 全局请求拦截器，配置详情参考[axios 拦截器](https://axios-http.com/zh/docs/interceptors)。
+
+示例：
 ```js
 // settings.mjs
 export default{
@@ -128,6 +130,7 @@ export default{
   },
 }
 ```
+此参数若设置，将覆盖[内置默认配置](http://10.10.3.188:9090/castle/template/blob/master/src/utils/request-interceptor.js#L18-36)
 
 ---
 
@@ -155,6 +158,7 @@ export default{
   },
 }
 ```
+此参数若设置，将覆盖[内置默认配置](http://10.10.3.188:9090/castle/template/blob/master/src/utils/request-interceptor.js#L45-105)
 
 ### userApiImplement
 
@@ -205,6 +209,24 @@ export default{
     // ...
     return Promise.resolve(permissions); // 返回数据：permissions<object>，请务必保证 permissions 里面包含 permissionCodes: string[]
   },
+}
+```
+
+### userNavigation
+
+- **类型:** `array`
+- **默认值:** `undefined`
+
+用户下拉菜单配置
+
+示例：
+```js
+// settings.mjs
+export default{
+  userNavigation: [{
+    label: '设置',
+    handleFn: router => router.push('/setting')
+  }],
 }
 ```
 
