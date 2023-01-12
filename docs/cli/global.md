@@ -1,7 +1,7 @@
 # 全局
 
 ### 全局状态
-可通过 `inject` 拿到 `castleStores`
+可通过 [inject](https://cn.vuejs.org/guide/components/provide-inject.html) 拿到 `castleStores`
 
 引用方式：
 ```js

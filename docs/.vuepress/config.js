@@ -43,6 +43,10 @@ export default defineUserConfig({
         text: '编码规范',
         link: '/front-standard-guide/',
       },
+      {
+        text: '前端团队文档',
+        link: '/docs/',
+      },
     ],
     sidebar: {
       '/cli/': [

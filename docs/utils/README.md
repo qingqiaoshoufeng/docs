@@ -1,6 +1,6 @@
 # Utils工具集
 
-脚手架会在应用内通过`provide`注入一些常用工具函数，此外，推荐 [vueuse](https://vueuse.org/)和[Lodash](https://www.lodashjs.com/)作为补充使用。
+脚手架会在应用内通过[provide](https://cn.vuejs.org/guide/components/provide-inject.html) 注入一些常用工具函数，此外，推荐 [vueuse](https://vueuse.org/)和[Lodash](https://www.lodashjs.com/)作为补充使用。
 
 
 引用方式：
