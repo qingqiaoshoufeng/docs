@@ -13,11 +13,16 @@
     "@bfehub/vuepress-components": "^1.1.0",
     "@bfehub/vuepress-plugin-code-block": "^1.1.0",
     "@vuepress/plugin-register-components": "^2.0.0-beta.58",
+    "less": "^4.1.3",
     "vue": "^3.2.37",
     "vuepress": "next"
   },
   "dependencies": {
+    "@antv/l7": "^2.13.1",
+    "@antv/l7-leaflet": "^0.0.3",
     "@castle/components-template": "^0.0.5",
-    "ant-design-vue": "^3.2.15"
+    "@castle/data-visualization": "^0.0.8",
+    "ant-design-vue": "^3.2.15",
+    "leaflet": "^1.9.3"
   }
 }

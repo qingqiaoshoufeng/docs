@@ -68,7 +68,7 @@ export default defineUserConfig({
           children: [
             '/components/README.md',
             '/components/components-template/README.md',
-            // '/components/components-template/HxDemo.md',
+            '/components/data-visualization/README.md',
           ],
         },
       ],
