@@ -10,6 +10,21 @@
 yarn add @castle/data-visualization
 ```
 
+## 引入
+
+### 全局引入
+main.js
+```js
+import ComponentsTemplate from "@castle/data-visualization";
+import "@castle/data-visualization/dist/style.css";
+
+app.use(ComponentsTemplate);
+```
+### 局部引入
+```js
+import { FantasyMap } from "@castle/data-visualization";
+```
+
 ## 使用
 
 ### 基本使用

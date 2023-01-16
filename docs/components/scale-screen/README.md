@@ -22,7 +22,9 @@ app.use(ComponentsTemplate);
 import { ScaleScreen } from "@castle/data-visualization";
 ```
 
-## 基本使用
+## 使用
+
+### 基本使用
 
 <demo src="./demos/BasicScreen.vue"></demo>
 
