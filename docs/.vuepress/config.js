@@ -69,6 +69,7 @@ export default defineUserConfig({
             '/components/README.md',
             '/components/components-template/README.md',
             '/components/data-visualization/README.md',
+            '/components/scale-screen/README.md',
           ],
         },
       ],
