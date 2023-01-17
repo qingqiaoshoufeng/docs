@@ -5,5 +5,5 @@
 </template>
 
 <script setup>
-import { FantasyMap } from '@castle/data-visualization'
+// import { FantasyMap } from '@castle/data-visualization'
 </script>

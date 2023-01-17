@@ -13,10 +13,10 @@
 </template>
 
 <script setup>
-import { ScaleScreen } from '@castle/data-visualization'
+// import { ScaleScreen } from '@castle/data-visualization'
 
-const fit = false;
-const lock = true;
+const fit = false
+const lock = true
 </script>
 
 <style scoped>

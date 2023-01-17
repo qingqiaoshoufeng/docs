@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import { FantasyMap } from '@castle/data-visualization'
+// import { FantasyMap } from '@castle/data-visualization'
 
 const unitData = {
   330200: 34543,
