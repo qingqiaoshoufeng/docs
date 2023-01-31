@@ -19,5 +19,5 @@ app.use(ComponentsTemplate);
 ```
 ### 局部引入
 ```js
-import { FantasyMap, ScaleScreen, ... } from "@castle/data-visualization";
+import { FantasyMap, ScaleScreen, Header, ... } from "@castle/data-visualization";
 ```
