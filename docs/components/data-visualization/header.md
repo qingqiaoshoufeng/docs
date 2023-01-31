@@ -1,4 +1,4 @@
-# 大屏 Header 组件
+# Header 组件
 
 大屏 Header 组件主要用于标题及头部内容展示。
 
