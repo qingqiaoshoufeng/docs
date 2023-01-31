@@ -76,6 +76,7 @@ export default defineUserConfig({
           children: [
             '/components/data-visualization/README.md',
             '/components/data-visualization/scale-screen.md',
+            '/components/data-visualization/header.md',
             '/components/data-visualization/fantasy-map.md',
           ],
         },
