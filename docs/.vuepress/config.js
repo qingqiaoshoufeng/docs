@@ -64,14 +64,20 @@ export default defineUserConfig({
       ],
       '/components/': [
         {
-          text: '组件',
+          text: '组件库模板',
+          children: ['/components/components-template/README.md'],
+        },
+        {
+          text: 'UI组件库',
+          children: ['/components/README.md'],
+        },
+        {
+          text: '数据可视化组件',
           children: [
-            '/components/README.md',
-            '/components/components-template/README.md',
             '/components/data-visualization/README.md',
-            '/components/scale-screen/README.md',
-            '/components/header/README.md',
-            '/components/border-wrapper/README.md'
+            '/components/data-visualization/scale-screen.md',
+            '/components/data-visualization/header.md',
+            '/components/data-visualization/fantasy-map.md',
           ],
         },
       ],

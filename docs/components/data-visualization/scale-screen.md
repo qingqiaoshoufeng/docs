@@ -1,32 +1,13 @@
-# 大屏容器组件
+# ScaleScreen 容器
 
 大屏容器组件主要使用tansfrom的scale属性进行缩放，实现对大屏的适配，并通过props传入的fit和lock属性控制组件对父容器大小的适应和对长宽比是否进行缩放锁定。同时我们添加了可控制显隐的缩放按钮，方便全屏化展示。
 
-## 安装
-```bash
-yarn add @castle/data-visualization
-```
-
-## 引入
-
-### 全局引入
-main.js
-```js
-import ComponentsTemplate from "@castle/data-visualization";
-import "@castle/data-visualization/dist/style.css";
-
-app.use(ComponentsTemplate);
-```
-### 局部引入
-```js
-import { ScaleScreen } from "@castle/data-visualization";
-```
 
 ## 使用
 
 ### 基本使用
 
-<demo src="./demos/BasicScreen.vue"></demo>
+<demo src="./scale-screen-demos/BasicScreen.vue"></demo>
 
 ## API
 

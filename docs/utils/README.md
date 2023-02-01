@@ -21,6 +21,7 @@ export default {
 ### downloadFile
 
 ```js
+// const downloadFile = inject('downloadFile')
 downloadFile(path, fileName, config: object = {}, method: string = 'get')
 ```
 
@@ -43,6 +44,8 @@ downloadFile(path, fileName, config: object = {}, method: string = 'get')
 **使用：**
 
 ```js
+// const bus = inject('bus')
+
 // listen to an event
 bus.on('foo', e => console.log('foo', e) )
 

@@ -1,8 +1,6 @@
-# 地图组件
+# @castle/data-visualization
 
-地图组件以[leaflet](https://leafletjs.cn/)为基础，加载[天地图](https://www.tianditu.gov.cn/)数据，在此基础上，我们拓展了全国、省、市、区（县）四级区域显示，并支持下钻加载。
-
-同时我们支持叠加[AntV L7](https://l7.antv.antgroup.com/)场景，以支持点图、飞线图、热力图等等功能。
+数据可视化组件库，主要为可视化大屏而设计。
 
 ## 安装
 
@@ -13,7 +11,6 @@ yarn add @castle/data-visualization
 ## 引入
 
 ### 全局引入
-main.js
 ```js
 import ComponentsTemplate from "@castle/data-visualization";
 import "@castle/data-visualization/dist/style.css";
@@ -22,51 +19,5 @@ app.use(ComponentsTemplate);
 ```
 ### 局部引入
 ```js
-import { FantasyMap } from "@castle/data-visualization";
+import { FantasyMap, ScaleScreen, Header, ... } from "@castle/data-visualization";
 ```
-
-## 使用
-
-### 基本使用
-
-<demo src="./demos/basic.vue"></demo>
-
-### 自定义区域内容
-
-<demo src="./demos/custom-area-content.vue"></demo>
-
-### 自定义区域背景颜色
-
-<demo src="./demos/custom-area-background-color.vue"></demo>
-
-### 叠加L7飞线图
-
-<demo src="./demos/l7-line-scene.vue"></demo>
-
-### 叠加L7热力图
-
-<demo src="./demos/l7-heat-scene.vue"></demo>
-
-## API
-
-### 属性
-
-| 属性名 | 说明 |  类型  | 默认值 |
-| :----: | :--: | :----: | :----: |
-|  tiandituToken  | 天地图鉴权key | String |  'cf8b627df2989291ecfc67605220bf98'  |
-|  mapConfig  | leaflet的map类的config参数,详情请看[leaflet](https://leafletjs.com/reference.html#map-example) | Object |  无  |
-|  mapTileType  | 天地图底图类型 | String |  'vec_w'  |
-|  textTileType  | 天地图注记类型 | String |  'cva_w'  |
-|  zoom  | 地图缩放大小 | Number |  8  |
-|  center  | 地图默认定位中心(无geo层时使用) | Array |  [29.284433, 120.3]  |
-|  geoEnable  | 是否展示geo图层 | Boolean |  true  |
-|  geoId  | geo图层展示地区编号, 如world, china, 330000 | String |  '330000'  |
-|  geoJsonPath  | geoJson文件相对存放路径 | String |  './geo-json/'  |
-|  areaDisabledColor  | geo地区块禁用颜色 | String |  '#092867'  |
-|  areaEnabledColor  | geo地区块可用颜色 | String |  '#0151C390'  |
-|  areaHighlightColor  | geo地区块高亮颜色 | String |  '#049EFF'  |
-|  areaBorderColor  | geo地区块边框颜色 | String |  '#00ffff'  |
-|  geoStyle  | leaflet的geoJSON类的style参数,详情请看[leaflet](https://leafletjs.com/reference.html#geojson) | Object |  无  |
-|  customAreaMakerContentFn  | 自定义区域块标注内容 | Function |  无  |
-|  customAreaMakerFillColorFn  | 自定义区域块可用状态填充颜色 | Function |  无  |
-|  l7Layer  | L7图层,具体使用方法请看[AntV L7](https://l7.antv.antgroup.com/tutorial/map/leaflet) | Object |  无  |
