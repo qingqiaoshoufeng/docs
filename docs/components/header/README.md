@@ -37,5 +37,5 @@ import { Header } from '@castle/data-visualization'
 |  height  | 头部高度 | Number |  90  |
 |  type  | 头部背景 svg 类型，可选值 1 和 2 | Number |  1  |
 |  color  | 头部背景 svg 颜色 | String |  '#1de2ff'  |
-|  animation  | 头部背景 svg 动画 | Boolean |  true  |
+|  animation  | 头部背景 svg 动画，开启会导致 CPU 占用高？ | Boolean |  true  |
 |  title  | 头部标题插槽 | slot |   |
