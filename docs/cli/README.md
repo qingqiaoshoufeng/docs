@@ -85,6 +85,15 @@ export default {
 
 ---
 
+### multiTab
+
+- **类型:** `boolean`
+- **默认值:** `false`
+
+开启多标签模式
+
+---
+
 ### themeConfigProvider
 
 - **类型:** `object`
