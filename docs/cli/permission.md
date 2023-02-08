@@ -10,7 +10,7 @@
 权限码配置。在页面里面，通过 [SFC 自定义语法路由数据](./router.md#sfc-自定义语法路由数据)参数 `meta.permissions` 处理，即用户拥有数组里面任意一个权限码，则可访问此页面，否则重定向到 403 页面。
 
 ::: tip
-当 `requiresAuth` 为 `true` 并且正确的处理好了[用户权限的数据（getPermissionData）](./README.md#userapiimplement)，此参数才会生效，
+当 `requiresAuth` 不为 `false` (默认值为 `true`) 并且正确的处理好了[用户权限的数据（getPermissionData）](./README.md#userapiimplement)，此参数才会生效，
 :::
 
 参考：
@@ -19,7 +19,6 @@
 <route lang="json">
   {
     "meta": {
-      "requiresAuth": "false",
       "permissions": ["user:list"]
     }
   }
