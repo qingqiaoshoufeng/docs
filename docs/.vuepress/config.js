@@ -80,6 +80,14 @@ export default defineUserConfig({
             '/components/data-visualization/fantasy-map.md',
           ],
         },
+        {
+          text: '业务组件',
+          children: [
+            '/components/business-components/README.md',
+            '/components/business-components/pro-list.md',
+            '/components/business-components/form-preview-text.md'
+          ],
+        },
       ],
       '/front-standard-guide/': [
         {
