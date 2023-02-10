@@ -1,4 +1,4 @@
-# @castle/data-visualization
+# @castle/business-components
 
 封装各种业务开发中的各种搞频率场景，统一开发标准，提高开发效率。
 
