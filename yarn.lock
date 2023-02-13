@@ -267,10 +267,10 @@
     vue "^3.2.33"
     vue-router "^4.0.15"
 
-"@castle/business-components@^0.0.2":
-  version "0.0.2"
-  resolved "http://10.13.4.128:4873/@castle%2fbusiness-components/-/business-components-0.0.2.tgz#0dda3553f62bdb23436137e3279477c4bb2ddbe1"
-  integrity sha512-ZvQQenR7eZdt4XLxM+xH+2jVLyb5OoWBlws54c+o8txnrvAoNtw0js00U9E1128YGpvr6s3OtRtem8bTBaOmeg==
+"@castle/business-components@^0.0.3":
+  version "0.0.3"
+  resolved "http://10.13.4.128:4873/@castle%2fbusiness-components/-/business-components-0.0.3.tgz#bf531a6315ae162447654bf493ce1bc1a183c77e"
+  integrity sha512-nR+PRjOfBEDca4Ez+ZLiNb0hzqMPBL9K8dAn0C3C45u1lEr76+1cPv0RImGAi+qq+7aynbqpCbePzRUqiDQyVg==
   dependencies:
     "@ant-design/icons-vue" "^6.1.0"
     "@castle/castle-use" "^0.0.2"
