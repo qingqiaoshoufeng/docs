@@ -1,6 +1,6 @@
 import Antd from 'ant-design-vue'
 import ComponentsTemplate from '@castle/components-template'
-// import DataVisualization from '@castle/data-visualization'
+// import DataVisualizationLocal from '@castle/data-visualization'
 import 'ant-design-vue/dist/antd.css'
 import '@castle/components-template/dist/style.css'
 // import '@castle/data-visualization/dist/style.css'
@@ -16,8 +16,9 @@ export default defineClientConfig({
     app.use(BusinessComponents)
 
     if (!__VUEPRESS_SSR__) {
-      import('@castle/data-visualization').then((DataVisualization) => {
-        app.use(DataVisualization)
+      import('@castle/data-visualization').then(async (DataVisualization) => {
+        await app.use(DataVisualization)
+        import('@castle/data-visualization/dist/style.css')
       })
     }
   },
