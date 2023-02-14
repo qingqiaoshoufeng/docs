@@ -223,19 +223,30 @@ export default{
 
 ### userNavigation
 
-- **类型:** `array`
+- **类型:** `navigationItem[]`
 - **默认值:** `undefined`
 
 用户下拉菜单配置
+
+- `label` 列表的文字
+- `handleFn` 点击触发的函数，默认参数为 router
+- `displayFn` 控制显示与否的函数，return 布尔值
 
 示例：
 ```js
 // settings.mjs
 export default{
-  userNavigation: [{
+  userNavigation: [
+    {
     label: '设置',
-    handleFn: router => router.push('/setting')
-  }],
+    handleFn: router => router.push('/setting'),
+    },
+    {
+      label: '登录',
+      handleFn: router => router.push('/login'),
+      displayFn: () => !localStorage.getItem('token'),
+    }
+  ],
 }
 ```
 
