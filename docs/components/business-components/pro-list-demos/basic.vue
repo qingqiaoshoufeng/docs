@@ -116,13 +116,7 @@ const getList = () => {
       </template>
       <template v-if="column.dataIndex === 'action'">
         <a-space>
-          <a type="link" @click="handleInput">
-            填报
-          </a>
-          <a type="link" @click="handleHung">
-            挂起
-          </a>
-          <a type="link" @click="handleLook">
+          <a type="link">
             查看
           </a>
         </a-space>

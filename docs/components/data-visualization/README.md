@@ -1,5 +1,7 @@
 # @castle/data-visualization
 
+<package-version name="@castle/data-visualization" />
+
 数据可视化组件库，主要为可视化大屏而设计。
 
 ## 安装
