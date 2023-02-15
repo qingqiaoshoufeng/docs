@@ -25,4 +25,4 @@
 | :----: | :--: | :--: |
 | filters | 顶部筛选区域插槽 | v-slot:filters="{ filterFormState }" |
 | bodyCell | 个性化单元格 | v-slot:bodyCell="{text, record, index, column}" |
-| right-actions | - |
+| right-actions | 右上角的操作插槽 | - |

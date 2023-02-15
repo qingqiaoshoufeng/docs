@@ -82,7 +82,7 @@ const getList = () => {
 <template>
   <ProList :get-list-fn="getList" :columns="columns" layout="inline">
     <template #filters="{ filterFormState }">
-      <a-form-item>
+      <a-form-item name="time">
         <a-range-picker
           v-model:value="filterFormState.time"
           :show-time="{ format: 'HH:mm' }"
@@ -90,7 +90,7 @@ const getList = () => {
         />
       </a-form-item>
 
-      <a-form-item>
+      <a-form-item name="zone">
         <a-cascader
           v-model:value="filterFormState.zone"
           :options="[{
@@ -102,7 +102,7 @@ const getList = () => {
         />
       </a-form-item>
 
-      <a-form-item>
+      <a-form-item name="code">
         <a-input
           v-model:value="filterFormState.code"
           placeholder="119编号"
