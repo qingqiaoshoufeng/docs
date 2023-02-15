@@ -127,7 +127,24 @@ Token 在 localStorage 存放的名称
 
 创建一个vue应用实例之后，在将应用实例挂载之前
 
-你可以通过默认的app参数，在这个时候进行任何全局性的 `app.xxx()` 的[操作](https://cn.vuejs.org/api/application.html#app-directive)，比如 app.use()、app.component() 等等
+你可以通过默认的app参数，在这个时候进行任何全局性的 `app.xxx()` 的[操作](https://cn.vuejs.org/api/application.html#app-directive)，比如 app.use()、app.component()、app.provide() 等等
+
+示例：
+```js
+// settings.mjs
+export default{
+  lifecycle: {
+    beforeMount: (app) => {
+      app.provide('message', 'hello')
+
+      // 注册一个选项对象
+      app.component('my-component', {
+        /* ... */
+      })
+    }
+  },
+}
+```
 
 ---
 
