@@ -950,13 +950,13 @@ body[data-move='Y'] {
  * CSS Output Code
  */
 
-#output {
+.output {
 	padding: 10px;
 	border: 2px dashed #888 !important;
 	box-shadow: none !important;
 	border-radius: 3px;
 	overflow: hidden;
-	grid-column: span 2;
+	grid-column: span 3;
 
 	-moz-user-select: text;
 	-webkit-user-select: text;
@@ -964,7 +964,7 @@ body[data-move='Y'] {
 	user-select: text;
 }
 
-#output .title {
+.output .title {
 	width: 100%;
 	height: 30px;
 	margin: 0 0 10px 0;
@@ -974,7 +974,7 @@ body[data-move='Y'] {
 	color: #AAA;
 }
 
-#output .css-property {
+.output .css-property {
 	width: 100%;
 	margin: 0;
 	color: #555;
@@ -983,13 +983,13 @@ body[data-move='Y'] {
 	display: flex;
 }
 
-#output .css-property .name {
+.output .css-property .name {
 	width: 30%;
 	font-weight: bold;
 	text-align: right;
 }
 
-#output .css-property .value {
+.output .css-property .value {
 	width: 65%;
 	padding: 0 2.5%;
 	word-break: break-all;
