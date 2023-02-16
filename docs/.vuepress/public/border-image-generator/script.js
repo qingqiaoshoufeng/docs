@@ -895,7 +895,7 @@ var BorderImage = (function BorderImage() {
 			InputSliderManager.subscribe('scale', setScale);
 			InputSliderManager.setValue('scale', scale);
 			imgState = 'border1';
-			loadRemoteImage('border-image-1.png');
+			loadRemoteImage('border-image-1.svg');
 			toggleGallery();
 		};
 
