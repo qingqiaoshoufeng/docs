@@ -14,41 +14,130 @@
   <g>
     <g>
       <g class="target-1" transform="matrix(1,0,0.5873306393623352,0.8093471527099609,-0.5483282140921801,0.1779923066496849)">
-        <path d="M162,0.93359375C162,0.93359375,272,0.93359375,272,0.93359375C272,0.93359375,272,29.57759375,272,29.57759375C272,29.57759375,162,29.57759375,162,29.57759375C162,29.57759375,162,0.93359375,162,0.93359375C162,0.93359375,162,0.93359375,162,0.93359375Z" fill="#00D7E9" fill-opacity="1"></path>
+        <path d="M162,0.93359375C162,0.93359375,272,0.93359375,272,0.93359375C272,0.93359375,272,29.57759375,272,29.57759375C272,29.57759375,162,29.57759375,162,29.57759375C162,29.57759375,162,0.93359375,162,0.93359375C162,0.93359375,162,0.93359375,162,0.93359375Z" fill="#00D7E9" fill-opacity="1">
+        <animate
+    attributeName="fill"
+    values="#00D7E9;#235fa7;#00D7E9"
+    dur="2s"
+    begin="0s"
+    repeatCount="indefinite"
+  />
+  </path>
       </g>
       <g class="target-2" transform="matrix(1,0,0.5873306393623352,0.8093471527099609,-0.5483282140921801,0.1779923066496849)">
-        <rect x="277" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1"></rect>
+        <rect x="277" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1">
+          <animate
+            attributeName="fill"
+            values="#00D7E9;#235fa7;#00D7E9"
+            dur="2s"
+            begin="0.1s"
+            repeatCount="indefinite"
+          />
+        </rect>
       </g>
       <g class="target-3" transform="matrix(1,0,0.5873306393623352,0.8093471527099609,-0.5483282140921801,0.1779923066496849)">
-        <rect x="290" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1"></rect>
+        <rect x="290" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1">
+          <animate
+            attributeName="fill"
+            values="#00D7E9;#235fa7;#00D7E9"
+            dur="2s"
+            begin="0.2s"
+            repeatCount="indefinite"
+          />
+        </rect>
       </g>
       <g class="target-4" transform="matrix(1,0,0.5873306393623352,0.8093471527099609,-0.5483282140921801,0.1779923066496849)">
-        <rect x="303" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1"></rect>
+        <rect x="303" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1">
+          <animate
+            attributeName="fill"
+            values="#00D7E9;#235fa7;#00D7E9"
+            dur="2s"
+            begin="0.3s"
+            repeatCount="indefinite"
+          />
+        </rect>
       </g>
       <g class="target-5" transform="matrix(1,0,0.5873306393623352,0.8093471527099609,-0.5483282140921801,0.1779923066496849)">
-        <rect x="316" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1"></rect>
+        <rect x="316" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1">
+          <animate
+            attributeName="fill"
+            values="#00D7E9;#235fa7;#00D7E9"
+            dur="2s"
+            begin="0.4s"
+            repeatCount="indefinite"
+          />
+        </rect>
       </g>
       <g class="target-6" transform="matrix(1,0,0.5873306393623352,0.8093471527099609,-0.5483282140921801,0.1779923066496849)">
-        <rect x="329" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1"></rect>
+        <rect x="329" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1">
+          <animate
+            attributeName="fill"
+            values="#00D7E9;#235fa7;#00D7E9"
+            dur="2s"
+            begin="0.5s"
+            repeatCount="indefinite"
+          />
+        </rect>
       </g>
       <g class="target-7" transform="matrix(1,0,0.5873306393623352,0.8093471527099609,-0.5483282140921801,0.1779923066496849)">
-        <rect x="342" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1"></rect>
+        <rect x="342" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1">
+          <animate
+            attributeName="fill"
+            values="#00D7E9;#235fa7;#00D7E9"
+            dur="2s"
+            begin="0.6s"
+            repeatCount="indefinite"
+          />
+        </rect>
       </g>
       <g class="target-8" transform="matrix(1,0,0.5873306393623352,0.8093471527099609,-0.5483282140921801,0.1779923066496849)">
-        <rect x="355" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1"></rect>
+        <rect x="355" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1">
+          <animate
+            attributeName="fill"
+            values="#00D7E9;#235fa7;#00D7E9"
+            dur="2s"
+            begin="0.7s"
+            repeatCount="indefinite"
+          />
+        </rect>
       </g>
       <g class="target-9" transform="matrix(1,0,0.5873306393623352,0.8093471527099609,-0.5483282140921801,0.1779923066496849)">
-        <rect x="368" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1"></rect>
+        <rect x="368" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1">
+          <animate
+            attributeName="fill"
+            values="#00D7E9;#235fa7;#00D7E9"
+            dur="2s"
+            begin="0.8s"
+            repeatCount="indefinite"
+          />
+        </rect>
       </g>
       <g class="target-10" transform="matrix(1,0,0.5873306393623352,0.8093471527099609,-0.5483282140921801,0.1779923066496849)">
-        <rect x="381" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1"></rect>
+        <rect x="381" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1">
+          <animate
+            attributeName="fill"
+            values="#00D7E9;#235fa7;#00D7E9"
+            dur="2s"
+            begin="0.9s"
+            repeatCount="indefinite"
+          />
+        </rect>
       </g>
       <g class="target-11" transform="matrix(1,0,0.5873306393623352,0.8093471527099609,-0.5483282140921801,0.1779923066496849)">
-        <rect x="394" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1"></rect>
+        <rect x="394" y="0.93359375" width="8" height="28.644010543823242" rx="0" fill="#00D7E9" fill-opacity="1">
+          <animate
+            attributeName="fill"
+            values="#00D7E9;#235fa7;#00D7E9"
+            dur="2s"
+            begin="0.10s"
+            repeatCount="indefinite"
+          />
+        </rect>
       </g>
     </g>
     <g filter="url(#master_svg0_0_8424)">
-      <path d="M0,12C0,5.37259,5.37258,0,12,0C12,0,146.409,0,146.409,0C150.237,0,153.836,1.82646,156.095,4.9165C156.095,4.9165,170.405,24.4835,170.405,24.4835C172.664,27.5735,176.263,29.4,180.091,29.4C180.091,29.4,428,29.4,428,29.4C434.627,29.4,440,34.7726,440,41.4C440,41.4,440,268,440,268C440,274.627,434.627,280,428,280C428,280,12,280,12,280C5.37257,280,0,274.627,0,268C0,268,0,12,0,12C0,12,0,12,0,12Z" fill="#04041A" fill-opacity="0.20000000298023224"></path>
+      <path d="M0,12C0,5.37259,5.37258,0,12,0C12,0,146.409,0,146.409,0C150.237,0,153.836,1.82646,156.095,4.9165C156.095,4.9165,170.405,24.4835,170.405,24.4835C172.664,27.5735,176.263,29.4,180.091,29.4C180.091,29.4,428,29.4,428,29.4C434.627,29.4,440,34.7726,440,41.4C440,41.4,440,268,440,268C440,274.627,434.627,280,428,280C428,280,12,280,12,280C5.37257,280,0,274.627,0,268C0,268,0,12,0,12C0,12,0,12,0,12Z" fill="#04041A" fill-opacity="0.20000000298023224">
+      </path>
     </g>
   </g>
   <text class="title" x="20" y="35">
