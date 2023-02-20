@@ -79,7 +79,8 @@ export default defineUserConfig({
             '/components/data-visualization/header.md',
             '/components/data-visualization/fantasy-map.md',
             '/components/data-visualization/border-image-generator.md',
-            '/components/data-visualization/virtual-number.md'
+            '/components/data-visualization/virtual-number.md',
+            '/components/data-visualization/virtual-date.md'
           ],
         },
         {
