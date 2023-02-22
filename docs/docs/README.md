@@ -20,3 +20,5 @@
 [软考高级《信息系统项目管理师》 ](https://docs.qq.com/slide/DZldoQlhaS29JTHRV)
 
 [GitFlow 分享](https://docs.qq.com/slide/DZmJocUpiWmFac2xs)
+
+[preview-image-cli工具分享](https://docs.qq.com/slide/DZmhlcXpjRWdaTU52)
