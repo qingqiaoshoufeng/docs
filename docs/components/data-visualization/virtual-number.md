@@ -1,26 +1,7 @@
-# 大屏数字组件
+# VirtualNumber 大屏数字组件
 
 大屏数字组件主要用于数字展示。
 
-## 安装
-```bash
-yarn add @castle/data-visualization
-```
-
-## 引入
-
-### 全局引入
-main.js
-```js
-import ComponentsTemplate from '@castle/data-visualization'
-import '@castle/data-visualization/dist/style.css'
-
-app.use(ComponentsTemplate)
-```
-### 局部引入
-```js
-import { VirtualNumber } from '@castle/data-visualization'
-```
 
 ## 使用
 

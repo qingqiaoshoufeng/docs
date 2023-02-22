@@ -54,13 +54,6 @@ const columns = [
     key: 'dept',
     dataIndex: 'dept',
   },
-  {
-    title: '操作',
-    key: 'action',
-    dataIndex: 'action',
-    align: 'center',
-    width: 140,
-  },
 ]
 
 const checked = ref('item')
@@ -83,24 +76,6 @@ const checked = ref('item')
       :scrollStep="checked"
       :row-class-name="(_record, index) => (index % 2 === 1 ? 'table-striped-even' : 'table-striped-odd')"
     >
-      <template #bodyCell="{ column }">
-        <template v-if="column.dataIndex === 'state'">
-          <span class="alarm-state-wait">状态</span>
-        </template>
-        <template v-if="column.dataIndex === 'action'">
-          <a-space>
-            <a type="link">
-              填报
-            </a>
-            <a type="link">
-              挂起
-            </a>
-            <a type="link">
-              查看
-            </a>
-          </a-space>
-        </template>
-      </template>
     </ScrollBoard>
   </div>
 </template>

@@ -1,26 +1,7 @@
-# 大屏时间组件
+# VirtualDate 大屏时间组件
 
 大屏时间组件主要用于时间展示。
 
-## 安装
-```bash
-yarn add @castle/data-visualization
-```
-
-## 引入
-
-### 全局引入
-main.js
-```js
-import ComponentsTemplate from '@castle/data-visualization'
-import '@castle/data-visualization/dist/style.css'
-
-app.use(ComponentsTemplate)
-```
-### 局部引入
-```js
-import { VirtualDate } from '@castle/data-visualization'
-```
 
 ## 使用
 

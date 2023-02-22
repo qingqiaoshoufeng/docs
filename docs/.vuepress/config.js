@@ -80,9 +80,8 @@ export default defineUserConfig({
             '/components/data-visualization/fantasy-map.md',
             '/components/data-visualization/scroll-board.md',
             '/components/data-visualization/virtual-number.md',
+            '/components/data-visualization/virtual-date.md',
             '/components/data-visualization/border-image-generator.md',
-            '/components/data-visualization/virtual-number.md',
-            '/components/data-visualization/virtual-date.md'
           ],
         },
         {
