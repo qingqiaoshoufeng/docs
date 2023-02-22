@@ -287,10 +287,10 @@
   resolved "http://10.13.4.128:4873/@castle%2fcomponents-template/-/components-template-0.0.5.tgz#7ff3987d17ece6b07874f6ccc0173be841acb442"
   integrity sha512-w/CokucfGsVrlQ6S5VTByNfc/hNllB9F+bC2YvFZmZDwo08p/414I3//A/eDURBNfsppO91rWvFTJIo9bTKjbg==
 
-"@castle/data-visualization@0.0.17":
-  version "0.0.17"
-  resolved "http://10.13.4.128:4873/@castle%2fdata-visualization/-/data-visualization-0.0.17.tgz#bedc6f01f5c0f97a22c84fe150efe31e40942dbd"
-  integrity sha512-5s/gM4a/is3vzJV8Wwn4j/G+F1DZaibAdvyOLLGEm3kQSGF4UVHB8Qw963LPsJZl1VCC26/fHYc+qi/7d1rwqg==
+"@castle/data-visualization@^0.0.19":
+  version "0.0.19"
+  resolved "http://10.13.4.128:4873/@castle%2fdata-visualization/-/data-visualization-0.0.19.tgz#bb334a998a58251d7dbaf6d20ea6a97badda1d98"
+  integrity sha512-FnPEgzaLAULw2eghjiJGgP4aV+dqzmtmUcQYxt/lTsMKNwWBBFnXe6VhczLVLX1Fg9CNcXawUXfgwSnkXArNmA==
   dependencies:
     "@antv/l7" "^2.13.1"
     "@antv/l7-leaflet" "^0.0.3"
