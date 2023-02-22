@@ -15,9 +15,9 @@ const getArray = (value) => {
   <div class="demo6">
     <ScaleScreen :fit="true" :fullscreen="false">
       <VirtualNumber class="demo-number" :value="12345">
-        <template #default="{ displayValue }">
+        <template #default="params">
           <span
-            v-for="(item, index) in getArray(displayValue)"
+            v-for="(item, index) in getArray(params?.displayValue)"
             :key="index"
             :class="{ 'is-number': item.number }"
           >
