@@ -22,3 +22,7 @@
 [GitFlow 分享](https://docs.qq.com/slide/DZmJocUpiWmFac2xs)
 
 [preview-image-cli工具分享](https://docs.qq.com/slide/DZmhlcXpjRWdaTU52)
+
+### 其他
+
+[前端紧急联系表](https://docs.qq.com/sheet/DZnNXeWR1aEp1bWJB?tab=BB08J2)
