@@ -58,7 +58,7 @@ export default {
 }
 ```
 
-### title
+### title 应用标题
 
 - **类型:** `string`
 - **默认值:** `Castle Template`
@@ -67,7 +67,7 @@ export default {
 
 ---
 
-### homePath
+### homePath 主页面
 
 - **类型:** `string`
 - **默认值:** `/`
@@ -76,7 +76,7 @@ export default {
 
 ---
 
-### watermarkContent
+### watermarkContent 水印内容
 
 - **类型:** `(userInfo: unknown) => string`
 - **默认值:** `(userInfo) => userInfo?.name`
@@ -85,7 +85,7 @@ export default {
 
 ---
 
-### multiTab
+### multiTab 多标签
 
 - **类型:** `boolean`
 - **默认值:** `false`
@@ -94,7 +94,7 @@ export default {
 
 ---
 
-### themeConfigProvider
+### themeConfigProvider 主题配置
 
 - **类型:** `object`
 - **默认值:** `{}`
@@ -103,7 +103,7 @@ export default {
 
 ---
 
-### copyright
+### copyright 版权信息
 
 - **类型:** `() => string`
 - **默认值:** `() => 'Copyright @2022 Huaxin. All Rights Reserved'`
@@ -112,7 +112,7 @@ export default {
 
 ---
 
-### tokenKeyName
+### tokenKeyName 秘钥名称
 
 - **类型:** `string`
 - **默认值:** `'token'`
@@ -121,7 +121,9 @@ Token 在 localStorage 存放的名称
 
 ---
 
-### lifecycle.beforeMount
+### lifecycle 生命周期
+
+#### beforeMount
 
 - **类型:** `(app) => void`
 
@@ -146,17 +148,29 @@ export default{
 }
 ```
 
----
-
-### lifecycle.mounted
+#### mounted
 
 - **类型:** `(app) => void`
 
 在将应用实例挂载之后
 
+示例：
+```js
+// settings.mjs
+export default{
+  lifecycle: {
+    mounted: (app) => {
+      /* ... */
+    }
+  },
+}
+```
+
 ---
 
-### httpInterceptors.request
+### httpInterceptors 请求拦截
+
+#### request
 
 - **类型:** `function`
 
@@ -178,7 +192,7 @@ export default{
 
 ---
 
-### httpInterceptors.response
+#### response
 
 - **类型:** `function`
 
@@ -204,7 +218,7 @@ export default{
 ```
 此参数若设置，将覆盖[内置默认配置](http://10.10.3.188:9090/castle/template/blob/master/src/utils/request-interceptor.js#L45-105)
 
-### userApiImplement
+### userApiImplement 认证处理
 
 用户认证鉴权等一系列实现过程
 
@@ -256,7 +270,7 @@ export default{
 }
 ```
 
-### userNavigation
+### userNavigation 用户下拉菜单
 
 - **类型:** `navigationItem[]`
 - **默认值:** `undefined`
@@ -285,7 +299,7 @@ export default{
 }
 ```
 
-### layout
+### layout 布局
 
 - **类型:** `object`
 - **默认值:** `{}`
@@ -306,7 +320,7 @@ export default {
 }
 ```
 
-### server
+### 开发服务配置 
 
 - **类型：** `({ command: string, mode: string, env: object }) => object`
 
