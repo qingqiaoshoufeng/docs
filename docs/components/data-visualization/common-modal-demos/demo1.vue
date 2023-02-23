@@ -1,6 +1,5 @@
 <script setup>
 import { ref } from 'vue'
-import CommonModal from '../index'
 
 const showWidthHeight = ref(false)
 </script>
