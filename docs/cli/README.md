@@ -317,3 +317,21 @@ export default {
 ## 环境变量
 
 Vite 在一个特殊的 import.meta.env 对象上暴露环境变量，详见：[Vite 环境变量和模式](https://cn.vitejs.dev/guide/env-and-mode.html#env-variables-and-modes)
+
+## 样式
+
+### 全局样式
+
+在生命周期里面import样式文件，如：
+
+```mjs
+// settings.mjs
+export default{
+  lifecycle: {
+    beforeMount: () => {
+      // 引入全局样式文件
+      import('@/assets/global.less')
+    }
+  },
+}
+```
