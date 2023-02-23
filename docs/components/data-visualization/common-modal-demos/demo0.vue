@@ -1,7 +1,6 @@
 <script setup>
 import { ref } from 'vue'
 import CommonModal from '../index'
-import ScaleScreen from '@/lib/ScaleScreen/index'
 
 const showModal = ref(false)
 </script>
