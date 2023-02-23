@@ -324,7 +324,7 @@ Vite 在一个特殊的 import.meta.env 对象上暴露环境变量，详见：[
 
 在生命周期里面import样式文件，如：
 
-```mjs
+```js
 // settings.mjs
 export default{
   lifecycle: {
