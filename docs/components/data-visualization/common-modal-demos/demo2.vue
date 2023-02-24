@@ -14,7 +14,7 @@ const showCloseStyle = ref(false)
   <div class="modal-demo0">
     <ScaleScreen :width="1366" :height="768" :fit="false" :lock="true">
       <div class="content">
-        <h2>自定义 maskStyle</h2>
+        <h3>自定义 maskStyle</h3>
         <a-button @click="() => showMaskStyle = true">
           显示弹窗
         </a-button>
@@ -23,7 +23,7 @@ const showCloseStyle = ref(false)
             这是一个弹窗
           </template>
         </CommonModal>
-        <h2>自定义 modalStyle</h2>
+        <h3>自定义 modalStyle</h3>
         <a-button @click="() => showModalStyle = true">
           显示弹窗
         </a-button>
@@ -32,7 +32,7 @@ const showCloseStyle = ref(false)
             这是一个弹窗
           </template>
         </CommonModal>
-        <h2>自定义 bodyStyle</h2>
+        <h3>自定义 bodyStyle</h3>
         <a-button @click="() => showBodyStyle = true">
           显示弹窗
         </a-button>
@@ -41,7 +41,7 @@ const showCloseStyle = ref(false)
             这是一个弹窗
           </template>
         </CommonModal>
-        <h2>自定义 closeStyle</h2>
+        <h3>自定义 closeStyle</h3>
         <a-button @click="() => showCloseStyle = true">
           显示弹窗
         </a-button>
@@ -62,8 +62,8 @@ const showCloseStyle = ref(false)
   .content {
     width: 100%;
     position: relative;
-    h2 {
-      color: white;
+    h3 {
+      color: white !important;
       margin-top: 10px;
     }
   }

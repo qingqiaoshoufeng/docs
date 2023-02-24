@@ -8,7 +8,7 @@ const showWidthHeight = ref(false)
   <div class="modal-demo0">
     <ScaleScreen :width="1366" :height="768" :fit="false" :lock="true">
       <div class="content">
-        <h2>自定义 width、height</h2>
+        <h3>自定义 width、height</h3>
         <a-button @click="() => showWidthHeight = true">
           显示弹窗
         </a-button>
@@ -34,8 +34,8 @@ const showWidthHeight = ref(false)
   .content {
     width: 100%;
     position: relative;
-    h2 {
-      color: white;
+    h3 {
+      color: white !important;
     }
     .header {
       width: 100%;

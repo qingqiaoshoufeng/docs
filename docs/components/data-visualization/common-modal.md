@@ -1,26 +1,6 @@
-# 大屏Modal组件
+# CommonModal 组件
 
-大屏Modal组件主要用于弹框展示。
-
-## 安装
-```bash
-yarn add @castle/data-visualization
-```
-
-## 引入
-
-### 全局引入
-main.js
-```js
-import ComponentsTemplate from '@castle/data-visualization'
-import '@castle/data-visualization/dist/style.css'
-
-app.use(ComponentsTemplate)
-```
-### 局部引入
-```js
-import { CommonModal } from '@castle/data-visualization'
-```
+CommonModal 组件主要用于弹框展示。
 
 ## 使用
 

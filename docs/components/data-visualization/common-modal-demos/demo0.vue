@@ -8,7 +8,7 @@ const showModal = ref(false)
   <div class="modal-demo0">
     <ScaleScreen :width="1366" :height="768" :fit="false" :lock="true">
       <div class="content">
-        <h2>基本用法</h2>
+        <h3>基本用法</h3>
         <a-button @click="() => showModal = true">
           显示弹窗
         </a-button>
@@ -33,8 +33,8 @@ const showModal = ref(false)
   .content {
     width: 100%;
     position: relative;
-    h2 {
-      color: white;
+    h3 {
+      color: white !important;
     }
   }
 }
