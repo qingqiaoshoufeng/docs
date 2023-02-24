@@ -18,4 +18,4 @@ export default{
 
 ## tailwindcss
 
-Castle 内置了 [tailwindcss](https://tailwindcss.com/) , 可直接使用
+Castle 内置了 [tailwindcss](https://tailwindcss.com/) , 可直接使用，同时推荐安装VSCode插件 [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
