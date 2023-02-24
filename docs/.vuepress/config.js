@@ -82,7 +82,8 @@ export default defineUserConfig({
             '/components/data-visualization/virtual-number.md',
             '/components/data-visualization/virtual-date.md',
             '/components/data-visualization/border-image-generator.md',
-            '/components/data-visualization/common-modal.md'
+            '/components/data-visualization/common-modal.md',
+            '/components/data-visualization/border-wrapper.md',
           ],
         },
         {
