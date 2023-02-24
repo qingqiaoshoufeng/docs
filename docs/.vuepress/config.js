@@ -59,6 +59,7 @@ export default defineUserConfig({
             '/cli/permission.md',
             '/cli/layout.md',
             '/cli/global.md',
+            '/cli/style.md',
           ],
         },
       ],
@@ -81,9 +82,9 @@ export default defineUserConfig({
             '/components/data-visualization/scroll-board.md',
             '/components/data-visualization/virtual-number.md',
             '/components/data-visualization/virtual-date.md',
-            '/components/data-visualization/border-image-generator.md',
             '/components/data-visualization/common-modal.md',
             '/components/data-visualization/border-wrapper.md',
+            '/components/data-visualization/border-image-generator.md',
           ],
         },
         {
