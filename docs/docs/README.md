@@ -13,9 +13,9 @@
 
 ### 工作报告
 
-[四所周会会议纪要](https://docs.qq.com/doc/DZmNJbmRnRGR4bUNI)
+[四所周会会议纪要](https://docs.qq.com/doc/DZmNJbmRnRGR4bUNI) <Badge type="warning" text="周更新"/>
 
-[前端周报集合](https://docs.qq.com/s/QBdM1-AOCDoR_jeRpmd6Eq) <Badge type="warning" text="周更新"/>
+[前端周报集合](https://docs.qq.com/s/QBdM1-AOCDoR_jeRpmd6Eq) 
 
 ### 前端分享PPT
 
@@ -24,6 +24,8 @@
 [GitFlow 分享](https://docs.qq.com/slide/DZmJocUpiWmFac2xs)
 
 [preview-image-cli工具分享](https://docs.qq.com/slide/DZmhlcXpjRWdaTU52)
+
+[浙江储备Webpack优化](https://docs.qq.com/slide/DZlBsd05vQmxtd1RU)
 
 ### 其他
 

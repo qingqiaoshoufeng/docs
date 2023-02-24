@@ -2,7 +2,7 @@
 
 ### 页面权限   
 
-- **类型:** `{ requiresAuth: boolean, permissions: string[]}`
+- **类型:** `{ requiresAuth: boolean, permissions: string[] }`
 #### requiresAuth
 页面是否需要进行权限验证，默认值为 true。在页面里面，通过 [SFC 自定义语法路由数据](./router.md#sfc-自定义语法路由数据)参数 `meta.requiresAuth` 处理。
 

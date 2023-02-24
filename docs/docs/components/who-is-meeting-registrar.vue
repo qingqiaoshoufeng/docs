@@ -1,5 +1,5 @@
 <template>
-  <p>本周周会记录员（需完成下列文档为 <strong>周更新</strong> 的文档内容）：</p>
+  <p>本周周会记录员（需完成下面<strong>四所周会会议纪要</strong> 的更新）：</p>
   <h1>{{ registrar().name }} 👨🏻‍💻 </h1>
 </template>
 
