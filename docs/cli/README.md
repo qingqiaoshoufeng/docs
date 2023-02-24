@@ -349,3 +349,7 @@ export default{
   },
 }
 ```
+
+### tailwindcss
+
+Castle 内置了 [tailwindcss](https://tailwindcss.com/) , 可直接使用
