@@ -22,7 +22,7 @@
     "@antv/l7-leaflet": "^0.0.3",
     "@castle/business-components": "^0.0.5",
     "@castle/components-template": "^0.0.5",
-    "@castle/data-visualization": "^0.0.21",
+    "@castle/data-visualization": "0.0.22",
     "ant-design-vue": "^3.2.15",
     "dayjs": "^1.11.7",
     "leaflet": "^1.9.3"
