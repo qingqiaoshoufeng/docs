@@ -95,6 +95,13 @@ export default defineUserConfig({
             '/components/business-components/form-preview-text.md'
           ],
         },
+        {
+          text: 'H265 播放器',
+          children: [
+            '/components/h265-player/README.md',
+            '/components/h265-player/h265-player.md',
+          ],
+        },
       ],
       '/front-standard-guide/': [
         {

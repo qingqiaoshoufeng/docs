@@ -300,6 +300,13 @@
     leaflet "^1.7.1"
     leaflet-ant-path "^1.3.0"
 
+"@castle/hx-h265-player@^0.0.1":
+  version "0.0.1"
+  resolved "http://10.13.4.128:4873/@castle%2fhx-h265-player/-/hx-h265-player-0.0.1.tgz#da1e10f374c5ddc3df51967468924d6416f34503"
+  integrity sha512-mOdDBUlpPlokblz8d0wStp5aWyqB8aoiK8rG6OP+CFjj+Uk1XzwmtqeyFSbQiUgUNLwrBiM/3BQOx6m5erh/Uw==
+  dependencies:
+    ant-design-vue "^3.2.15"
+
 "@ctrl/tinycolor@^3.4.0":
   version "3.5.0"
   resolved "http://10.13.4.128:4873/@ctrl%2ftinycolor/-/tinycolor-3.5.0.tgz#6e52b3d1c38d13130101771821e09cdd414a16bc"

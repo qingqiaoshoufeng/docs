@@ -7,6 +7,9 @@ import '@castle/components-template/dist/style.css'
 import BusinessComponents from '@castle/business-components'
 import '@castle/business-components/dist/style.css'
 
+import HxH265Player from '@castle/hx-h265-player'
+import '@castle/hx-h265-player/dist/style.css'
+
 import { defineClientConfig } from '@vuepress/client'
 
 export default defineClientConfig({
@@ -14,6 +17,7 @@ export default defineClientConfig({
     app.use(Antd)
     app.use(ComponentsTemplate)
     app.use(BusinessComponents)
+    app.use(HxH265Player)
 
     if (!__VUEPRESS_SSR__) {
       import('@castle/data-visualization').then(async (DataVisualization) => {
