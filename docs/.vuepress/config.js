@@ -57,6 +57,7 @@ export default defineUserConfig({
             '/cli/router.md',
             '/cli/sidebar-menu.md',
             '/cli/permission.md',
+            '/cli/request-data.md',
             '/cli/layout.md',
             '/cli/global.md',
             '/cli/style.md',
@@ -100,6 +101,15 @@ export default defineUserConfig({
           children: [
             '/components/h265-player/README.md',
             '/components/h265-player/h265-player.md',
+          ],
+        },
+      ],
+      '/utils/': [
+        {
+          text: '工具集',
+          children: [
+            '/utils/castle-cli.md',
+            '/utils/castle-use.md',
           ],
         },
       ],

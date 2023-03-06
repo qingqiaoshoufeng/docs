@@ -41,9 +41,27 @@ yarn run dev
   "scripts": {
     "dev": "castle dev", // 启动开发服务器
     "build": "castle build", // 为生产环境构建产物
+    "optimize": "castle optimize", // 预构建依赖
+    "preview": "castle preview --port 4173", // 快速本地预览构建产物
   },
 }
 ```
+
+其他详细[使用说明](https://cn.vitejs.dev/guide/cli.html#vite-optimize)
+
+## 浏览器兼容性
+
+| <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" /><br /> IE / Edge | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" /><br />Firefox | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" /><br />Chrome | <img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" /><br />Safari |
+| --- | --- | --- | --- |
+| Edge >=91 | Firefox >=83 | Chrome >=91 | Safari >=14.1 |
+
+:::tip
+有些项目可能需要支持国产操作系统自带的浏览器，而国产浏览器有些是基于低版本的 Chromium，你可以考虑如下方案：
+
+- 安装最新 Linux 版本的 [Firefox](https://www.mozilla.org/zh-CN/firefox/linux/) 浏览器
+- 通过 [@vitejs/plugin-legacy](https://www.npmjs.com/package/@vitejs/plugin-legacy) 转译成兼容性更好的ES5
+:::
+
 
 ## 项目配置
 
