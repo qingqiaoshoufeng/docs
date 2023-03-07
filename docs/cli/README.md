@@ -6,6 +6,7 @@ Castle CLI是一个基于Vite的简洁的定制化脚手架，本教程将帮助
 - 前端构建工具基于 [Vite](https://cn.vitejs.dev/), 需要 Node.js 版本 14.18+，16+。
 :::
 
+## 安装
 
 #### 步骤1：全局安装 **@castle/castle-cli**
 
@@ -48,6 +49,50 @@ yarn run dev
 ```
 
 其他详细[使用说明](https://cn.vitejs.dev/guide/cli.html#vite-optimize)
+
+## 项目结构
+
+Castle CLI 生成的的整个项目的目录结构，您需要关注的如下：
+```
+.                        
+├─ src                          
+│  ├─ assets                          # 资源层                 
+│  │  └─ images                 
+│  │     ├─ favicon.png         
+│  │     ├─ login-bg-white.png  
+│  │     └─ logo.png            
+│  ├─ config                          # 配置层             
+│  │  ├─ project-settings.mjs   
+│  │  └─ settings.js            
+│  └─ pages                           # 页面层              
+│     ├─ blank-page             
+│     │  └─ index.vue           
+│     ├─ home                   
+│     │  └─ index.vue           
+│     ├─ link-putlined          
+│     │  └─ index.vue           
+│     └─ test                   
+│        ├─ index               
+│        │  ├─ components       
+│        │  │  └─ _button.vue   
+│        │  ├─ page1.vue        
+│        │  └─ _page2.vue       
+│        └─ index.vue           
+├─ index.html                   
+├─ jsconfig.json                
+├─ package.json                 
+├─ postcss.config.js            
+├─ README.md
+├─ .env                               # 生产环境变量
+├─ .env.development                   # 开发环境变量                   
+├─ tailwind.config.js           
+└─ yarn.lock   
+```                 
+
+## 核心依赖
+
+正如您所看到的，当您通过 Castle CLI 生成整个项目并且安装完依赖包之后，整个项目已经可以通过 `yarn dev` 运行本地开发，其中我们需要注意的是，在所有的依赖包中，最核心的依赖包为 [@Castle/Castle-template](http://10.13.4.128:4873/-/web/detail/@castle/components-template) ，它包含了我们几乎所有的内置模块和功能，所以，通过Castle CLI创建的工程，后期可以直接通过升级 [@Castle/Castle-template](http://10.13.4.128:4873/-/web/detail/@castle/components-template) 的版本进行更新。
+
 
 ## 浏览器兼容性
 

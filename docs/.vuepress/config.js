@@ -71,7 +71,7 @@ export default defineUserConfig({
         },
         {
           text: 'UI组件库',
-          children: ['/components/README.md'],
+          children: ['/components/ui-components.md'],
         },
         {
           text: '数据可视化组件',

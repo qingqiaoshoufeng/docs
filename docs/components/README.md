@@ -1,3 +1,9 @@
-# @castle/ui-components
+# 组件
 
-目前我们的脚手架里面内置 [Ant Design Vue](https://antdv.com/components/overview-cn)，后期我们将Fork一份维护我们的定制版。
+针对我们日常开发工作的提炼，基于 Vue 3，面向华信前端开发的组件库
+
+## 目标
+
+- 提炼华信中后台产品的交互语言和视觉风格。
+- 开箱即用的高质量 Vue 组件。
+- 提高开发效率
