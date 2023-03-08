@@ -86,6 +86,7 @@ export default defineUserConfig({
             '/components/data-visualization/common-modal.md',
             '/components/data-visualization/border-wrapper.md',
             '/components/data-visualization/charts.md',
+            '/components/data-visualization/3D.md',
             '/components/data-visualization/border-image-generator.md',
           ],
         },

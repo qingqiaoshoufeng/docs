@@ -22,5 +22,5 @@ app.use(ComponentsTemplate);
 ```
 ### 局部引入
 ```js
-import { FantasyMap, ScaleScreen, Header, ... } from "@castle/business-components";
+import { ProList, FormPreviewText, ... } from "@castle/business-components";
 ```
