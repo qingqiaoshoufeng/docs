@@ -22,10 +22,11 @@
     "@antv/l7-leaflet": "^0.0.3",
     "@castle/business-components": "^0.0.5",
     "@castle/components-template": "^0.0.5",
-    "@castle/hx-h265-player": "^0.0.1",
     "@castle/data-visualization": "0.0.22",
+    "@castle/hx-h265-player": "^0.0.1",
     "ant-design-vue": "^3.2.15",
     "dayjs": "^1.11.7",
-    "leaflet": "^1.9.3"
+    "leaflet": "^1.9.3",
+    "three": "^0.150.1"
   }
 }
