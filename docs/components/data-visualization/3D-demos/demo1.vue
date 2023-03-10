@@ -22,6 +22,7 @@ const scene = new THREE.Scene()
 
 // 添加相机
 const camera = new THREE.PerspectiveCamera(45, 1, 1, 1000)
+camera.position.set(21.307, 66.285, -73.066)
 
 // 创建渲染器
 const renderer = new THREE.WebGLRenderer()
@@ -29,8 +30,9 @@ renderer.outputEncoding = THREE.sRGBEncoding
 renderer.setSize(870, 870)
 
 // 设置灯光效果
-const DirectionalLight = new THREE.DirectionalLight(0xffffff)
-scene.add(DirectionalLight)
+const directionLight = new THREE.DirectionalLight(0xffffff)
+scene.add(directionLight)
+directionLight.position.set(21.307, 66.285, -73.066)
 
 const initRenderer = () => {
   renderer.render(scene, camera)
@@ -79,11 +81,11 @@ const initControls = () => {
   const controls = new OrbitControls(camera, renderer.domElement)
 
   // 如果使用animate方法时，将此函数删除
-  controls.addEventListener( 'change', initRenderer );
+  controls.addEventListener('change', initRenderer)
   // 使动画循环使用时阻尼或自转 意思是否有惯性
   controls.enableDamping = false
   //动态阻尼系数 就是鼠标拖拽旋转灵敏度
-  controls.dampingFactor = 0.25;
+  controls.dampingFactor = 0.25
   //是否可以缩放
   controls.enableZoom = true
   //是否自动旋转
@@ -135,7 +137,6 @@ onMounted(() => {
     function (gltf) {
       scene.add(gltf.scene)
       scene.add(cube())
-      camera.position.set(21.307, 66.285, -73.066)
 
       initControls()
       initFan()
