@@ -6,17 +6,17 @@
     提示：可以按住鼠标左键拖拽切换角度，滚动鼠标滚轮实现放大缩小，点击鼠标右键拖拽实现平移
   </p>
   <a-divider />
-  <div id="renderer-wrap"></div>
+  <div id="renderer-wrap" ref="rendererWrap"></div>
 </template>
 
 <script setup>
 // @ts-nocheck
-
 import { ref, onMounted } from 'vue'
 import * as THREE from 'three'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js'
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
 
+const rendererWrap = ref(null)
 // 添加场景
 const scene = new THREE.Scene()
 
@@ -127,7 +127,7 @@ const initFan = () => {
 }
 
 onMounted(() => {
-  document.querySelector('#renderer-wrap').appendChild(renderer.domElement)
+  rendererWrap.value.appendChild(renderer.domElement)
   const loader = new GLTFLoader()
 
   loader.load(
