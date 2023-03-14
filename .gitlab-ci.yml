@@ -57,7 +57,7 @@ build&deploy-job:
     # - cp -rf ./public/* ${OUTPUT_LATEST_PATH}
 
     - echo "重启nginx服务"
-    - source /data/nginx-reload.sh
+    - echo $(date "+%Y-%m-%d %H:%M:%S") "完成"${CI_PROJECT_NAME}"的部署，重启nginx服务" >> /data/nginx-reload-log.log
     
     
   
