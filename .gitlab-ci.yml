@@ -52,6 +52,7 @@ build&deploy-job:
         mkdir -p ${OUTPUT_LATEST_PATH}
       fi 
     - cp -rf ./public/* ${OUTPUT_LATEST_PATH}
+    - docker -v
     
     
   
