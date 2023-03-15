@@ -11,7 +11,6 @@ cache: # 缓存
   key: ${CI_BUILD_REF_NAME}
   paths:
     - node_modules
-    - dist
 
 install-job:
   stage: install
@@ -41,6 +40,11 @@ build-job:
     - general
   before_script: 
     - mkdir -p /data
+  artifacts:
+    name: "dist"
+    expire_in: 60 mins
+    paths:
+      - dist/
   script:
     - echo "⏰ 开始代码打包"
     - yarn docs:build
@@ -61,7 +65,7 @@ build-job:
       if [ ! -d ${OUTPUT_PATH} ]; then
         mkdir -p ${OUTPUT_PATH}
       fi 
-    - cp -rf ./dist/* ${OUTPUT_PATH}
+    - cp -rf dist/* ${OUTPUT_PATH}
 
 dev-deploy-job:
   only:
@@ -95,7 +99,7 @@ master-deploy-job:
       if [ ! -d ${OUTPUT_LATEST_PATH} ]; then
         mkdir -p ${OUTPUT_LATEST_PATH}
       fi 
-    - cp -rf ./dist/* ${OUTPUT_LATEST_PATH}
+    - cp -rf dist/* ${OUTPUT_LATEST_PATH}
 
 reload-nginx:
   stage: reload-nginx
