@@ -111,8 +111,6 @@ reload-nginx:
     - master
   tags:
     - general
-  before_script: 
-    - mkdir -p /data
   when: on_success
   script:
     - echo "🧭 重启nginx服务"
