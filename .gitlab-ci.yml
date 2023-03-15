@@ -3,7 +3,8 @@ image: node:16
 stages: # 分段
   - install
   - build
-  # - deploy
+  - deploy
+  - reload-nginx
 
 
 cache: # 缓存
@@ -14,6 +15,10 @@ cache: # 缓存
 install-job:
   stage: install
   only:
+    - dev
+    - test
+    - uat
+    - prod
     - master
   tags:
     - general
@@ -21,21 +26,31 @@ install-job:
     - echo "🧩 开始install"
     - yarn --registry=http://10.13.4.128:4873
 
-build&deploy-job:
+build-job:
   stage: build
   only:
+    - dev
+    - test
+    - uat
+    - prod
     - master
   tags:
     - general
-  # artifacts:
-  #   expire_in: 1 week
-  #   paths:
-  #     - public/
   before_script: 
     - mkdir -p /data
   script:
     - echo "⏰ 开始代码打包"
     - yarn docs:build
+
+dev-deploy-job:
+  stage: deploy
+  only:
+    - dev
+  tags:
+    - general
+  before_script: 
+    - mkdir -p /data
+  script:
 
     # - SHORT_SHA=`git rev-parse --short ${CI_COMMIT_SHA}`
     # - OUTPUT_PATH=/data/${CI_PROJECT_NAME}/${CI_PIPELINE_ID}-${SHORT_SHA}
@@ -53,11 +68,44 @@ build&deploy-job:
         mkdir -p ${OUTPUT_LATEST_PATH}
       fi 
     - cp -rf ./public/* ${OUTPUT_LATEST_PATH}
+    
+deploy-job:
+  stage: deploy
+  only:
+    - test
+    - uat
+    - prod
+    - master
+  tags:
+    - general
+  before_script: 
+    - mkdir -p /data
+  when: manual
+  script:
+    - echo "🚌 部署代码"
+    - GIT_BRANCH=`git branch`
+    - OUTPUT_PATH=/data/${CI_PROJECT_NAME}/${GIT_BRANCH}
+    - echo "$OUTPUT_PATH"
+    - |
+      if [ ! -d ${OUTPUT_PATH} ]; then
+        mkdir -p ${OUTPUT_PATH}
+      fi 
+    - cp -rf ./public/* ${OUTPUT_PATH}
 
+    
+reload-nginx:
+  stage: reload-nginx
+  only:
+    - dev
+    - test
+    - uat
+    - prod
+    - master
+  tags:
+    - general
+  before_script: 
+    - mkdir -p /data
+  script:
     - echo "🧭 重启nginx服务"
     - echo $(date "+%Y-%m-%d %H:%M:%S") "完成"【${CI_PROJECT_NAME}】"的部署，重启nginx服务" >> /data/nginx-reload-log.log
-
     - echo "🎉 完成！"
-    
-    
-  
