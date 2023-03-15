@@ -4,7 +4,7 @@
   "description": "Documentation for FEED",
   "scripts": {
     "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs --dest public"
+    "docs:build": "vuepress build docs --dest dist"
   },
   "main": "index.js",
   "author": "oys",

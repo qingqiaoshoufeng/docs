@@ -48,6 +48,7 @@ build-job:
     - general
   before_script:
     - mkdir -p /data
+  when: manual
   script:
     - echo "🚌 部署代码"
     - GIT_BRANCH=`git branch`
@@ -57,7 +58,7 @@ build-job:
       if [ ! -d ${OUTPUT_PATH} ]; then
         mkdir -p ${OUTPUT_PATH}
       fi 
-    - cp -rf ./public/* ${OUTPUT_PATH}
+    - cp -rf ./dist/* ${OUTPUT_PATH}
 
 dev-deploy-job:
   only:
@@ -83,6 +84,7 @@ master-deploy-job:
   only:
     - master
   extends: .deploy-job
+  when: always
   script:
     - echo "🚌 部署代码"
     - OUTPUT_LATEST_PATH=/data/${CI_PROJECT_NAME}/latest
@@ -90,7 +92,7 @@ master-deploy-job:
       if [ ! -d ${OUTPUT_LATEST_PATH} ]; then
         mkdir -p ${OUTPUT_LATEST_PATH}
       fi 
-    - cp -rf ./public/* ${OUTPUT_LATEST_PATH}
+    - cp -rf ./dist/* ${OUTPUT_LATEST_PATH}
 
 reload-nginx:
   stage: reload-nginx
