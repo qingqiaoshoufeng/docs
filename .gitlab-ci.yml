@@ -42,16 +42,14 @@ build-job:
     - echo "⏰ 开始代码打包"
     - yarn docs:build
 
-dev-deploy-job:
-  stage: &deploy_stage
+.deploy-job:
+  stage:
     - deploy
-  only:
-    - dev
-  tags: &deploy_tags
+  tags:
     - general
-  before_script: &deploy_before_script
+  before_script:
     - mkdir -p /data
-  script: &deploy_script
+  script:
     - echo "🚌 部署代码"
     - GIT_BRANCH=`git branch`
     - OUTPUT_PATH=/data/${CI_PROJECT_NAME}/${GIT_BRANCH}
@@ -62,36 +60,30 @@ dev-deploy-job:
       fi 
     - cp -rf ./public/* ${OUTPUT_PATH}
 
+dev-deploy-job:
+  only:
+    - dev
+  extends: .deploy-job
+
 test-deploy-job:
   only:
     - test
-  stage: *deploy_stage
-  tags: *deploy_tags
-  before_script: *deploy_before_script
-  script: *deploy_script
+  extends: .deploy-job
 
 uat-deploy-job:
   only:
     - uat
-  stage: *deploy_stage
-  tags: *deploy_tags
-  before_script: *deploy_before_script
-  script: *deploy_script
+  extends: .deploy-job
 
 prod-deploy-job:
   only:
     - prod
-  stage: *deploy_stage
-  tags: *deploy_tags
-  before_script: *deploy_before_script
-  script: *deploy_script
+  extends: .deploy-job
 
 master-deploy-job:
   only:
     - master
-  stage: *deploy_stage
-  tags: *deploy_tags
-  before_script: *deploy_before_script
+  extends: .deploy-job
   script:
     - echo "🚌 部署代码"
     - OUTPUT_LATEST_PATH=/data/${CI_PROJECT_NAME}/latest
