@@ -11,6 +11,7 @@ cache: # 缓存
   key: ${CI_BUILD_REF_NAME}
   paths:
     - node_modules
+    - dist
 
 install-job:
   stage: install
@@ -23,6 +24,8 @@ install-job:
   tags:
     - general
   script:
+    - node -v
+    - npm -v
     - echo "🧩 开始install"
     - yarn --registry=http://10.13.4.128:4873
 
