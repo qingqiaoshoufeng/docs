@@ -43,8 +43,7 @@ build-job:
     - yarn docs:build
 
 .deploy-job:
-  stage:
-    - deploy
+  stage: deploy
   tags:
     - general
   before_script:
