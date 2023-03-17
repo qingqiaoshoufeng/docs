@@ -64,7 +64,7 @@ const getList = () => {
         page: 1,
         limit: 10,
         total: 40,
-        list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(i => ({
+        list: Array.from(Array(10).keys()).map(i => ({
           num: '20221027074621094029',
           type: '火灾扑救',
           time: '2022-12-06 23:01',
