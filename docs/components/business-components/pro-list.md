@@ -26,3 +26,16 @@
 | filters | 顶部筛选区域插槽 | v-slot:filters="{ filterFormState }" |
 | bodyCell | 个性化单元格 | v-slot:bodyCell="{text, record, index, column}" |
 | right-actions | 右上角的操作插槽 | - |
+
+### 事件
+| 事件名 | 说明 |
+| :----: | :--: |
+| filter | 点击筛选时触发 |
+| reset | 重置筛选的时触发 |
+| pageChang | 分页改变时触发 |
+
+### 方法
+| 方法名 | 说明 |
+| :----: | :--: |
+| loadList | 触发请求列表数据 |
+| filter | 触发请求筛选列表数据 |

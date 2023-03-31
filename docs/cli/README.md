@@ -362,6 +362,22 @@ export default{
 }
 ```
 
+### darkness 暗黑模式
+
+基于 (darkreader)[https://github.com/darkreader/darkreader] 来实现的暗黑模式
+
+- **类型:** 
+```ts
+{ 
+  showSwitch: boolean, // 是否显示切换开关
+  defaultMode: 'light' | 'dark', // 默认为 light
+  theme: Partial<DarkReader.Theme>, // 详见：https://github.com/darkreader/darkreader/blob/9654563378d07cc342ecb9ce25d5c5c5e18bfa81/src/definitions.d.ts#L51
+  fixes: DarkReader.DynamicThemeFix, // 详见：https://github.com/darkreader/darkreader/blob/9654563378d07cc342ecb9ce25d5c5c5e18bfa81/src/definitions.d.ts#L145
+}
+```
+
+
+
 ### layout 布局
 
 - **类型:** `object`
