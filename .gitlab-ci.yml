@@ -58,7 +58,7 @@ build-job:
   when: manual
   script:
     - echo "🚌 部署代码"
-    - OUTPUT_PATH=/data/${CI_PROJECT_NAME}/${CI_COMMIT_REF_NAME}
+    - OUTPUT_PATH=/data/${CI_PROJECT_NAME}/latest
     - echo "$OUTPUT_PATH"
     - |
       if [ ! -d ${OUTPUT_PATH} ]; then
