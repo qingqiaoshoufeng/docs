@@ -362,9 +362,25 @@ export default{
 }
 ```
 
+### topNavigationCustomComponents 顶部导航栏自定义组件
+
+- **类型:** `componentsVNode[]`
+- **默认值:** `undefined`
+
+示例：
+```js
+// settings.mjs
+import { h } from 'vue';
+import Components1 from 'path/to/component'
+export default{
+  topNavigationCustomComponents: [h(Components1)],
+}
+```
+
+
 ### darkness 暗黑模式
 
-基于 (darkreader)[https://github.com/darkreader/darkreader] 来实现的暗黑模式
+基于 [darkreader](https://github.com/darkreader/darkreader) 来实现的暗黑模式
 
 - **类型:** 
 ```ts
