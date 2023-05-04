@@ -107,5 +107,7 @@ reload-nginx:
   when: on_success
   script:
     - echo "🧭 重启nginx服务"
+    - OUTPUT_PATH=/data/${CI_PROJECT_NAME}
+    - cp -rf dist/nginx-*.conf ${OUTPUT_PATH}
     - echo $(date "+%Y-%m-%d %H:%M:%S") "完成"【${CI_PROJECT_NAME}】"的部署，重启nginx服务" >> /data/nginx-reload-log.log
     - echo "🎉 完成！"
