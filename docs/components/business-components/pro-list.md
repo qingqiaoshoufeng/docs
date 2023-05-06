@@ -15,7 +15,7 @@
 | 属性名 | 说明 |  类型  | 默认值 |
 | :----: | :--: | :----: | :----: |
 | getListFn | 获取列表数据的接口方法 | `(query: any) => Promise<array>` | - |
-| columns | 表格列的配置描述，具体项见[这里](https://antdv.com/components/table-cn#Column) | array | - |
+| columns | 表格列的配置描述，具体项见[这里](http://10.13.4.128:1111/components/table-cn#Column) | array | - |
 | layout | 表单布局 | 'horizontal'|'vertical'|'inline' | 'horizontal' |
 | paginationConfig | 分页配置 | object | { alias: { page: 'page', limit: 'limit', list: 'list', total: 'total' }, limit: 10 } |
 | defaultFilterValue | 顶部筛选默认值 | object | - |
