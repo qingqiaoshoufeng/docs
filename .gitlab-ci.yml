@@ -93,6 +93,7 @@ master-deploy-job:
   only:
     - master
   extends: .deploy-job
+  when: always
 
 reload-nginx:
   stage: reload-nginx
