@@ -175,7 +175,7 @@ export default {
 
 ---
 
-### tokenKeyName 秘钥名称
+### tokenKeyName Token名称
 
 - **类型:** `string`
 - **默认值:** `'token'`
@@ -291,14 +291,25 @@ export default{
   login: (loginForm: { username: string, password: string, encryptPassword: string } ) => Promise<string>, 
   logout: () => Promise<any>, 
   getUserInfo: () => Promise<{ name: string, [key: string]: any}>, 
-  getPermissionData: (userInfo: object) => Promise<{ permissionCodes: string[], [key: string]: any }> 
+  getPermissionData: (userInfo: object) => Promise<{ permissionCodes: string[], [key: string]: any }>,
+  getVerificationCode: () => Promise<verificationCodeSrc: string>,
+  rsaPublicKey: () => Promise<publicKey: string>
 }
 ```
 
 - **示例:** 
 ```js
 {
-  // 用户登录的实现方法
+  /**
+   * 用户登录的实现方法
+   * loginForm包含：
+   * @username (用户名)
+   * @password (密码)
+   * @verificationCode (验证码)
+   * @encryptUserName (MD5加密后的用户名)
+   * @encryptPassword (RSA加密后的密码)
+   * @encryptVerificationCodeAndPassWord (RSA加密后的验证码+密码)
+   */
   async login(loginForm) {
     // ... 
     // 登录请求实现过程，例如：const { token } = await login(loginForm)
@@ -330,6 +341,25 @@ export default{
     // ...
     return Promise.resolve(permissions); // 返回数据：permissions<object>，请务必保证 permissions 里面包含 permissionCodes: string[]
   },
+
+  // 获取图形验证码数据的实现方法（当此方法没有配置是，默认不显示验证码输入框）
+  async getVerificationCode() {
+    // ...
+    // 获取图形验证码，示例：
+    // const { img } = await fetch('http://10.13.4.66:8081/reserver/auth/code').then(r => r.json())
+    // return img
+    // ...
+    return Promise.resolve(verificationCodeSrc); // 返回 verificationCodeSrc 为 Base64 图片数据
+  },
+
+  // 设置 RSA 加密的公钥，将作用于 login 方法，返回 encryptPassword 和 encryptVerificationCodeAndPassWord
+  async rsaPublicKey() {
+    // 可以直接前端设置，或者在这里通过后端接口获取公钥。
+    return Promise.resolve(publicKey); // 返回 publicKey<string>
+  },
+
+  // 自定义其他组件（在登陆按钮下面显示）
+  customComponents: [h(Components1)], // 使用方法参考 topNavigationCustomComponents
 }
 ```
 
