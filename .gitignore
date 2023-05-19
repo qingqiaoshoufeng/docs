@@ -2,6 +2,7 @@
 node_modules
 docs/.vitepress/dist
 /public
+docs/.vuepress/public/demos/business-components/node_modules
 
 docs/.vuepress/.temp/
 docs/.vuepress/.cache/
