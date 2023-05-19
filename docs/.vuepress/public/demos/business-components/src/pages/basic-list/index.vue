@@ -311,7 +311,7 @@ const handleModal = (modalTypeVal, inCardVal, modalVisibleVal, isAddVal) => {
   <ProDataImport
     v-model:visible="importVisible"
     title="导入"
-    action="https://www.mocky.io/v2/5cc8019d300000980a055e76"
+    action="https://ouyangshun.free.beeceptor.com/import-upload"
     :handle-result="handleResult"
     :handle-download-error-result="handleDownloadErrorResult"
     :accepts="['excel']"

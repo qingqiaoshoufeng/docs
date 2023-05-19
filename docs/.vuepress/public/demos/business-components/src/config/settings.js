@@ -66,7 +66,10 @@ export default {
       import('@castle/business-components/dist/style.css')
 
       const { $router } = app.config.globalProperties
-      $router.push(`/${new URLSearchParams(window.location.search).get('url')}`)
+      const URL = new URLSearchParams(window.location.search).get('url')
+      if (URL) {
+        $router.push(`/${URL}`)
+      }
     },
   },
 

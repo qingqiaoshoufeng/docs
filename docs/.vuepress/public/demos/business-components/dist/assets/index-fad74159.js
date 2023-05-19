@@ -1,1 +1,0 @@
-import{P as o}from"./index-38f073c3.js";const m="/demos/business-components/dist/assets/logo-426c674f.png",r=o({name:"RenderJsxComponents",props:{componentVnode:{type:Object,default:null}},setup(e,{attrs:n,expose:s,emit:t}){return()=>e.componentVnode}});export{r as R,m as _};
