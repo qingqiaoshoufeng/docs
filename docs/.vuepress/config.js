@@ -44,6 +44,10 @@ export default defineUserConfig({
         link: '/front-standard-guide/',
       },
       {
+        text: '设计交互规范',
+        link: '/ux/',
+      },
+      {
         text: '前端团队文档',
         link: '/docs/',
       },
@@ -95,6 +99,9 @@ export default defineUserConfig({
           children: [
             '/components/business-components/README.md',
             '/components/business-components/pro-list.md',
+            '/components/business-components/pro-card.md',
+            '/components/business-components/pro-data-import.md',
+            '/components/business-components/pro-modal.md',
             '/components/business-components/form-preview-text.md'
           ],
         },
@@ -125,6 +132,18 @@ export default defineUserConfig({
             '/front-standard-guide/javascript-style-guide.md',
             '/front-standard-guide/typescript-style-guide.md',
             '/front-standard-guide/git-style-guide.md',
+          ],
+        },
+      ],
+      '/ux/': [
+        {
+          text: '设计交互规范',
+          children: [
+            '/ux/layout.md',
+            '/ux/login.md',
+            '/ux/basic-list.md',
+            '/ux/404.md',
+            '/ux/403.md',
           ],
         },
       ],

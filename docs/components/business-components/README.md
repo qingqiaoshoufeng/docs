@@ -22,5 +22,7 @@ app.use(ComponentsTemplate);
 ```
 ### 局部引入
 ```js
-import { ProList, FormPreviewText, ... } from "@castle/business-components";
+import FormPreviewText from '@castle/business-components/dist/FormPreviewText.js';
+import ProList from '@castle/business-components/dist/ProList.js';
+...
 ```

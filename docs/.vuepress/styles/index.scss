@@ -25,3 +25,18 @@ h6 {
 :root {
   --content-width: 100%;
 }
+
+.vmi-previewer-example, .ant-picker-dropdown {
+  table {
+    display: table;
+    tr:nth-child(2n) {
+      background: none;
+    }
+    tr {
+      border: none;
+    }
+    th, td {
+      border: none;
+    }
+  }
+}

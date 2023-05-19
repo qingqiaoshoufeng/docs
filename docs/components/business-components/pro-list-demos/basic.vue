@@ -1,5 +1,6 @@
 <script setup>
-import { DownloadOutlined, PlusOutlined } from '@ant-design/icons-vue'
+import { ref } from 'vue';
+import { FilterOutlined } from '@ant-design/icons-vue'
 
 const columns = [
   {
@@ -77,63 +78,100 @@ const getList = () => {
     }, 1500)
   })
 }
+
+const filter = () => {
+  console.log('filter')
+}
+
+const reset = () => {
+  console.log('reset')
+}
+
+const pageChange = () => {
+  console.log('pageChange')
+}
+
+const expand = ref(false)
 </script>
 
 <template>
-  <ProList :get-list-fn="getList" :columns="columns" layout="inline">
-    <template #filters="{ filterFormState }">
-      <a-form-item name="time">
-        <a-range-picker
-          v-model:value="filterFormState.time"
-          :show-time="{ format: 'HH:mm' }"
-          format="YYYY-MM-DD HH:mm"
-        />
-      </a-form-item>
+  <ProList
+    ref="proList"
+    :get-list-fn="getList"
+    :columns="columns"
+    layout="vertical"
+    :default-filter-value="{ zone: 'zhejiang' }"
+    @filter="filter"
+    @reset="reset"
+    @page-change="pageChange"
+  >
+    <template #subTitle>
+      <strong>总计： 1200</strong>
+    </template>
+    <template #filters="{ filterFormState, handleFilter }">
+      <a-row :gutter="16">
+        <a-col :span="4">
+          <a-form-item label="时间" name="time">
+            <a-range-picker
+              v-model:value="filterFormState.time"
+              :show-time="{ format: 'HH:mm' }"
+              format="YYYY-MM-DD HH:mm"
+              style="width: 100%"
+              @change="handleFilter()"
+            />
+          </a-form-item>
+        </a-col>
 
-      <a-form-item name="zone">
-        <a-cascader
-          v-model:value="filterFormState.zone"
-          :options="[{
-            value: 'zhejiang',
-            label: '浙江',
-          }]"
-          expand-trigger="hover"
-          placeholder="选择行政区域"
-        />
-      </a-form-item>
+        <a-col :span="4">
+          <a-form-item label="省份" name="zone">
+            <a-cascader
+              v-model:value="filterFormState.zone"
+              :options="[
+                {
+                  value: 'zhejiang',
+                  label: '浙江',
+                },
+              ]"
+              expand-trigger="hover"
+              placeholder="选择行政区域"
+              @change="handleFilter()"
+            />
+          </a-form-item>
+        </a-col>
 
-      <a-form-item name="code">
-        <a-input
-          v-model:value="filterFormState.code"
-          placeholder="119编号"
-        />
-      </a-form-item>
+        <a-col :span="4">
+          <a-form-item label="119编号" name="code">
+            <a-input v-model:value="filterFormState.code" placeholder="请输入" @blur="handleFilter()" />
+          </a-form-item>
+        </a-col>
+
+        <a-col v-if="expand" :span="4">
+          <a-form-item label="户主信息" name="user">
+            <a-input v-model:value="filterFormState.user" placeholder="请输入" @blur="handleFilter()" />
+          </a-form-item>
+        </a-col>
+
+        <a-col :span="2">
+          <a-form-item label=" ">
+            <a-button type="link" @click="expand = !expand">
+              <FilterOutlined v-if="!expand" />{{ expand ? '收起' : '更多筛选' }}
+            </a-button>
+          </a-form-item>
+        </a-col>
+      </a-row>
     </template>
 
-    <template #bodyCell="{ column }">
+    <template #bodyCell="{ column, index }">
       <template v-if="column.dataIndex === 'state'">
         <span class="alarm-state-wait">状态</span>
       </template>
       <template v-if="column.dataIndex === 'action'">
         <a-space>
-          <a type="link">
-            查看
-          </a>
+          <a type="link"> 填报 </a>
+          <a type="link"> 挂起 </a>
+          <a type="link"> 查看 </a>
         </a-space>
       </template>
-    </template>
-
-    <template #right-actions>
-      <a-button
-        type="primary"
-      >
-        <PlusOutlined />
-        新增
-      </a-button>
-      <a-button>
-        <DownloadOutlined />
-        导出
-      </a-button>
     </template>
   </ProList>
 </template>
