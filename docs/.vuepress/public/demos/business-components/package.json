@@ -1,0 +1,35 @@
+{
+	"name": "business-components",
+	"author": "ouyangshun",
+	"version": "0.0.1",
+	"description": "business components demo",
+	"scripts": {
+		"dev": "castle dev",
+		"build": "castle build",
+		"optimize": "castle optimize",
+		"preview": "castle preview --port 4173",
+		"preinstall": "npx only-allow yarn",
+		"lint-staged": "npx lint-staged",
+		"prepare": "husky install"
+	},
+	"lint-staged": {
+		"*.{vue,js,jsx,cjs,mjs}": [
+			"eslint --ignore-path .gitignore"
+		]
+	},
+	"license": "ISC",
+	"dependencies": {
+		"@castle/ant-design-vue": "latest",
+		"@castle/business-components": "^0.2.1",
+		"@castle/castle-template": "latest",
+		"@castle/pro-layout": "latest",
+		"@commitlint/cli": "^17.3.0",
+		"@commitlint/config-conventional": "^17.3.0",
+		"husky": "^8.0.2",
+		"lint-staged": "^13.1.0"
+	},
+	"devDependencies": {},
+	"engines": {
+		"node": ">=14.18.0"
+	}
+}

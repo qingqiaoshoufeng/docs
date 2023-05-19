@@ -1,0 +1,1 @@
+import{b as e}from"./route-block-83d24a4e.js";import{_ as t,o as _,d as c}from"./index-38f073c3.js";const o={},n={class:"content-wrap"};function a(s,f){return _(),c("div",n," 这里是内容区域 ")}typeof e=="function"&&e(o);const i=t(o,[["render",a],["__scopeId","data-v-a7f4f6a7"]]);export{i as default};
