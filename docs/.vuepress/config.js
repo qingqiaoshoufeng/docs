@@ -134,6 +134,12 @@ export default defineUserConfig({
             '/front-standard-guide/git-style-guide.md',
           ],
         },
+        {
+          text: '最佳实践',
+          children: [
+            '/front-standard-guide/clean-code-javascript.md',
+          ],
+        },
       ],
       '/ux/': [
         {
