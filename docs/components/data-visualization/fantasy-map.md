@@ -8,6 +8,8 @@
 
 ## 使用
 
+此组件依赖了 geoJson 的数据，请将 [geoJson 数据](http://10.10.3.188:9090/castle/components/geo-json) 拷贝到 `/public/geo-json/` 下，也可以通过 `geoJsonPath` 修改对应的文件夹地址。
+
 ### 基本使用
 
 <demo src="./fantasy-map-demos/basic.vue"></demo>
