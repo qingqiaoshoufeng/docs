@@ -138,6 +138,7 @@ export default defineUserConfig({
           text: '最佳实践',
           children: [
             '/front-standard-guide/clean-code-javascript.md',
+            '/front-standard-guide/fire-alarm-statistics-questions.md',
           ],
         },
       ],

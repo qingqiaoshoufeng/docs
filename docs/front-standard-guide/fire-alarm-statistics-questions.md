@@ -2,13 +2,20 @@
 
 ## 问题1：[console-for-proxy](https://www.npmjs.com/package/console-for-proxy)
 
-Vue3 之后通过`ref`、`reactive`声明变量，但是输出到控制台的变量每次要多点击1-2下，才能看到想要看到的变量具体内容。如下图：
+Vue3 之后通过`ref`、`reactive`声明变量，比如以下变量：
 
-[](./images/log-origin.png)
+```
+const detail = ref({ name: '小明' })
+const result = reactive({ code: 200 })
+```
+
+输出到控制台的变量每次要多点击1-2下，才能看到`name: '小明'`。如下图：
+
+![image](./images/log-origin.png)
 
 为了减少点击次数我们需要获取到未代理的原始值，问题其实变成了，我们根据代理后的`ref`、`reactive`变量，获取到代理前的值，并输出的控制台。
 
-原生`JS`通过`Reflect`可以获取到代理前的值，不过相对麻烦，而`Vue`本身也提供了`toRaw`方法，可以通过此方法获取到代理前的值。所以我们封装一下`toRaw`方法并覆盖掉原生`console.log`即可。
+原生`JS`通过`Reflect`可以获取到代理前的值，不过相对麻烦，而`Vue`本身也提供了[`toRaw`](https://vuejs.org/api/reactivity-advanced.html#toraw)方法，可以通过此方法获取到代理前的值。所以我们封装一下`toRaw`方法并覆盖掉原生`console.log`即可。
 
 火统使用的是封装好的`npm`包，如下：
 
@@ -26,13 +33,13 @@ console.log(result)
 
 经过改写的`console.log`输出的`ref`、`reactive`如下图：
 
-[](./images/log-final.png)
+![image](./images/log-final.png)
 
 ## 问题2：表单自动滚到未填写的必填项
 
-### 产品多次提到，减少用户输入、滚动、点击等操作，方便用户使用。
+产品多次提到，减少用户输入、滚动、点击等操作，方便用户使用。对于表单校验未通过，希望滚动到未填写必填项位置
 
-火统采用的是 Dom 查询到所有报红色提示的节点，并滚动到第一个节点位置。
+火统采用的是`Dom`查询到所有报红色提示的节点，并滚动到第一个节点位置。
 
 ```
 export const scrollFormFailed = () => {
@@ -78,7 +85,7 @@ formRef.value.validate().then((values) => {
 .scrollBarStyle(item-content);
 ```
 
-由于`less`函数是高级特性，`Vite`配置要做相应更改。
+由于[`less`](https://blog.csdn.net/RogerQianpeng/article/details/120780283)函数是高级特性，[`Vite`](https://cn.vitejs.dev/config/shared-options.html#css-preprocessoroptions)配置要做相应更改。
 
 ```
 // css预处理器
@@ -94,9 +101,11 @@ preprocessorOptions: {
 
 ## 问题4：省市县街道四级懒加载回显
 
-由于使用的是省市县街道4级联动结构，所以做了懒加载优化请求速度。但是在编辑修改的时候，由于市县街道数据未加载，导致回显出现问题，`浙江省/000000/000000/000000`。
+火统使用的是省市县街道4级联动结构，所以做了懒加载优化请求速度。但是在编辑修改的时候，由于市县街道数据未加载，导致回显出现问题。
 
-主要根据已有的省市县`id`，批量加载出市县街道数据，有了市县街道数据就能正常显示相应中文文案。对于批量加载可以使用`Promise.all()`，或者使用`VueUse`等第三方库封装好的异步任务队列等方法。
+`浙江省/000000/000000/000000`
+
+主要根据已有的省市县`id`，批量加载出市县街道数据，有了市县街道数据就能正常显示相应中文文案。对于批量加载可以使用[`Promise.all()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)，或者使用[`VueUse`](https://vueuse.org/core/useAsyncQueue/)、[`VueHook Plus`](https://inhiblab-core.gitee.io/docs/hooks/useAsyncOrder/)等第三方库封装好的异步任务队列等方法。
 
 ```
 Promise.all()
@@ -108,7 +117,7 @@ VueHook Plus：useAsyncOrder
 
 ## 问题5：[useRerender](http://10.10.3.188:9090/castle/projects/fire-alarm-statistics-ui/blob/dev/src/hooks/useRerender.js)
 
-对于窗口发生变化，或者全屏之后缩放带来的`size`变化，需要重新渲染的地方，可以使用`useRerender`。
+对于窗口发生变化，或者全屏之后缩放带来的`size`变化，需要重新渲染的地方，可以使用`useRerender`控制。
 
 比如，页面在滚动的过程中，锚点是固定不变的，因为锚点使用的是绝对定位，如果这个时候窗口大小发生了变化，锚点的位置因为是绝对定位就会错乱，所以我们就要重新渲染锚点组件，可以使用`useRerender`。
 
@@ -122,11 +131,11 @@ const { showCurrentDom } = useRerender()
 
 ## 问题6：[useModal](http://10.10.3.188:9090/castle/projects/fire-alarm-statistics-ui/blob/dev/src/hooks/useModal.js)
 
-对于弹窗显示隐藏通过`useModal`控制。
+对于弹窗显示隐藏，火统项目中封装了`useModal`，主要因为以下原因。
 
-第一个原因是超过5个弹窗，通过多次定义变量没法很好控制弹窗的显示隐藏，通过封装的`useModal`可以减少定义`ref`、`reactive`变量的次数。
+第一个原因：超过5个弹窗，通过多次定义变量没法很好控制弹窗的显示隐藏，通过封装的`useModal`可以减少定义`ref`、`reactive`变量的次数。
 
-第二个原因是大家遵守相同的规范，减少不同书写方式在版本迭代过程中，逐渐变得冗杂，难以维护。
+第二个原因：大家遵守相同的规范，减少不同书写风格在版本迭代过程中，逐渐变得冗杂，难以维护。
 
 ```
 import { useModal } from '@/hooks/useModal.js'
@@ -142,11 +151,11 @@ show.value.lookFire = true
 
 ## 问题7：[useOptions](http://10.10.3.188:9090/castle/projects/fire-alarm-statistics-ui/blob/dev/src/hooks/useOptions.js)
 
-对于字典及下拉选项通过`useOptions`控制。
+对于字典，火统项目中封装了`useOptions`，主要因为以下原因。
 
-第一个原因是超过5个字典，通过多次定义变量没法很好绑定字典跟控件，通过封装的`useOptions`可以减少定义`ref`、`reactive`变量的次数。
+第一个原因：超过5个字典，通过多次定义变量没法很好绑定字典跟控件，通过封装的`useOptions`可以减少定义`ref`、`reactive`变量的次数。
 
-第二个原因是大家遵守相同的规范，减少不同书写方式在版本迭代过程中，逐渐变得冗杂，难以维护。
+第二个原因：大家遵守相同的规范，减少不同书写方式在版本迭代过程中，逐渐变得冗杂，难以维护。
 
 ```
 import { useOptions } from '@/hooks/useOptions.js'
@@ -187,7 +196,7 @@ options.value.idNot = [
 
 ## 问题9：全局字典管理[useSystemDict](http://10.10.3.188:9090/castle/projects/fire-alarm-statistics-ui/blob/dev/src/store/modules/dict.js)
 
-对于表单需要用到的字典，为了全局统一处理，并且减少每次都请求后端接口，通过`pinia`做了缓存处理。
+对于表单需要用到的字典，为了全局统一处理，并且减少每次都请求后端接口，通过[`pinia`](https://pinia.vuejs.org/)做了缓存处理。
 
 ```
 import { useSystemDict } from '@/store/index.js'
@@ -276,7 +285,7 @@ const form = inject('form')
 
 `Vue3`之后`ref`对象是响应式的，加上`provide`、`inject`之后的`form`对象也保持了响应式，因此把多字段表单拆分成模块是可行的。
 
-## 问题11. useForm
+## 问题11. [useForm](https://antdv.com/components/form-cn/#API)
 
 火统中出动填报表单有100多个字段，产品提出需要有进度条能展示当前表单填写进度，`ant-design-vue`中可以使用`useForm`动态对表单校验，同时不会触发表单显式红色提示。
 
@@ -319,7 +328,7 @@ const rulesRef = ref({
 
 ## 问题12. 数组动态删除
 
-通过`splice`删除数组元素会引起`useForm`报错，`filter`生成新数组不会有此问题。因为`splice`是对原数组进行处理，而`filter`则是生成新数组后赋值。
+通过`splice`删除数组元素会引起`useForm`报错，`filter`生成新数组不会有此问题。`splice`是对原数组进行处理，而`filter`则是生成新数组后赋值，在对原数组变更过程中已经引起了`Vue`响应式进而触发了`useForm`。
 
 ```
 form.value.linkUnit.fireDispatchList.splice(index, 1)
