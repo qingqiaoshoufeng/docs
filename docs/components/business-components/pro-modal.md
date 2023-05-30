@@ -25,3 +25,11 @@
 | cancelBtn | 确认按钮的控制 | { label: string, display: boolean } | - |
 | proCardId | 当选择为覆盖 pro-card 的弹窗样式时，绑定的id （pro-card 需要设置同样的 id）| string | - |
 | ... | 其他参数可以参考[modal 组件](http://10.13.4.128:1111/components/modal-cn) | - | - |
+
+### 插槽
+
+| 插槽名称 | 说明 |  参数  |
+| :----: | :--: | :----: |
+| default | 默认中间内容插槽 | - |
+| title | 标题插槽，将覆盖默认的标题 | - |
+| footer | 底部插槽，将覆盖默认的按钮 | - |

@@ -20,13 +20,15 @@
   "dependencies": {
     "@antv/l7": "^2.13.1",
     "@antv/l7-leaflet": "^0.0.3",
-    "@castle/business-components": "^0.2.1",
+    "@castle/business-components": "^0.2.2",
     "@castle/components-template": "^0.0.5",
     "@castle/data-visualization": "0.0.22",
     "@castle/hx-h265-player": "^0.0.1",
+    "add": "^2.0.6",
     "ant-design-vue": "^3.2.15",
     "dayjs": "^1.11.7",
     "leaflet": "^1.9.3",
-    "three": "^0.150.1"
+    "three": "^0.150.1",
+    "yarn": "^1.22.19"
   }
 }
