@@ -19,8 +19,8 @@
 | fullscreen | 是否默认全屏显示 | boolean | false |
 | destroyOnClose | 关闭时销毁 Modal 里的子元素 | boolean | true |
 | modalType | 显示的弹窗的样式 | 'a-modal' &#124; 'a-drawer' | 'a-modal' |
-| handleOkFn | 点击确认按钮之后的回调函数 | () => Promise<void> | - |
-| handleCancelFn | 点击取消按钮之后的回调函数 | () => Promise<void> | - |
+| handleOkFn | 点击确认按钮之后的回调函数 | () => Promise | - |
+| handleCancelFn | 点击取消按钮之后的回调函数 | () => Promise | - |
 | okBtn | 确认按钮的控制 | { label: string, display: boolean } | - |
 | cancelBtn | 确认按钮的控制 | { label: string, display: boolean } | - |
 | proCardId | 当选择为覆盖 pro-card 的弹窗样式时，绑定的id （pro-card 需要设置同样的 id）| string | - |
