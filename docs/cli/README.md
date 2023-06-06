@@ -42,6 +42,8 @@ yarn run dev
   "scripts": {
     "dev": "castle dev", // 启动开发服务器
     "build": "castle build", // 为生产环境构建产物
+    "dev:microapp": "castle dev:microapp", // 启动微前端的子应用服务
+    "build:microapp": "castle build:microapp", // 为生产环境构建微前端产物
     "optimize": "castle optimize", // 预构建依赖
     "preview": "castle preview --port 4173", // 快速本地预览构建产物
   },
