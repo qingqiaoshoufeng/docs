@@ -12,10 +12,14 @@
 ```
 ### 全局loading
 
-通过 [eventBus](../utils//README.md#eventbus) 事件 `castle-global-loading` 触发和关闭。
+::: tip
+在 `@castle/castle-template` 的版本 `<= 2.0.1`时，事件名为：`castle-global-loading`
+:::
+
+通过 [eventBus](../utils//README.md#eventbus) 事件 `CASTLE_globalLoading` 触发和关闭。
 
 ```js
-bus.emit("castle-global-loading", true)
+bus.emit("CASTLE_globalLoading", true)
 ```
 
 
