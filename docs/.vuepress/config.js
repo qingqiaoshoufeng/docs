@@ -65,6 +65,7 @@ export default defineUserConfig({
             '/cli/layout.md',
             '/cli/global.md',
             '/cli/style.md',
+            '/cli/keep-alive.md',
             '/cli/microapp.md',
           ],
         },

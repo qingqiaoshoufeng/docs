@@ -1,7 +1,7 @@
 # 微前端
 
 ::: tip
-微前端需要 `@castle/castle-template` 的版本 `>= 2.0.0`，且需要在 `package.json` 的 `scripts` 包含微前端的调试和打包命令：
+微前端需要 `@castle/castle-template` 的版本 `>= 2.0.0`，如果是从低版本升级上来，请确保在 `package.json` > `scripts` 包含微前端的调试和打包命令（没有需要手动添加）：
 
 ```
 ...
