@@ -7,7 +7,7 @@
 镜像地址：
 
 ```
-http://10.13.4.128:4873/
+http://castle-npm.cp.hxdi.cn 
 ```
 :::tip
 - 为了杜绝因包管理不同而造成的问题，我们通过[only-allow](https://www.npmjs.com/package/only-allow)强制在项目中使用[Yarn](https://yarnpkg.com/)包管理器
