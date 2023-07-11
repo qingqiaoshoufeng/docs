@@ -8,18 +8,65 @@
 
 组合式api:
 ```vue
-<script setup name="Home">
+<route lang="json">
+{
+  "meta": {
+    "keepAlive": "Foo"
+  }
+}
+</route>
+
+<script setup name="Foo">
 // ...
 </script>
+
+<template>
+  <!-- ... -->
+</template>
 ```
 
 选项式api:
 ```vue
+<route lang="json">
+{
+  "meta": {
+    "keepAlive": "Foo"
+  }
+}
+</route>
+
 <script>
 export default {
-  name: "Home",
+  name: "Foo",
   //...
 };
 </script>
+
+<template>
+  <!-- ... -->
+</template>
+```
+
+如果遇到多层路由嵌套使用，请务必保证父级 router 也要添加 `meta.keepAlive` 参数，并且使用全局 `<PageLayout />` 组件代替 `<router-view />` 组件即可
+
+```vue
+<route lang="json">
+{
+  "meta": {
+    "keepAlive": "Foo"
+  }
+}
+</route>
+
+<script steup name="Foo">
+// ...
+</script>
+
+<template>
+  <div class="page-wrap">
+    <PageLayout />
+  </div>
+</template>
 ```
 :::
+
