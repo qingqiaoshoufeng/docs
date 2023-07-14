@@ -38,3 +38,14 @@
 ### 部署
 
 和正常的vue单页应用一致，区别在于需要多次分别打包不同的应用。未来将结合中台的前端构建工具一起使用。
+
+CI/CD快捷打包命令：
+
+```bash
+# 主应用
+yarn run build:microapp --microappName main
+
+# 子应用
+yarn run build:microapp --microappName <microapp name>
+
+```
