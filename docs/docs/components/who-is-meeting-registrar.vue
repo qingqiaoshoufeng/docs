@@ -16,7 +16,7 @@ const getWeekOfYear = () => {
 const registrars = [
   { name: '欧阳顺', status: true },
   { name: '卯升获', status: true },
-  { name: '毕丽静', status: true },
+  { name: '毕丽静', status: false },
   { name: '郑书彬', status: true },
   { name: '杨川', status: true },
   { name: '和肖飞', status: true },
@@ -26,6 +26,7 @@ const registrars = [
   { name: '董建麟', status: true },
   { name: '付明', status: true },
   { name: '陈阳', status: true },
+  { name: '黄凯', status: true },
 ]
 
 const registrar = () => {
