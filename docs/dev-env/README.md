@@ -21,7 +21,7 @@ $ nrm ls
   cnpm --------- https://r.cnpmjs.org/
   taobao ------- https://registry.npmmirror.com/
   npmMirror ---- https://skimdb.npmjs.com/registry/
-* hx ----------- http://10.13.4.128:4873/
+* hx ----------- http://castle-npm.cp.hxdi.cn/
 ```
 :::
 
