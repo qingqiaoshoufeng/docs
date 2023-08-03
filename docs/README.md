@@ -25,7 +25,7 @@ features:
 footer: MIT Licensed | Copyright © 2022-present 华信设计院
 ---
 
-<!-- ### 像数 1, 2, 3 一样容易
+<!-- ### 像数
 
 <CodeGroup>
   <CodeGroupItem title="YARN" active>
