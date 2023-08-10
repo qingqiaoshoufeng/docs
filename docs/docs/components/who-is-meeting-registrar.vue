@@ -27,6 +27,7 @@ const registrars = [
   { name: '付明', status: true },
   { name: '陈阳', status: true },
   { name: '黄凯', status: true },
+  { name: '范晴', status: true },
 ]
 
 const registrar = () => {
