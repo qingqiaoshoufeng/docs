@@ -26,7 +26,7 @@ install-job:
     - node -v
     - npm -v
     - echo "🧩 开始install"
-    - yarn --registry=http://10.13.4.128:4873
+    - yarn --registry=http://castle-npm.cp.hxdi.cn
 
 build-job:
   stage: build
