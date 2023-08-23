@@ -361,7 +361,7 @@ export default{
   },
 
   // 自定义其他组件（在登陆按钮下面显示）
-  customComponents: [h(Components1)], // 使用方法参考 topNavigationCustomComponents
+  customComponents: [h(Components1)], // 使用方法参考 userNavigationComponents
 }
 ```
 
@@ -394,7 +394,7 @@ export default{
 }
 ```
 
-### topNavigationCustomComponents 顶部导航栏自定义组件
+### userNavigationComponents 顶部导航栏自定义组件
 
 - **类型:** `componentsVNode[]`
 - **默认值:** `undefined`
@@ -405,7 +405,7 @@ export default{
 import { h } from 'vue';
 import Components1 from 'path/to/component'
 export default{
-  topNavigationCustomComponents: [h(Components1)],
+  userNavigationComponents: [h(Components1)],
 }
 ```
 
