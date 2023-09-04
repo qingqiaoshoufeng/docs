@@ -18,6 +18,7 @@
 {
   ...
   microapp: {
+    baseUrl: '', // 开发或生产环境服务的公共基础路径，默认为空，和vite的base功能一致，https://cn.vitejs.dev/config/shared-options.html#base
     apps: [
       {
         name: 'demo1', // 子应用唯一标识符，所用该子应用的url将带上此前缀，如：/demo1/you-page-path
@@ -49,3 +50,5 @@ yarn run build:microapp --microappName main
 yarn run build:microapp --microappName <microapp name>
 
 ```
+
+针对不同的环境，可以添加 --mode 配合 .env.{mode} 指定不同的环境
