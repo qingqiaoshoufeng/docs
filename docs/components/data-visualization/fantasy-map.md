@@ -55,3 +55,4 @@
 |  customAreaMakerContentFn  | 自定义区域块标注内容 | Function |  无  |
 |  customAreaMakerFillColorFn  | 自定义区域块可用状态填充颜色 | Function |  无  |
 |  l7Layer  | L7图层,具体使用方法请看[AntV L7](https://l7.antv.antgroup.com/tutorial/map/leaflet) | Object |  无  |
+|  tileLayerEnable | 关闭瓦片图层 | Boolean | true |
