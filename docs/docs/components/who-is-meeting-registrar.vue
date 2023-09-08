@@ -4,14 +4,6 @@
 </template>
 
 <script setup>
-const getWeekOfYear = () => {
-  var currentDate = new Date()
-  var year = new Date(currentDate.getFullYear(), 0, 1)
-  var days = Math.floor((currentDate - year) / (24 * 60 * 60 * 1000))
-  var week = Math.ceil((currentDate.getDay() + 1 + days) / 7)
-  return week
-}
-
 // 排名不分先后
 const registrars = [
   { name: '欧阳顺', status: true },
@@ -28,12 +20,26 @@ const registrars = [
   { name: '陈阳', status: true },
   { name: '黄凯', status: true },
   { name: '范晴', status: true },
+  { name: '於志强', status: true },
 ]
 
+const normalRegistrars = registrars.filter((i) => i.status)
+
+const anchored = {
+  date: new Date('2023/09/01'),
+  index: normalRegistrars.findIndex(i => i.name === '陈阳'),
+}
+
+const getWeekOfDates = (date) => {
+  const currentDateTime = new Date().getTime();
+  const lastDateTime = new Date(date).getTime() ;
+  return parseInt(String(Math.abs(Number(currentDateTime) - Number(lastDateTime)) / 1000 / 60 / 60 / 24 / 7));
+}
+
 const registrar = () => {
-  const registrarNum = registrars.length
-  const index = (getWeekOfYear() + registrarNum) % registrarNum
-  return registrars.filter((i) => i.status)[index]
+  const registrarNum = normalRegistrars.length
+  const index = (getWeekOfDates(anchored.date) + registrarNum + anchored.index) % registrarNum
+  return normalRegistrars[index]
 }
 </script>
 

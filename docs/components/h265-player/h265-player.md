@@ -21,3 +21,8 @@
 | isStream | 是否为视频流(默认为文件) | boolean | false |
 | autoplay | 是否自动播放视频 | boolean | false |
 | useHxH265Play | 强制使用软解（默认为自动根据客户浏览器是否支持硬解而自动调用） | boolean | false |
+
+### 插槽
+| 插槽名 | 说明 | 类型 |
+| :----: | :--: | :--: |
+| sideBar | 状态栏插槽 | - |
