@@ -91,10 +91,22 @@ Castle CLI 生成的的整个项目的目录结构，您需要关注的如下：
 └─ yarn.lock   
 ```                 
 
+## 内置基础依赖
+```
+"vue": "^3.2.47",
+"vue-router": "^4.1.3"
+"axios": "^1.1.2",
+"lodash": "^4.17.21",
+"pinia": "2.0.17",
+"tailwindcss": "^3.1.8",
+"dayjs": "^1.10.5",
+"@castle/ant-design-vue": "latest",
+"@castle/castle-template": "latest",
+"@castle/pro-layout": "latest"
+```
 ## 核心依赖
 
-正如您所看到的，当您通过 Castle CLI 生成整个项目并且安装完依赖包之后，整个项目已经可以通过 `yarn dev` 运行本地开发，其中我们需要注意的是，在所有的依赖包中，最核心的依赖包为 [@Castle/Castle-template](http://10.13.4.128:4873/-/web/detail/@castle/components-template) ，它包含了我们几乎所有的内置模块和功能，所以，通过Castle CLI创建的工程，后期可以直接通过升级 [@Castle/Castle-template](http://10.13.4.128:4873/-/web/detail/@castle/components-template) 的版本进行更新。
-
+正如您所看到的，当您通过 Castle CLI 生成整个项目并且安装完依赖包之后，整个项目已经可以通过 `yarn dev` 运行本地开发，其中我们需要注意的是，在所有的依赖包中，最核心的依赖包为 [@Castle/Castle-template](http://10.13.4.153:4873/-/web/detail/@castle/components-template) ，它包含了我们几乎所有的内置模块和功能，所以，通过Castle CLI创建的工程，后期可以直接通过升级 [@Castle/Castle-template](http://10.13.4.153:4873/-/web/detail/@castle/components-template) 的版本进行更新。
 
 ## 浏览器兼容性
 
@@ -105,7 +117,7 @@ Castle CLI 生成的的整个项目的目录结构，您需要关注的如下：
 :::tip
 有些项目可能需要支持国产操作系统自带的浏览器，而国产浏览器有些是基于低版本的 Chromium，你可以考虑如下方案：
 
-- 安装最新 Linux 版本的 [Firefox](https://www.mozilla.org/zh-CN/firefox/linux/) 浏览器
+- 安装最新 Linux 版本的 [Firefox](https://www.mozilla.org/zh-CN/firefox/linux/) 浏览器或者[360浏览器](https://browser.360.net/gc/index.html?src=se)
 - 通过 [@vitejs/plugin-legacy](https://www.npmjs.com/package/@vitejs/plugin-legacy) 转译成兼容性更好的ES5
 :::
 
@@ -115,7 +127,7 @@ Castle CLI 生成的的整个项目的目录结构，您需要关注的如下：
 项目配置文件位于路径 `src/config/settings.js`，最基础的配置文件：
 
 ```js
-// settings.mjs
+// settings.js
 export default {
   // ...
   // 配置选项 
