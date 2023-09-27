@@ -27,11 +27,11 @@ Pages 会自动将您的 pages 目录中的文件映射到带有
 -  `src/pages/[user]/settings.vue` -> `/:user/settings` (`/one/settings`)
 
 任何动态参数都将作为 props 传递给页面。例如，给定
-文件`src/pages/users/[id].vue`，路径`/users/abc`将被传递
+文件`src/pages/users/[id].vue`，路径`/users/foo`将被传递
 以下 props：
 
 ```json
-{ "id": "abc" }
+{ "id": "foo" }
 ```
 
 ### 嵌套路由

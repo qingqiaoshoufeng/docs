@@ -40,6 +40,10 @@ export default defineUserConfig({
         link: '/utils/',
       },
       {
+        text: '前端中台',
+        link: 'http://castle-platform.cp.hxdi.cn/project'
+      },
+      {
         text: '编码规范',
         link: '/front-standard-guide/',
       },
