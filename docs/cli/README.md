@@ -133,6 +133,13 @@ export default {
   // 配置选项 
   // ...
 }
+
+// settings.js v2.1.17+ 新增函数式配置，默认参数对象里面包括 env 环境变量
+export default ({ env }) => {
+  // ...
+  // 配置选项 
+  // ...
+}
 ```
 
 ### title 应用标题
@@ -470,4 +477,6 @@ export default {
 ## 环境变量
 
 Vite 在一个特殊的 import.meta.env 对象上暴露环境变量，详见：[Vite 环境变量和模式](https://cn.vitejs.dev/guide/env-and-mode.html#env-variables-and-modes)
+
+index.html 通过特殊的 %ENV_NAME% 语法在 HTML 文件中使用，见：[HTML 环境变量替换](https://cn.vitejs.dev/guide/env-and-mode.html#html-env-replacement)
 
