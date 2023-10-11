@@ -27,7 +27,7 @@ import { HxH265Player } from "@castle/hx-h265-player";
 
 ## 2. 导入依赖资源
 
-由于此方案使用了 Web Work 和 WebAssembly 相关技术软解视频，需要将 [相应的依赖文件(点击下载)](/h265Player.zip) 放置到 `public` 文件夹下，注意：文件夹名称不能修改
+由于此方案使用了 Web Work 和 WebAssembly 相关技术软解视频，需要将 [相应的依赖文件](http://10.10.3.188:9090/castle/components/hx-h265-player/-/tree/master/public) 放置到 `public` 文件夹下，注意：文件夹名称不能修改
 
 ```
 root                                 
