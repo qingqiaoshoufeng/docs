@@ -453,6 +453,25 @@ export default{
 布局配置，详见：[Ant Design Pro Layout](https://github.com/vueComponent/pro-components/tree/next/packages/pro-layout)
 
 
+### handleMenuItem 目录项处理
+
+- **类型:** `function`
+- **默认值:** `undefined`
+
+对目录项定制化处理，可结合环境变量，对不同的环境修改目录项的任意 meta 字段
+
+- **示例:** 
+```js
+async handleMenuItem(menuItem) {
+  // ... 
+  // 处理目录项数据 menuItem
+  // ...
+  return menuItem
+}
+
+```
+
+
 ## 环境配置
 
 项目配置文件位于路径 `src/config/project-settings.mjs`，最基础的配置文件：
