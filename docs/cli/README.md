@@ -462,7 +462,7 @@ export default{
 
 - **示例:** 
 ```js
-async handleMenuItem(menuItem) {
+handleMenuItem(menuItem) {
   // ... 
   // 处理目录项数据 menuItem
   // ...
