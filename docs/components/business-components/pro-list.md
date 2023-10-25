@@ -44,9 +44,9 @@ ProList 的诞生是为了解决项目中需要写很多 table 的样板代码�
 | loadList | 触发请求列表数据 | function | - |
 | filter | 触发请求筛选列表数据 | function | - |
 | resetForm | 重置筛选项表单 | function | - |
-| loading | 请求的状态 | Ref<boolean> | false |
-| list | 列表数据 | Ref<object> | - |
-| query | 筛选项参数 | Ref<object> | - |
+| loading | 请求的状态 | Ref&lt;boolean&gt; | false |
+| list | 列表数据 | Ref&lt;object&gt; | - |
+| query | 筛选项参数 | Ref&lt;object&gt; | - |
 | tableRef | 表格组件的引用 | object | - |
 
 
