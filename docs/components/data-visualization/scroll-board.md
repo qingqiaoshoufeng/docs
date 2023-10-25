@@ -18,5 +18,6 @@
 | :----: | :--: | :----: | :----: |
 |  showListNum  | 显示的列表的行数 | Number |  5  |
 |  interval  | 滚动间隔时间（ms） | Number |  2000  |
-|  scrollStep  | 行滚动还是页滚动 | String |  'item' | 'page'  |
+|  scrollStep  | 行滚动还是页滚动 | String |  'item' or 'page'  |
+|  disableScroll | 禁止滚动 | Boolean | false |
 |  ...  | 其他参数和使用方式请参考 [Antdv Table](http://10.13.4.128:1111/components/table-cn#API)，ScrollBoard 相当于是添加了上述几个属性的 ATable | Boolean |  true  |
