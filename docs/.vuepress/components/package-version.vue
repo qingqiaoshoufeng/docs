@@ -18,7 +18,7 @@ export default {
     }
   },
   mounted () {
-    fetch(`http://10.13.4.128:4873/-/verdaccio/data/sidebar/${this.name}`).then(r => r.json()).then(r => this.info = r)
+    fetch(`http://10.13.4.153:4873/-/verdaccio/data/sidebar/${this.name}`).then(r => r.json()).then(r => this.info = r)
   }
 }
 </script>
