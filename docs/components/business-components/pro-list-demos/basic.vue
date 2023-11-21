@@ -58,7 +58,11 @@ const columns = [
   },
 ]
 
-const getList = () => {
+const getList = (querys) => {
+  // 在请求之前，你可以在这里灵活的处理请求参数 querys
+  // ...
+
+  // 模拟接口请求
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({
