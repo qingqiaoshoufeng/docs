@@ -380,6 +380,7 @@ export default{
   },
 
   // 自定义其他组件（在登陆按钮下面显示）
+  // 注意：Components1 组件内如果使用 position: fixed，请自行修改 login-form-wrap: { backdrop-filter: unset; }
   customComponents: [h(Components1)], // 使用方法参考 userNavigationComponents
 }
 ```
