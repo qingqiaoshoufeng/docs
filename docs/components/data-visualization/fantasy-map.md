@@ -56,3 +56,12 @@
 |  customAreaMakerFillColorFn  | 自定义区域块可用状态填充颜色 | Function |  无  |
 |  l7Layer  | L7图层,具体使用方法请看[AntV L7](https://l7.antv.antgroup.com/tutorial/map/leaflet) | Object |  无  |
 |  tileLayerEnable | 关闭瓦片图层 | Boolean | true |
+|  breadcrumbDisabled | 分级禁用面包屑 | Object | { china: false, province: false, city: false, district: false } |
+|  geoClickDisabled | 分级禁用地图点击，根据点击区域判断 | Object | { province: false, city: false, district: false } |
+|  geoMapOffset | 地图偏移量 | Array | [0, 150] |
+|  geoMapPadding | 地图边距 | Number | 0.3 |
+
+### 事件
+| 事件名 | 说明 | 参数 |
+| :----: | :--: | :----: |
+| geoLayerClick | 地图点击时触发 | params: Object；done: Function |
