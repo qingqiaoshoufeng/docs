@@ -27,6 +27,8 @@
 
 [浙江储备Webpack优化](https://docs.qq.com/slide/DZlBsd05vQmxtd1RU)
 
+[储备菜单相关配置文档](https://docs.qq.com/doc/DTkhJS0lKUHpXUnRP)
+
 ### 其他
 
 [前端紧急联系表](https://docs.qq.com/sheet/DZnNXeWR1aEp1bWJB?tab=BB08J2)
