@@ -106,7 +106,7 @@ Castle CLI 生成的的整个项目的目录结构，您需要关注的如下：
 ```
 ## 核心依赖
 
-正如您所看到的，当您通过 Castle CLI 生成整个项目并且安装完依赖包之后，整个项目已经可以通过 `yarn dev` 运行本地开发，其中我们需要注意的是，在所有的依赖包中，最核心的依赖包为 [@Castle/Castle-template](http://10.13.4.153:4873/-/web/detail/@castle/components-template) ，它包含了我们几乎所有的内置模块和功能，所以，通过Castle CLI创建的工程，后期可以直接通过升级 [@Castle/Castle-template](http://10.13.4.153:4873/-/web/detail/@castle/components-template) 的版本进行更新。
+正如您所看到的，当您通过 Castle CLI 生成整个项目并且安装完依赖包之后，整个项目已经可以通过 `yarn dev` 运行本地开发，其中我们需要注意的是，在所有的依赖包中，最核心的依赖包为 [@Castle/Castle-template](http://10.13.4.153:4873/-/web/detail/@castle/components-template) <package-version name="@castle/components-template" />，它包含了我们几乎所有的内置模块和功能，所以，通过Castle CLI创建的工程，后期可以直接通过升级 [@Castle/Castle-template](http://10.13.4.153:4873/-/web/detail/@castle/components-template) 的版本进行更新。
 
 ## 浏览器兼容性
 
