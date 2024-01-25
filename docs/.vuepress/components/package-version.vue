@@ -1,6 +1,6 @@
 <template>
   <div>
-    <img :src="`https://img.shields.io/badge/Latest-v${info?.latest?.version ?? '?.?.?'}-blue`" />
+    <img :src="`https://img.shields.io/badge/${name}-Latest:v${info?.latest?.version ?? '?.?.?'}-blue`" />
   </div>
 </template>
 
