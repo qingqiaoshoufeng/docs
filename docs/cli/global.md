@@ -22,6 +22,23 @@
 bus.emit("CASTLE__globalLoading", true)
 ```
 
+### 全局定时器 <sup class="vt-badge" data-text="2.1.27+" />
+
+通过 [eventBus](../utils//README.md#eventbus) 事件 `CASTLE__globalTimer` 订阅，时间周期为 1 秒。
+
+```js
+bus.on("CASTLE__globalTimer", async (t) => {
+  if (!(t % 3)) {
+    // 每3秒需要执行的内容
+  }
+
+  if (!(t % 10)) {
+    // 每10秒需要执行的内容
+  }
+})
+```
+
+
 
 
 
