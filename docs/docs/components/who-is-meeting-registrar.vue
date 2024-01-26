@@ -21,6 +21,7 @@ const registrars = [
   { name: '黄凯', status: true },
   { name: '范晴', status: true },
   { name: '於志强', status: true },
+  { name: '徐政', status: true },
 ]
 
 const normalRegistrars = registrars.filter((i) => i.status)
