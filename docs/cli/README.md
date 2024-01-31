@@ -145,7 +145,7 @@ export default ({ env }) => {
 
 ### title 应用标题
 
-- **类型:** `string | () => string` <Badge text="2.1.28+"/>
+- **类型:** `string | () => string` <Badge text="2.1.29+"/>
 - **默认值:** `Castle Template`
 
 项目标题，将会在顶部导航栏左侧和登陆界面显示
