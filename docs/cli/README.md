@@ -145,7 +145,7 @@ export default ({ env }) => {
 
 ### title 应用标题
 
-- **类型:** `string`
+- **类型:** `string | () => string` <Badge text="2.1.28+"/>
 - **默认值:** `Castle Template`
 
 项目标题，将会在顶部导航栏左侧和登陆界面显示
@@ -166,7 +166,7 @@ export default ({ env }) => {
 - **类型:** `(userInfo: unknown) => string`
 - **默认值:** `(userInfo) => userInfo?.name`
 
-界面水印文字
+界面水印文字，返回为空字符串则不显示
 
 ---
 
@@ -188,20 +188,20 @@ export default ({ env }) => {
 
 ---
 
-### serverStatus 服务器检查
-
-- **类型:** `() => Promise<boolean>`
-
-该配置的函数每 30 秒将调用一次，根据返回的布尔值来判断是否重定向到服务器维护页面。（注意：请在设计此函数的时候，千万注意其它因素的干扰，如网络问题等，从而错误的返回为false，导致用户看到服务器维护页面）
-
----
-
-### copyright 版权信息 <Badge text="2.1.27+"/>
+### copyright 版权信息 
 
 - **类型:** `() => string`
 - **默认值:** `() => 'Copyright @2022 Huaxin. All Rights Reserved'`
 
 版权信息
+
+---
+
+### serverStatus 服务器检查 <Badge text="2.1.27+"/>
+
+- **类型:** `() => Promise<boolean>`
+
+该配置的函数每 30 秒将调用一次，根据返回的布尔值来判断是否重定向到服务器维护页面。（注意：请在设计此函数的时候，千万注意其它因素的干扰，如网络问题等，从而错误的返回为false，导致用户看到服务器维护页面）
 
 ---
 
