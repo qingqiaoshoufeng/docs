@@ -337,3 +337,136 @@ form.value.linkUnit.fireDispatchList.splice(index, 1)
 ```
 form.value.linkUnit.fireDispatchList = form.value.linkUnit.fireDispatchList.filter(item => item.id !== value)
 ```
+
+## 问题13. 时间轴
+
+![image](./images/time-range.png)
+
+```
+第一步：计算时间轴宽度，比如选择了`3`个时间则`30%`，`5`个时间则`50%`，选择了全部时间则`100%`
+第二步：计算总的时间差，及每个时间差
+第三步：根据总的时间差、总的宽度、每个时间差，计算得到每个时间宽度的`px`值
+第四步：循环校验每个时间宽度，如果宽度小于`50px`，则设置为`50px`。（此时所有时间宽度之和大于时间轴总宽度）
+第五步：循环计算所有最小时间之和，所有最小时间宽度之和
+第六步：根据总时间差、总宽度、最小时间之和、最小时间宽度之和，计算的到剩余时间差、剩余时间宽度
+第七步：根据剩余时间差、剩余时间宽度、每个时间差，计算得到每个时间宽度（此时所有时间宽度之和小于等于时间轴总宽度）
+```
+
+## 问题14. 移动端 ProModal
+
+移动端正常页面传参为`router`或者`Vuex`等方式，而`PC` `Castle` `ProModal`传参为`props`，为了保持两端一致，方便维护，所以移动端特殊页面也采用了全屏展示的`ProModal`。
+
+问题是移动端可以侧滑关闭页面，如果是在列表上显示`ProModal`，则侧滑关闭会出现同时关闭`ProModal`和列表页面。
+
+解决方案：
+
+```
+const route = useRoute();
+
+const router = useRouter();
+
+const currentTime = dayjs().valueOf();
+
+const showModal = ref(false);
+
+watch(() => props.visible, (newValue) => {
+  if (newValue) {
+    router.push({
+      path: route.path,
+      query: {
+        temporary: currentTime,
+      }
+    })
+  }
+  showModal.value = newValue;
+});
+```
+
+```
+const closeModal = () => {
+  router.go(-1);
+  showModal.value = false;
+  emit("update:visible", showModal.value);
+};
+```
+
+```
+watch(() => [route.path], () => {
+  if ((!route.query?.temporary || Number(route.query?.temporary) < currentTime)) {
+    showModal.value = false;
+    emit('update:visible', showModal.value);
+  }
+}, { immediate: true, deep: true })
+```
+
+## 问题15. `a-typography-text`导致页面卡顿
+
+![image](./images/hight-light.png)
+
+```
+<template v-for="(item, index) in templateContent" :key="index">
+  <a-typography-text v-if="item === 'X'" type="primary">
+    {{ num (index) }}
+  </a-typography-text>
+  <a-typography-text v-else-if="item">
+    {{ item }}
+  </a-typography-text>
+</template>
+```
+优化后
+```
+<template v-for="(item, index) in templateContent" :key="index">
+  <span v-if="item === 'X'" class="typography-text-primary">
+    {{ num (index) }}
+  </span>
+  <template v-else-if="item">
+    {{ item }}
+  </template>
+</template>
+```
+
+## 问题16. Chrome 121 版本自定义滚动条不生效
+
+`scrollbar-color`会使`webkit-scrollbar`无效。
+
+```
+.top-row {
+  // scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.06);
+}
+.top-row::-webkit-scrollbar {
+  width: @width;
+  height: @height;
+}
+.top-row::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background: rgba(0, 0, 0, 0.2);
+}
+.top-row::-webkit-scrollbar-track {
+  border-radius: 0;
+  background: rgba(0, 0, 0, 0.06);
+}
+```
+
+## 问题17. 虚拟滚动
+
+区域管理模块，默认是`Tree`结构，搜索之后变成了`List`结构。因为要显示表头，故使用`Ant-design-vue` `Table`组件的`Child`属性实现，但是会出现搜索后，当数据量超过`1000`会很卡顿。
+
+`Ant-design-vue`3.x或者4.x不支持虚拟滚动。`VueUse`中[`useVirtualList`](https://vueuse.org/core/useVirtualList/)或者参考[`vue-virtual-scroller`](https://github.com/Akryum/vue-virtual-scroller)
+
+火统目前处理方式：默认展示`100`条数据，当滚动到底部，再加载`100`条，[如此反复](http://10.10.3.188:9090/castle/projects/fire-alarm-statistics-ui/-/blob/master/src/components/pro-list/index.vue)。
+
+## 问题18. 时间戳毫秒问题
+
+1. 比如时间戳`1707026261925`存在后端会变成`1707026261000`或者`1707026262000`，后端如果类型设置为`long`，会出现四舍五入。可以使用`unix`取代`valueOf`，或者后端存为字符串
+
+2. 当时间戳进行计算时，比如`1707026261125 - 1707026260725 = 400`，页面上看到的相差`1s`，`diff`得到的是`400`毫秒约等于后是`0s`。对于涉及到时间差计算的，使用`unix`取代`valueOf`，或者监听`change`，使用`set`，动态设置`hour`、`minute`、`second`
+
+3. 类似当两个时间进行比较时，因为毫秒的存在，会出现`A000 === B000`，`A222 > B111`，`A111 < B222`
+
+## 问题19. 表单字段联动，数据未置空
+
+第一次提交表单，数据为`A:value1`、`B:value`，第二次提交表单，数据为`A:value2`、`C:value`。
+
+当`A`变动的时候，需要把`B`置空（不同类型为''或者`undefined`），后端也需要处理，大部分情况后端不会对空值数据库执行`update`。
+
+如果不处理，再次编辑表单会出现`B:value`有值，或者统计数据的时候，能查到该条数据，但是详情并没有该字段。
