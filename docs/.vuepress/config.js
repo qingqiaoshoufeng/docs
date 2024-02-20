@@ -73,6 +73,17 @@ export default defineUserConfig({
             '/cli/microapp.md',
           ],
         },
+        {
+          text: 'CLI-H5',
+          children: [
+            '/cli/h5-index.md',
+            '/cli/h5-router.md',
+            '/cli/h5-permission.md',
+            '/cli/h5-request.md',
+            '/cli/h5-global.md',
+            '/cli/h5-style.md',
+          ],
+        }
       ],
       '/components/': [
         {
