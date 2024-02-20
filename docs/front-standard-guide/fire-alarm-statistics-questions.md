@@ -471,3 +471,24 @@ watch(() => [route.path], () => {
 当`A`变动的时候，需要把`B`置空（不同类型为''或者`undefined`），后端也需要处理，大部分情况后端不会对空值数据库执行`update`。
 
 如果不处理，再次编辑表单会出现`B:value`有值，或者统计数据的时候，能查到该条数据，但是详情并没有该字段。
+
+## 问题20. `input`表单历史记录不显示
+
+```
+<a-form autocomplete="off">
+</a-form>
+```
+
+`edge`浏览器需要单独设置[`aria-autocomplete`](https://blog.csdn.net/weixin_43824054/article/details/130493653)属性。
+
+```
+<a-form>
+  <a-input aria-autocomplete="none" />
+</a-form>
+```
+
+## 问题21. `edge`浏览器翻译插件导致阅读态`多级组件`显示乱码
+
+![image](./images/edge-trans.png)
+
+多级组件`a-cascader`如果设置`max-tag-count="responsive"`属性，此时阅读态组件不会显示省略号后面的内容，要特殊处理。
