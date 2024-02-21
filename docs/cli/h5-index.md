@@ -35,6 +35,53 @@ yarn run dev
 
 ## 项目配置
 
+### lifecycle 生命周期
+
+#### beforeMount
+
+- **类型:** `(app) => void`
+
+创建一个vue应用实例之后，在将应用实例挂载之前
+
+你可以通过默认的app参数，在这个时候进行任何全局性的 `app.xxx()` 的[操作](https://cn.vuejs.org/api/application.html#app-directive)，比如 app.use()、app.component()、app.provide() 等等
+
+示例：
+```js
+// project-config.js
+export default ({ env }) => ({
+  lifecycle: {
+    beforeMount: (app) => {
+      app.provide('message', 'hello')
+
+      // 注册一个选项对象
+      app.component('my-component', {
+        /* ... */
+      })
+    }
+  },
+})
+```
+
+#### mounted
+
+- **类型:** `(app) => void`
+
+在将应用实例挂载之后
+
+示例：
+```js
+// project-config.js
+export default ({ env }) => ({
+  lifecycle: {
+    mounted: (app) => {
+      /* ... */
+    }
+  },
+})
+```
+
+---
+
 ## 环境配置
 
 项目配置文件位于路径`src/config/vite-config.js`，最基础的配置文件：
