@@ -491,4 +491,18 @@ watch(() => [route.path], () => {
 
 ![image](./images/edge-trans.png)
 
+处理办法把`index.html`中`<html lang="en">` `lang`属性去掉
+
+谷歌浏览器在`index.html`增加
+
+```
+<html translate="no">
+```
+
+`edge`浏览器在`index.html`增加
+
+```
+<meta name="google" content="notranslate">
+```
+
 多级组件`a-cascader`如果设置`max-tag-count="responsive"`属性，此时阅读态组件不会显示省略号后面的内容，要特殊处理。
