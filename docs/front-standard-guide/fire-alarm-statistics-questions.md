@@ -491,17 +491,11 @@ watch(() => [route.path], () => {
 
 ![image](./images/edge-trans.png)
 
-处理办法把`index.html`中`<html lang="en">` `lang`属性去掉
-
-谷歌浏览器在`index.html`增加
+处理办法把`index.html`中`<html lang="en">` 属性改为`<html lang="zh">`，或者在`index.html`增加
 
 ```
-<html translate="no">
-```
+<html lang="en" translate="no">
 
-`edge`浏览器在`index.html`增加
-
-```
 <meta name="google" content="notranslate">
 ```
 

@@ -13,7 +13,7 @@
 
 ### 支持`JSX`写法
 
-已内置`@vitejs/plugin-vue-jsx`插件，支持`JSX`语法
+已内置[@vitejs/plugin-vue-jsx](https://www.npmjs.com/package/@vitejs/plugin-vue-jsx)插件，支持`JSX`语法
 
 ### 组件`name`属性
 
@@ -35,7 +35,7 @@ onMounted(() => {
 </script>
 ```
 
-已内置`vite-plugin-vue-setup-extend`插件，可以按下面方式书写，更方便。
+已内置[vite-plugin-vue-setup-extend](https://www.npmjs.com/package/vite-plugin-vue-setup-extend)插件，可以按下面方式书写，更方便。
 
 ```
 <script setup name="firstPage">
@@ -47,7 +47,7 @@ onMounted(() => {
 </script>
 ```
 
-### 图片懒加载 `[vue-lazyload](https://blog.csdn.net/muzidigbig/article/details/115376889)`
+### 图片懒加载 [vue-lazyload](https://blog.csdn.net/muzidigbig/article/details/115376889)
 
 ```
 npm i vue-lazyload --save
