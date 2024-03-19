@@ -15,6 +15,26 @@
 
 已内置[@vitejs/plugin-vue-jsx](https://www.npmjs.com/package/@vitejs/plugin-vue-jsx)插件，支持`JSX`语法
 
+### 支持`event-bus`，基于[mitt](https://www.npmjs.com/package/mitt)
+
+在组件`A`注册
+
+```
+import { inject } from 'vue'
+
+const bus = inject('bus')
+
+bus.on('key', (res) => {
+  console.log(res)
+})
+```
+
+在组件`B`触发
+
+```
+bus.emit('key', { name: 'vue' })
+```
+
 ### 组件`name`属性
 
 对于自定义组件，需要指定`name`属性。下面是默认书写方式：
