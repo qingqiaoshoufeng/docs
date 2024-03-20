@@ -54,6 +54,10 @@ export default defineUserConfig({
       {
         text: '前端团队文档',
         link: '/docs/',
+      },      
+      {
+        text: '低代码搭建',
+        link: '/lowcode/',
       },
     ],
     sidebar: {
@@ -169,6 +173,12 @@ export default defineUserConfig({
             '/ux/404.md',
             '/ux/403.md',
           ],
+        },
+      ],
+      '/lowcode/': [
+        {
+          text: '低代码搭建',
+          children: [],
         },
       ],
     },
