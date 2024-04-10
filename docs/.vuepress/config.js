@@ -86,6 +86,7 @@ export default defineUserConfig({
             '/cli/h5-request.md',
             '/cli/h5-global.md',
             '/cli/h5-style.md',
+            '/cli/h5-version.md',
           ],
         }
       ],
@@ -160,6 +161,7 @@ export default defineUserConfig({
           children: [
             '/front-standard-guide/clean-code-javascript.md',
             '/front-standard-guide/fire-alarm-statistics-questions.md',
+            '/front-standard-guide/fire-alarm-excel-report.md',
           ],
         },
       ],
