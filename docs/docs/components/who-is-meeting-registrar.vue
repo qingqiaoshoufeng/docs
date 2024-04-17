@@ -1,5 +1,5 @@
 <template>
-  <p>本周周会记录员（需在节假日前一天的下午提前预定会议室（一个小时），并通知全员完成本周的周报填写，周报填写地址：<a href="http://10.13.4.3:8090/pages/viewpage.action?pageId=48596478">周报汇总</a>）：</p>
+  <p>本周周会记录员（需在节假日前一天的下午提前预定会议室（一个小时），并通知全员完成本周的周报填写，周报填写地址：<a href="http://10.13.4.3:8090/pages/viewpage.action?pageId=48596478">周报汇总</a>），如果有分享的同学，请把分享的资料（如PPT），放到<a href="http://10.13.4.3:8090/pages/viewpage.action?pageId=48596324">知识分享</a>：</p>
   <h1>{{ registrar().name }} 👨🏻‍💻 </h1>
 </template>
 
