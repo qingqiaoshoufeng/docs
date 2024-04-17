@@ -416,7 +416,7 @@ export default{
 示例：
 ```js
 // settings.mjs
-export default{
+export default {
   userNavigation: [
     {
     label: '设置',
@@ -441,8 +441,23 @@ export default{
 // settings.mjs
 import { h } from 'vue';
 import Components1 from 'path/to/component'
-export default{
+export default {
   userNavigationComponents: [h(Components1)],
+}
+```
+
+### userNavigationAvatar 顶部导航栏自定义头像 <Badge text="2.1.31+"/>
+
+- **类型:** `componentsVNode[]`
+- **默认值:** `undefined`
+
+示例：
+```js
+// settings.mjs
+import { h } from 'vue';
+import Components2 from 'path/to/component'
+export default {
+  userNavigationAvatar: h(Components2),
 }
 ```
 
