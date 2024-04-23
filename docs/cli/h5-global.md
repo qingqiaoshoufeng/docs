@@ -91,3 +91,19 @@ Vue.use(VueLazyload, {
 2. `lodash-es`已经包含了节流防抖，不需要单独引入`throttle-debounce`
 
 3. `vue-use`已包含多种`resize`事件，不需要单独引入`element-resize-event`
+
+4. 为了避免出现循环依赖，引起`JavaScript heap out of memory`，`vite`构建配置内置了
+
+```
+manualChunks(id) {
+  if (id.includes('node_modules')) {
+    return id
+      .toString()
+      .split('node_modules/')[1]
+      .split('/')[0]
+      .toString()
+  }
+},
+```
+
+参考：[vite-plugin-chunk-split](https://github.com/sanyuan0704/vite-plugin-chunk-split)
