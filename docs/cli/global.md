@@ -38,7 +38,36 @@ bus.on("CASTLE__globalTimer", async (t) => {
 })
 ```
 
+### 全局 ant-design-vue 日期组件汉化
 
+比如：`DatePicker`组件默认为英文文案，需要汉化为中文文案。
 
+在`settings.js`中初始化
 
+```
+import 'dayjs/locale/zh-cn'
 
+dayjs.locale('zh-cn')
+```
+
+### 自定义登录页
+
+对于交互特别复杂，需要支持扫码登录、单点登录等场景，需要自定义登录页的，可以参考以下方式：
+
+在`seetings.js`中初始化登录页路由
+
+```
+import Login from '@/components/login/index.vue'
+
+mounted: (app) => {
+  app.config.globalProperties.$router.addRoute({
+    path: '/login',
+    name: 'login',
+    component: Login,
+    meta: {
+      requiresAuth: false,
+      permissions: [],
+    },
+  })
+}
+```
