@@ -22,9 +22,9 @@ export default{
 >* 更建议使用 PostCSS 处理器，它类似于 CSS 中的 Babel，不但具备 Sass 和 Less 的功能，而且社区繁荣，同时还可以根据自己的需求扩展相关的插件。
 >* 随着 CSS 的一些新特性出现，Sass 和 Less 以往的优势也会慢慢消失。
 
-## tailwindcss
+## Tailwind CSS
 
-Castle 内置了 [tailwindcss](https://tailwindcss.com/) , 可直接使用，同时推荐安装VSCode插件 [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+Castle 内置了 [Tailwind CSS](https://tailwindcss.com/) , 可直接使用，同时推荐安装VSCode插件 [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
 
 ### 概述
 
@@ -70,7 +70,7 @@ Castle 内置了 [tailwindcss](https://tailwindcss.com/) , 可直接使用，同
 当您意识到使用预定义的实用程序类专门使用 HTML 工作可以多么高效时，以任何其他方式工作都会感觉像是折磨。
 
 ### 配置
-在项目根目录下 `tailwind.config.js` 文件配置
+在项目根目录下 `tailwind.config.js` 文件配置，配置项请参考官方文档。
 
 ### 参考
 * [Tailwind CSS 中文文档](https://www.tailwindcss.cn/)
