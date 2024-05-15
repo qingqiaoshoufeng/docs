@@ -84,6 +84,10 @@ Vue.use(VueLazyload, {
 })
 ```
 
+### 依赖包分析：[rollup-plugin-visualizer](https://github.com/btd/rollup-plugin-visualizer)
+
+已配置依赖包分析插件`rollup-plugin-visualizer`，代码注释中，请在`vite-config.js`自行开启。
+
 ### 其他优化
 
 1. 在项目中使用`lodash-es`，`lodash` 没法 `treeshaking`，构建会包含全部方法。其他类似包有同样`es`版本的，优先使用`es`版本。
