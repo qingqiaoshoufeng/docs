@@ -206,7 +206,7 @@
     lodash "^4.17.15"
     web-worker-helper "^0.0.3"
 
-"@antv/l7@^2.13.1":
+"@antv/l7@2.13.1", "@antv/l7@^2.13.1":
   version "2.13.1"
   resolved "http://10.13.4.153:4873/@antv%2fl7/-/l7-2.13.1.tgz#f447c2e77f805885946fdb8d32e481b5bc20181a"
   integrity sha512-QKP+9uE5tMfPfV3bbLhVxFR70dEZm3VKze7MhG+onMZZGS/7UYDioc5nLYbklQcHuQRKzaZfagXVp6ILL3tk7g==
@@ -267,45 +267,50 @@
     vue "^3.2.33"
     vue-router "^4.0.15"
 
-"@castle/business-components@^0.2.2":
-  version "0.2.2"
-  resolved "http://10.13.4.153:4873/@castle%2fbusiness-components/-/business-components-0.2.2.tgz#99680461ad5547ce80d0ac436092b08a17582f4e"
-  integrity sha512-nlPYkCZd8rAzyb8SR92K2HU5kq8dNc9rKlUdB1x6L3av7Y8D9ceSEzgtf3cGgNvpw+Q/6RWfC82ealzl8FMS+w==
+"@castle/business-components@latest":
+  version "0.2.20"
+  resolved "http://castle-npm.cp.hxdi.cn/@castle%2fbusiness-components/-/business-components-0.2.20.tgz#4ba63ca23e4b13fd2e4b84a788a9a09927a604dc"
+  integrity sha512-ZHM69GzzBVI7oNUyNE7YrkPKi/nNWOMTi5qA6yPQCx60Dbeik6U2zFWU5GjU3okWPFNJOYb+pjGSOa3JtJQBMQ==
   dependencies:
     "@ant-design/icons-vue" "^6.1.0"
     "@castle/castle-use" "^0.0.2"
     ant-design-vue "^3.2.15"
-    dayjs "^1.11.7"
+    dayjs "1.10.5"
+    print-js "^1.6.0"
 
 "@castle/castle-use@^0.0.2":
   version "0.0.2"
   resolved "http://10.13.4.153:4873/@castle%2fcastle-use/-/castle-use-0.0.2.tgz#50801960f0074d217a61f63aacdd419b64a264cd"
   integrity sha512-KO4yZ+Im31zWJWl0CmkGm/mzRyYKmL2I5gaVYNDYBdsqs+wZEzkKeQGk0BBGx/hw6RrnrqRjwz0Xn+Na7HYZkQ==
 
-"@castle/components-template@^0.0.5":
-  version "0.0.5"
-  resolved "http://10.13.4.153:4873/@castle%2fcomponents-template/-/components-template-0.0.5.tgz#7ff3987d17ece6b07874f6ccc0173be841acb442"
-  integrity sha512-w/CokucfGsVrlQ6S5VTByNfc/hNllB9F+bC2YvFZmZDwo08p/414I3//A/eDURBNfsppO91rWvFTJIo9bTKjbg==
-
-"@castle/data-visualization@0.0.22":
-  version "0.0.22"
-  resolved "http://10.13.4.153:4873/@castle%2fdata-visualization/-/data-visualization-0.0.22.tgz#c7772421775c8dbc8a8e90a0ccf21ded0b4220be"
-  integrity sha512-aNDUjUC+p5rlPfjAq1eCI+xRWpZummeRmQS7yZICw3nR9fCBF6DIkD7NolXdIA21RmzcPbCqBKB8n13QtjgSrg==
+"@castle/components-template@latest":
+  version "0.0.7"
+  resolved "http://castle-npm.cp.hxdi.cn/@castle%2fcomponents-template/-/components-template-0.0.7.tgz#821ce61759e2a57b5c08f4ed2d4c343b94ba0de4"
+  integrity sha512-nLcgp9wBMuzBb4b60RAsUm6+pzKYBZNPqxTT0At5IWTG0phRQxvVpkGXqMxMhREZ7y7ZWy3JEar1X+d7g+Mo4w==
   dependencies:
-    "@antv/l7" "^2.13.1"
+    ant-design-vue "^3.2.15"
+
+"@castle/data-visualization@latest":
+  version "0.0.53"
+  resolved "http://castle-npm.cp.hxdi.cn/@castle%2fdata-visualization/-/data-visualization-0.0.53.tgz#f4a077ba5d567de9876e62c692624b0b95ba322f"
+  integrity sha512-arC1BoEg9Vw6QtA07k4GRxTPcv8CFy+DoX8n1qeuhAYJPs3uqel5tHfokn2YRYsfaVMczqcV8t9dEuhqaURWzg==
+  dependencies:
+    "@ant-design/icons-vue" "^6.1.0"
+    "@antv/l7" "2.13.1"
     "@antv/l7-leaflet" "^0.0.3"
     ant-design-vue "^3.2.15"
     countup.js "^2.4.2"
-    dayjs "^1.11.7"
-    leaflet "^1.7.1"
+    dayjs "1.11.7"
+    leaflet "^1.8.0"
     leaflet-ant-path "^1.3.0"
 
-"@castle/hx-h265-player@^0.0.1":
-  version "0.0.1"
-  resolved "http://10.13.4.153:4873/@castle%2fhx-h265-player/-/hx-h265-player-0.0.1.tgz#da1e10f374c5ddc3df51967468924d6416f34503"
-  integrity sha512-mOdDBUlpPlokblz8d0wStp5aWyqB8aoiK8rG6OP+CFjj+Uk1XzwmtqeyFSbQiUgUNLwrBiM/3BQOx6m5erh/Uw==
+"@castle/hx-h265-player@latest":
+  version "0.0.27"
+  resolved "http://castle-npm.cp.hxdi.cn/@castle%2fhx-h265-player/-/hx-h265-player-0.0.27.tgz#f0eb0c5d0bc3d4913190ed2d5c7ad92ee3365bd7"
+  integrity sha512-qM6PDvtTLMYGCXLPAY/NfVwxB3hA1d0/zVMsuOpDgp5EIkn8RN1AnPUVYY9smt0lHf0oHJkUguwAwBtLGiljyQ==
   dependencies:
     ant-design-vue "^3.2.15"
+    vue-demi "^0.14.6"
 
 "@ctrl/tinycolor@^3.4.0":
   version "3.5.0"
@@ -1482,7 +1487,12 @@ d3-time@1:
   resolved "http://10.13.4.153:4873/d3-time/-/d3-time-1.1.0.tgz#b1e19d307dae9c900b7e5b25ffc5dcc249a8a0f1"
   integrity sha512-Xh0isrZ5rPYYdqhAVk8VLnMEidhz5aP7htAADH6MfzgmmicPkTo8LhkLxci61/lCB7n7UmE3bN0leRt+qvkLxA==
 
-dayjs@^1.10.5, dayjs@^1.11.7:
+dayjs@1.10.5:
+  version "1.10.5"
+  resolved "http://castle-npm.cp.hxdi.cn/dayjs/-/dayjs-1.10.5.tgz#5600df4548fc2453b3f163ebb2abbe965ccfb986"
+  integrity sha512-BUFis41ikLz+65iH6LHQCDm4YPMj5r1YFLdupPIyM4SGcXMmtiLQ7U37i+hGS8urIuqe7I/ou3IS1jVc4nbN4g==
+
+dayjs@1.11.7, dayjs@^1.10.5, dayjs@^1.11.7:
   version "1.11.7"
   resolved "http://10.13.4.153:4873/dayjs/-/dayjs-1.11.7.tgz#4b296922642f70999544d1144a2c25730fce63e2"
   integrity sha512-+Yw9U6YO5TQohxLcIkrXBeY73WP3ejHWVvx8XCk3gxvQDCTEmS48ZrSZCKciI7Bhl/uCMyxYtE9UqRILmFphkQ==
@@ -2118,7 +2128,12 @@ leaflet-ant-path@^1.3.0:
   resolved "http://10.13.4.153:4873/leaflet-ant-path/-/leaflet-ant-path-1.3.0.tgz#eac54e936e911666e61e9c2af682cba768b46a5a"
   integrity sha512-wgWWcAD4w8QVguRsHh89NGj5eqwLOP6e/HazunW0fQaytqZqEh3WePWYIrmbUeMcOf2cX/+GecHkFfI5tirS1Q==
 
-leaflet@^1.7.1, leaflet@^1.9.3:
+leaflet@^1.8.0:
+  version "1.9.4"
+  resolved "http://castle-npm.cp.hxdi.cn/leaflet/-/leaflet-1.9.4.tgz#23fae724e282fa25745aff82ca4d394748db7d8d"
+  integrity sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==
+
+leaflet@^1.9.3:
   version "1.9.3"
   resolved "http://10.13.4.153:4873/leaflet/-/leaflet-1.9.3.tgz#52ec436954964e2d3d39e0d433da4b2500d74414"
   integrity sha512-iB2cR9vAkDOu5l3HAay2obcUHZ7xwUBBjph8+PGtmW/2lYhbLizWtG7nTeYht36WfOslixQF9D/uSIzhZgGMfQ==
@@ -2483,6 +2498,11 @@ potpack@^1.0.1:
   resolved "http://10.13.4.153:4873/potpack/-/potpack-1.0.2.tgz#23b99e64eb74f5741ffe7656b5b5c4ddce8dfc14"
   integrity sha512-choctRBIV9EMT9WGAZHn3V7t0Z2pMQyl0EZE6pFc/6ml3ssw7Dlf/oAOvFwjm1HVsqfQN8GfeFyJ+d8tRzqueQ==
 
+print-js@^1.6.0:
+  version "1.6.0"
+  resolved "http://castle-npm.cp.hxdi.cn/print-js/-/print-js-1.6.0.tgz#692b046cf31992b46afa6c6d8a9db1c69d431d1f"
+  integrity sha512-BfnOIzSKbqGRtO4o0rnj/K3681BSd2QUrsIZy/+WdCIugjIswjmx3lDEZpXB2ruGf9d4b3YNINri81+J0FsBWg==
+
 prismjs@^1.29.0:
   version "1.29.0"
   resolved "http://10.13.4.153:4873/prismjs/-/prismjs-1.29.0.tgz#f113555a8fa9b57c35e637bba27509dcf802dd12"
@@ -2826,6 +2846,11 @@ vue-demi@*:
   version "0.13.11"
   resolved "http://10.13.4.153:4873/vue-demi/-/vue-demi-0.13.11.tgz#7d90369bdae8974d87b1973564ad390182410d99"
   integrity sha512-IR8HoEEGM65YY3ZJYAjMlKygDQn25D5ajNFNoKh9RSDMQtlzCxtfQjdQgv9jjK+m3377SsJXY8ysq8kLCZL25A==
+
+vue-demi@^0.14.6:
+  version "0.14.7"
+  resolved "http://castle-npm.cp.hxdi.cn/vue-demi/-/vue-demi-0.14.7.tgz#8317536b3ef74c5b09f268f7782e70194567d8f2"
+  integrity sha512-EOG8KXDQNwkJILkx/gPcoL/7vH+hORoBaKgGe+6W7VFMvCYJfmF2dGbvgDroVnI8LU7/kTu8mbjRZGBU1z9NTA==
 
 vue-router@^4.0.15, vue-router@^4.1.3, vue-router@^4.1.6:
   version "4.1.6"

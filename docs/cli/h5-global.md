@@ -11,6 +11,17 @@
 </script>
 ```
 
+可通过 [inject](https://cn.vuejs.org/guide/components/provide-inject.html) 拿到 `tabBarList`  、该数据是一个数据可以拿到当前页面所有tabbar的配置
+
+引用方式：
+
+```
+<script setup>
+  import { inject } from 'vue'
+  const tabBarList = inject('tabBarList')
+</script>
+```
+
 ### 支持`JSX`写法
 
 已内置[@vitejs/plugin-vue-jsx](https://www.npmjs.com/package/@vitejs/plugin-vue-jsx)插件，支持`JSX`语法
